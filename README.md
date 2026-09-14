@@ -1,6 +1,6 @@
 # DataWeave orders companion
 
-Companion code for *DataWeave in Depth* by Simon Sarkar, the second book of the pair that starts with *MuleSoft from Scratch*. It holds the book's DataWeave scripts, input fixtures and saved outputs, chapter by chapter, and runs them with the pinned DataWeave CLI. You need Docker and Python 3; no Anypoint account is required.
+Companion code for *DataWeave in Depth* by Simon Sarkar, the second book of the pair that starts with *Mule from Scratch*. It holds the book's DataWeave scripts, input fixtures and saved outputs, chapter by chapter, and runs them with the pinned DataWeave CLI. You need Docker and Python 3; no Anypoint account is required.
 
 ## Run it
 
