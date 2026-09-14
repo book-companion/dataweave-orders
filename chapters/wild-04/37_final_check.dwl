@@ -1,7 +1,7 @@
 %dw 2.0
 output application/json
 var placedAt = |2026-06-16T14:30:00-04:00|
-var orders = [{ id: "A-1001", placedAt: |2026-06-16T02:30:00Z| }, { id: "A-1002", placedAt: |2026-06-16T14:30:00Z| }]
+var orders = [{ id: "A-1001", placedAt: |2026-06-16T02:30:00Z| }, { id: "A-1013", placedAt: |2026-06-16T14:30:00Z| }]
 ---
 {
   roundTripEqual: ((placedAt as LocalDateTime) as DateTime) == placedAt,

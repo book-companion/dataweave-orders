@@ -10,7 +10,7 @@ $ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/grou
       "qty": 4
     },
     {
-      "orderId": "A-1002",
+      "orderId": "A-1008",
       "sku": "PEN-01",
       "name": "Gel Pen",
       "category": "writing",
@@ -18,7 +18,7 @@ $ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/grou
       "qty": 1
     },
     {
-      "orderId": "A-1002",
+      "orderId": "A-1008",
       "sku": "INK-03",
       "name": "Ink Refill",
       "category": "writing",

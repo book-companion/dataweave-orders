@@ -8,14 +8,14 @@ $ dw run -i payload=chapters/language-07/orders.json -f chapters/language-07/do-
     "tier": "gold"
   },
   {
-    "orderId": "A-1002",
+    "orderId": "A-1008",
     "subtotal": 11.5,
     "shipping": 4.99,
     "total": 16.49,
     "tier": "standard"
   },
   {
-    "orderId": "A-1003",
+    "orderId": "A-1009",
     "subtotal": 0,
     "shipping": 4.99,
     "total": 4.99,

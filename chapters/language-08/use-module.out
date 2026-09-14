@@ -5,7 +5,7 @@ $ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08
     "total": 34.56
   },
   {
-    "orderId": "A-1002",
+    "orderId": "A-1008",
     "total": 12.42
   }
 ]

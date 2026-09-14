@@ -29,7 +29,7 @@ $ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/grou
   ],
   "pickByNumber": [
     {
-      "orderId": "A-1002",
+      "orderId": "A-1008",
       "sku": "INK-03",
       "name": "Ink Refill",
       "category": "writing",

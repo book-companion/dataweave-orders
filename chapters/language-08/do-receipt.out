@@ -26,7 +26,7 @@ $ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/do
     "tax": 2.56
   },
   {
-    "orderId": "A-1002",
+    "orderId": "A-1008",
     "lines": [
       {
         "sku": "PEN-01",

@@ -10,7 +10,7 @@ $ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/ex1-
     ]
   },
   {
-    "orderId": "A-1002",
+    "orderId": "A-1008",
     "units": 4,
     "skus": [
       "PEN-01",

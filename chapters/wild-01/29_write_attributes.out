@@ -5,7 +5,7 @@
     "customer": "Dana",
     "total": {
       "@currency": "USD",
-      "__text": "42.00"
+      "__text": "32.00"
     }
   }
 }exit=0

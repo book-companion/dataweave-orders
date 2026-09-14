@@ -18,11 +18,11 @@ $ dw run -i payload=chapters/language-06/orders.json -f chapters/language-06/fla
       "sku": "CLP-08"
     },
     {
-      "orderId": "A-1002",
+      "orderId": "A-1008",
       "sku": "PEN-01"
     },
     {
-      "orderId": "A-1002",
+      "orderId": "A-1008",
       "sku": "INK-03"
     }
   ],
