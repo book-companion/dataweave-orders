@@ -28,8 +28,10 @@ go 09_params $J -p env=prod -p taxRate=0.2
 { $DW run -s $P -li 'payload={"items":[{"sku":"PEN-01","price":2.5,"qty":4}]}' 'input payload application/json import orderTotal from orders::OrderMath output application/json --- orderTotal(payload.items)' 2>&1; echo "exit=$?"; } | strip > 10_inline_literal.out
 go 11_dwtest $P
 go 11b_dwtest_bare $P
-# golden file: write with -o, diff against the committed golden
-$DW run -s $J $P -f $C/12_normalize_order.dwl -o $C/golden/order-normalized.json >/dev/null 2>&1
+# golden file: diff against the committed golden. A check never rewrites it;
+# BLESS=1 ./run.sh regenerates it on purpose, the chapter's "when the change is intended" step.
+if [ "${BLESS:-}" = 1 ]; then $DW run -s $J $P -f $C/12_normalize_order.dwl -o $C/golden/order-normalized.json >/dev/null 2>&1; fi
+[ -f golden/order-normalized.json ] || { echo "golden/order-normalized.json is missing: commit it, or run BLESS=1 ./run.sh" >&2; exit 1; }
 { $DW run -s $J $P -f $C/12_normalize_order.dwl -o $C/actual.json 2>&1; diff golden/order-normalized.json actual.json && echo "golden: OK"; echo "exit=$?"; } | strip > 12_golden_diff.out
 { $DW run -s $J $P -f $C/12b_normalize_order_changed.dwl -o $C/actual.json 2>&1; diff golden/order-normalized.json actual.json && echo "golden: OK"; echo "exit=$?"; } | strip > 12b_golden_diff_changed.out
 go 13_assert_in_script $P
