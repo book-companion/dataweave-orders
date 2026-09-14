@@ -1,0 +1,3 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to detect reader type for `payload`, as no MimeType was set. Please declare the input directive i.e. input `payload` application/xml
+exit=255

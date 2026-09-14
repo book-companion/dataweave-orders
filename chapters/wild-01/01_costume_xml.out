@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<order>
+  <id>A-1001</id>
+  <customer>Dana</customer>
+  <total>32</total>
+</order>exit=0

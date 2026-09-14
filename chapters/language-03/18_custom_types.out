@@ -1,0 +1,12 @@
+{
+  "goldIsTier": true,
+  "platinumIsTier": false,
+  "stringPrice": true,
+  "numberPrice": true,
+  "boolPrice": false,
+  "firstIsLineItem": true,
+  "wholeIsOrder": true,
+  "wrongShape": false,
+  "extraKey": true,
+  "withNote": true
+}exit=0

@@ -1,0 +1,10 @@
+[ERROR] Error while executing the script:
+[ERROR] Expecting Type: `Number`, but got: `"2.50"` at `price`.
+	|-- From: `LineItem`
+	|---- From: orderTotal(items: Array<LineItem>) -> Number
+
+5| orderTotal([ { sku: "PEN-01", price: "2.50", qty: 4 } ])
+                                        ^^^^^^
+Location:
+06b_type_mismatch_string (line: 5, column:38)
+exit=255

@@ -1,0 +1,10 @@
+{
+  "defaultQuote": [
+    "'Ballpoint pen",
+    "Notepad"
+  ],
+  "singleQuote": [
+    "Ballpoint pen, blue",
+    "Notepad"
+  ]
+}exit=0

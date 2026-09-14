@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input "map (item) -> total = ", expected FieldName (line 5, column 15):
+
+
+5| payload.items map (item) -> total = total + item.price * item.qty
+                 ^^^^^^^^^^^^^^^^^^^^^
+Location:
+03_assignment_fails (line: 5, column:15)
+exit=255

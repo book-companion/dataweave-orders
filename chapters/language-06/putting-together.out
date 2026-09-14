@@ -1,0 +1,17 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/putting-together.dwl
+[
+  {
+    "category": "writing",
+    "revenue": 21.5,
+    "topSeller": true
+  },
+  {
+    "category": "paper",
+    "revenue": 12
+  },
+  {
+    "category": "desk",
+    "revenue": 10
+  }
+]
+exit=0

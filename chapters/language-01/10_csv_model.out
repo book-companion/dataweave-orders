@@ -1,0 +1,17 @@
+[
+  {
+    sku: "PEN-01",
+    price: "2.5",
+    qty: "4"
+  }, 
+  {
+    sku: "PAD-22",
+    price: "6.0",
+    qty: "2"
+  }, 
+  {
+    sku: "CLP-08",
+    price: "1.0",
+    qty: "10"
+  }
+] as Array {encoding: "UTF-8", mediaType: "application/csv"}exit=0

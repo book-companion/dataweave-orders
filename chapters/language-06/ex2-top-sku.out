@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/ex2-top-sku.dwl
+{
+  "sku": "PEN-01",
+  "revenue": 12.5
+}
+exit=0

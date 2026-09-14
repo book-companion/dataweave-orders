@@ -1,0 +1,23 @@
+{
+  "fromRoot": [
+    "Ballpoint pen"
+  ],
+  "fromOrder": [
+    "Ballpoint pen"
+  ],
+  "starItems": [
+    "Ballpoint pen",
+    "Notepad",
+    "Binder clip"
+  ],
+  "descendAttr": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ],
+  "starAttr": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ]
+}exit=0

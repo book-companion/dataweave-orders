@@ -1,0 +1,14 @@
+[
+  {
+    "sku": "PEN-01",
+    "lineTotal": 10
+  },
+  {
+    "sku": "PAD-22",
+    "lineTotal": 12
+  },
+  {
+    "sku": "CLP-08",
+    "lineTotal": 10
+  }
+]exit=0

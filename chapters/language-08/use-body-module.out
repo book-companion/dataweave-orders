@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/use-body-module.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `greet`.
+
+5| greet("script")
+   ^^^^^
+Location:
+use-body-module (line: 5, column:1)
+
+exit=255

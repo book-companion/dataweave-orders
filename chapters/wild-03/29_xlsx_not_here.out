@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Unknown content type `application/xlsx`. Supported content types are: `application/dw`, `application/json`, `application/xml`, `application/csv`, `application/octet-stream`, `text/plain`, `application/x-www-form-urlencoded`, `multipart/form-data`, `text/x-java-properties`, `application/yaml`
+
+2| output application/xlsx
+          ^^^^^^^^^^^^^^^^
+Trace:
+  at 29_xlsx_not_here::main (line: 2, column: 8) at:
+
+2| output application/xlsx
+          ^^^^^^^^^^^^^^^^
+exit=255

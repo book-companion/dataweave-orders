@@ -1,0 +1,17 @@
+[
+  {
+    "id": "A-1001",
+    "lineType": "Object",
+    "skus": "PEN-01"
+  },
+  {
+    "id": "A-1002",
+    "lineType": "Object",
+    "skus": "PAD-22"
+  },
+  {
+    "id": "A-1003",
+    "lineType": "Object",
+    "skus": "PEN-01"
+  }
+]exit=0

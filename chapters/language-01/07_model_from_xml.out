@@ -1,0 +1,23 @@
+{
+  order: {
+    orderId: "A-1001",
+    customer: "Dana",
+    items: {
+      item: {
+        sku: "PEN-01",
+        price: "2.5",
+        qty: "4"
+      },
+      item: {
+        sku: "PAD-22",
+        price: "6.0",
+        qty: "2"
+      },
+      item: {
+        sku: "CLP-08",
+        price: "1.0",
+        qty: "10"
+      }
+    }
+  }
+} as Object {encoding: "UTF-8", mediaType: "application/xml"}exit=0

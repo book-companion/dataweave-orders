@@ -1,0 +1,11 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/conditional-key-unless.dwl
+[ERROR] Error while executing the script:
+[ERROR] Invalid input ' ', expected `}` or ',' for the object expression. (line 6, column 17):
+
+
+6|   (single: true) unless (line.qty >= 3)
+                   ^
+Location:
+conditional-key-unless (line: 6, column:17)
+
+exit=255

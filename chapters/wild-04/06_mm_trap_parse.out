@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (16/06/2026 14:30) to LocalDateTime, caused by: Text '16/06/2026 14:30' could not be parsed at index 14
+
+4| { wrong: "16/06/2026 14:30" as LocalDateTime {format: "dd/mm/yyyy HH:mm"} }
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 06_mm_trap_parse::main (line: 4, column: 10) at:
+
+4| { wrong: "16/06/2026 14:30" as LocalDateTime {format: "dd/mm/yyyy HH:mm"} }
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

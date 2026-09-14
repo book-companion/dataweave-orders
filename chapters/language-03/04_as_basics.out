@@ -1,0 +1,10 @@
+{
+  "fromString": 42,
+  "decimalString": 2.5,
+  "toString": "42",
+  "decimalToString": "6",
+  "productToString": "10",
+  "flag": true,
+  "upperFlag": true,
+  "alreadyNumber": 42
+}exit=0

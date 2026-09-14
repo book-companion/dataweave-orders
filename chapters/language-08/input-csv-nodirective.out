@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/language-08/lines.csv  -f chapters/language-08/input-csv-nodirective.dwl
+[
+  {
+    "sku": "PEN-01",
+    "qty": 4
+  },
+  {
+    "sku": "PAD-22",
+    "qty": 2
+  },
+  {
+    "sku": "CLP-08",
+    "qty": 10
+  }
+]
+exit=0

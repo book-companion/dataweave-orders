@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Missing Mapping Expression ie. var a = 1 
+ --- 
+ a 
+
+4| fun orderTotal(items) = items sumBy (i) -> lineTotal(i)
+...
+
+Location:
+15_module_run_directly (line: 4, column:56)
+exit=255

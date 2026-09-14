@@ -1,0 +1,21 @@
+Compiling `08b_validate_unresolved`...
+[ERROR] Unable to resolve reference of: `payload`.
+
+4| { id: payload.orderId, total: payload.items sumBy (i) -> i.price * i.qty }
+         ^^^^^^^
+Location:
+08b_validate_unresolved (line: 4, column:7)
+[ERROR] Unable to resolve reference of: `sumBy`.
+
+4| { id: payload.orderId, total: payload.items sumBy (i) -> i.price * i.qty }
+                                               ^^^^^
+Location:
+08b_validate_unresolved (line: 4, column:45)
+[ERROR] Unable to resolve reference of: `payload`.
+
+4| { id: payload.orderId, total: payload.items sumBy (i) -> i.price * i.qty }
+                                 ^^^^^^^
+Location:
+08b_validate_unresolved (line: 4, column:31)
+3 errors found
+exit=255

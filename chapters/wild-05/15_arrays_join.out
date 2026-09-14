@@ -1,0 +1,28 @@
+{
+  "inner": [
+    {
+      "sku": "PEN-01",
+      "name": "Gel pen",
+      "qty": 4
+    },
+    {
+      "sku": "PAD-22",
+      "name": "A5 notepad",
+      "qty": 2
+    }
+  ],
+  "left": [
+    {
+      "sku": "PEN-01",
+      "name": "Gel pen"
+    },
+    {
+      "sku": "PAD-22",
+      "name": "A5 notepad"
+    },
+    {
+      "sku": "CLP-08",
+      "name": "(not in catalog)"
+    }
+  ]
+}exit=0

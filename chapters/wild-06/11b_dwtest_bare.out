@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve module with identifier dw::test.
+
+2| import * from dw::test
+                 ^^^^^^^^
+Location:
+11b_dwtest_bare (line: 2, column:15)
+exit=255

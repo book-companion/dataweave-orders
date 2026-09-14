@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/reduce-seed-forms.dwl
+{
+  "seeded": 60,
+  "unseeded": 60,
+  "emptySeeded": 0,
+  "emptyUnseeded": null
+}
+exit=0

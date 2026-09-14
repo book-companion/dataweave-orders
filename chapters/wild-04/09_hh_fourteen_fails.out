@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (14:00) to LocalTime, caused by: Text '14:00' could not be parsed: Invalid value for ClockHourOfAmPm (valid values 1 - 12): 14
+
+4| { afternoon: "14:00" as LocalTime {format: "hh:mm"} }
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 09_hh_fourteen_fails::main (line: 4, column: 14) at:
+
+4| { afternoon: "14:00" as LocalTime {format: "hh:mm"} }
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Number (1) to Boolean
+
+4| { one: 1 as Boolean, zero: 0 as Boolean }
+          ^^^^^^^^^^^^
+Trace:
+  at 07b_number_as_boolean::main (line: 4, column: 8) at:
+
+4| { one: 1 as Boolean, zero: 0 as Boolean }
+          ^^^^^^^^^^^^
+exit=255

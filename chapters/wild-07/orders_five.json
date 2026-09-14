@@ -1,0 +1,87 @@
+[
+  {
+    "orderId": "A-1001",
+    "customer": "Dana",
+    "items": [
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 1
+      },
+      {
+        "sku": "PAD-22",
+        "price": 6.0,
+        "qty": 1
+      }
+    ],
+    "total": 8.5
+  },
+  {
+    "orderId": "A-1002",
+    "customer": "Ravi",
+    "items": [
+      {
+        "sku": "PAD-22",
+        "price": 6.0,
+        "qty": 2
+      },
+      {
+        "sku": "CLP-08",
+        "price": 1.0,
+        "qty": 1
+      }
+    ],
+    "total": 13.0
+  },
+  {
+    "orderId": "A-1003",
+    "customer": "Mei",
+    "items": [
+      {
+        "sku": "CLP-08",
+        "price": 1.0,
+        "qty": 3
+      },
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 1
+      }
+    ],
+    "total": 5.5
+  },
+  {
+    "orderId": "A-1004",
+    "customer": "Tomas",
+    "items": [
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 4
+      },
+      {
+        "sku": "PAD-22",
+        "price": 6.0,
+        "qty": 1
+      }
+    ],
+    "total": 16.0
+  },
+  {
+    "orderId": "A-1005",
+    "customer": "Dana",
+    "items": [
+      {
+        "sku": "PAD-22",
+        "price": 6.0,
+        "qty": 5
+      },
+      {
+        "sku": "CLP-08",
+        "price": 1.0,
+        "qty": 1
+      }
+    ],
+    "total": 31.0
+  }
+]

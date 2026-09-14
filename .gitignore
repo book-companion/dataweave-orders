@@ -1,0 +1,4 @@
+# Local artefacts. Chapter scripts, fixtures, modules and saved outputs are tracked.
+.DS_Store
+__pycache__/
+*.pyc

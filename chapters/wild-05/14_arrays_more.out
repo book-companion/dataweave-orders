@@ -1,0 +1,55 @@
+{
+  "sumOfNothing": 0,
+  "countOfNothing": 0,
+  "allPositive": true,
+  "anyBulk": true,
+  "firstBulk": {
+    "sku": "CLP-08",
+    "price": 1.0,
+    "qty": 10
+  },
+  "noneFound": null,
+  "pages": [
+    [
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 4,
+        "note": null
+      },
+      {
+        "sku": "PAD-22",
+        "price": 6.0,
+        "qty": 2
+      }
+    ],
+    [
+      {
+        "sku": "CLP-08",
+        "price": 1.0,
+        "qty": 10
+      }
+    ]
+  ],
+  "skuIndex": 1,
+  "head": [
+    {
+      "sku": "PEN-01",
+      "price": 2.5,
+      "qty": 4,
+      "note": null
+    }
+  ],
+  "rest": [
+    {
+      "sku": "PAD-22",
+      "price": 6.0,
+      "qty": 2
+    },
+    {
+      "sku": "CLP-08",
+      "price": 1.0,
+      "qty": 10
+    }
+  ]
+}exit=0

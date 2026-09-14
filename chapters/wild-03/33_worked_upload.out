@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "PEN-01",
+    "name": "Ballpoint pen",
+    "qty": 4,
+    "unitPrice": 2.5
+  },
+  {
+    "sku": "PAD-22",
+    "name": "Notepad",
+    "qty": 2,
+    "unitPrice": 6
+  },
+  {
+    "sku": "CLP-08",
+    "name": "Binder clip",
+    "qty": 10,
+    "unitPrice": 1
+  }
+]exit=0

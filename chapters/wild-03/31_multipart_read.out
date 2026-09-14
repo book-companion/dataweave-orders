@@ -1,0 +1,23 @@
+{
+  "partNames": [
+    "orderId",
+    "items"
+  ],
+  "orderId": "A-1001",
+  "disposition": {
+    "name": "items",
+    "filename": "items.csv",
+    "subtype": "form-data"
+  },
+  "contentType": "application/csv",
+  "rows": [
+    {
+      "sku": "PEN-01",
+      "qty": 4
+    },
+    {
+      "sku": "PAD-22",
+      "qty": 2
+    }
+  ]
+}exit=0

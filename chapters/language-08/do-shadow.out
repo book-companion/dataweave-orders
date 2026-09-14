@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/do-shadow.dwl
+{
+  "inDo": 120,
+  "inHeader": 108
+}
+exit=0

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (2026-13-01) to Date
+
+4| { bad: "2026-13-01" as Date }
+          ^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 23_month_13_fails::main (line: 4, column: 8) at:
+
+4| { bad: "2026-13-01" as Date }
+          ^^^^^^^^^^^^^^^^^^^^
+exit=255

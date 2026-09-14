@@ -1,0 +1,10 @@
+{
+  "single": "Ballpoint pen",
+  "many": [
+    "Ballpoint pen"
+  ],
+  "singleSku": "PEN-01",
+  "manySku": [
+    "PEN-01"
+  ]
+}exit=0

@@ -1,0 +1,54 @@
+{
+  "orders": [
+    {
+      "placedAt": "2026-06-14",
+      "customer": "Dana",
+      "note": "Leave at <side door> & ring twice",
+      "line": {
+        "sku": "PEN-01",
+        "category": "stationery",
+        "price": "2.50",
+        "qty": "4"
+      },
+      "line": {
+        "sku": "PAD-22",
+        "category": "paper",
+        "price": "6.00",
+        "qty": "2"
+      },
+      "line": {
+        "sku": "CLP-08",
+        "category": "stationery",
+        "price": "1.00",
+        "qty": "10"
+      }
+    },
+    {
+      "placedAt": "06/16/2026",
+      "customer": "Ravi",
+      "line": {
+        "sku": "PAD-22",
+        "category": "paper",
+        "price": "6.00",
+        "qty": "1"
+      }
+    },
+    {
+      "placedAt": "2026-06-18T09:30:00Z",
+      "customer": "Mei",
+      "line": {
+        "sku": "PEN-01",
+        "category": "stationery",
+        "price": "2.50",
+        "qty": "12"
+      },
+      "line": {
+        "sku": "CLP-08",
+        "category": "stationery",
+        "price": "1.00",
+        "qty": "3"
+      }
+    }
+  ],
+  "firstId": "A-1001"
+}exit=0

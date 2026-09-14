@@ -1,0 +1,12 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String ($6.00) to Number
+
+18| fun money(s: String): Number = s as Number
+                                   ^^^^^^^^^^^
+Trace:
+  at orders::Feed::money (line: 18, column: 32)
+  at 02c_money_bad_fails::main (line: 5, column: 1) at:
+
+18| fun money(s: String): Number = s as Number
+                                   ^^^^^^^^^^^
+exit=255

@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/reduce-positional-swapped.dwl
+{
+  "accThenItem": "PEN-01,PAD-22,CLP-08",
+  "itemThenAcc": "CLP-08,PAD-22,PEN-01"
+}
+exit=0

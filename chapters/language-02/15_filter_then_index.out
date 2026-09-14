@@ -1,0 +1,8 @@
+{
+  "bulkFirst": "PEN-01",
+  "bulkLast": "CLP-08",
+  "filterSelector": [
+    "PEN-01",
+    "CLP-08"
+  ]
+}exit=0

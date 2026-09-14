@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Not enough arguments (1) for function with parameters (item, index).
+
+5| payload.items map lineTotal($)
+                     ^^^^^^^^^
+Trace:
+  at 46_check_two_param_infix::main (line: 5, column: 19) at:
+
+5| payload.items map lineTotal($)
+                     ^^^^^^^^^
+exit=255

@@ -1,0 +1,7 @@
+{
+  "orderId": "A-1001",
+  "channel": "web",
+  "amount": "32.00",
+  "currency": "USD",
+  "amountType": "String"
+}exit=0

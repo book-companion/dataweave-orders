@@ -1,0 +1,33 @@
+$ dw validate -f 02_summary.dwl
+Compiling `02_summary`...
+[ERROR] Unable to resolve reference of: `payload`.
+
+5|   id: payload.orderId,
+         ^^^^^^^
+Location:
+02_summary (line: 5, column:7)
+[ERROR] Unable to resolve reference of: `payload`.
+
+6|   buyer: payload.customer,
+            ^^^^^^^
+Location:
+02_summary (line: 6, column:10)
+[ERROR] Unable to resolve reference of: `payload`.
+
+7|   lineCount: sizeOf(payload.items)
+                       ^^^^^^^
+Location:
+02_summary (line: 7, column:21)
+3 errors found
+exit=255
+$ dw validate -f 03_assignment_fails.dwl
+Compiling `03_assignment_fails`...
+[ERROR] Invalid input "map (item) -> total = ", expected FieldName (line 5, column 15):
+
+
+5| payload.items map (item) -> total = total + item.price * item.qty
+                 ^^^^^^^^^^^^^^^^^^^^^
+Location:
+03_assignment_fails (line: 5, column:15)
+1 errors found
+exit=255

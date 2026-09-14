@@ -1,0 +1,13 @@
+$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/Orders.dwl
+[ERROR] Error while executing the script:
+[ERROR] Missing Mapping Expression ie. var a = 1 
+ --- 
+ a 
+
+6| fun withTax(amount) = amount * (1 + taxRate)
+...
+
+Location:
+Orders (line: 6, column:45)
+
+exit=255

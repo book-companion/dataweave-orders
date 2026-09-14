@@ -1,0 +1,5 @@
+limit=512m xmx=64m exit=0
+elapsed_s=0.2
+peak_bytes=32161792
+out_bytes=23
+out_head={ "first": "A-1001"}

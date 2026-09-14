@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input '{', expected with (line 3, column 25):
+
+
+3| output application/json { deferred: true }
+                           ^
+Location:
+01b_brace_output_fails (line: 3, column:25)
+exit=255

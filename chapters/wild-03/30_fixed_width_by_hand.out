@@ -1,0 +1,12 @@
+[
+  {
+    "customerId": "4021",
+    "name": "Dana Lopez",
+    "amountCents": 12950
+  },
+  {
+    "customerId": "4022",
+    "name": "Sam Okafor",
+    "amountCents": 4999
+  }
+]exit=0

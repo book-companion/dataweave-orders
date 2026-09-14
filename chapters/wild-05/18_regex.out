@@ -1,0 +1,12 @@
+{
+  "validEmail": true,
+  "normalized": "AC-1099-XL",
+  "parts": [
+    [
+      "AC-1099-XL",
+      "AC",
+      "1099",
+      "XL"
+    ]
+  ]
+}exit=0

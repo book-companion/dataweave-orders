@@ -1,0 +1,18 @@
+{
+  "firstTwo": [
+    "PEN-01",
+    "PAD-22"
+  ],
+  "lastTwo": [
+    "PAD-22",
+    "CLP-08"
+  ],
+  "reversed": [
+    "CLP-08",
+    "PAD-22",
+    "PEN-01"
+  ],
+  "pastTheEnd": null,
+  "outOfRange": null,
+  "stringSlice": "A-"
+}exit=0

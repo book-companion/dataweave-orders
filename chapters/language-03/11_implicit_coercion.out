@@ -1,0 +1,7 @@
+{
+  "multiply": 10,
+  "concat": "2.504",
+  "compareRaw": false,
+  "compareCoerced": true,
+  "greater": true
+}exit=0

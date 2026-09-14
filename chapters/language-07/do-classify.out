@@ -1,0 +1,25 @@
+$ dw run -i payload=chapters/language-07/orders.json -f chapters/language-07/do-classify.dwl
+[
+  {
+    "orderId": "A-1001",
+    "subtotal": 32,
+    "shipping": 0,
+    "total": 32,
+    "tier": "gold"
+  },
+  {
+    "orderId": "A-1002",
+    "subtotal": 11.5,
+    "shipping": 4.99,
+    "total": 16.49,
+    "tier": "standard"
+  },
+  {
+    "orderId": "A-1003",
+    "subtotal": 0,
+    "shipping": 4.99,
+    "total": 4.99,
+    "tier": "empty cart"
+  }
+]
+exit=0

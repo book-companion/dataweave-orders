@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] There is no variable named 'lineTotals'
+
+3| var total = sum(lineTotals)
+                   ^^^^^^^^^^
+Trace:
+  at 22_var_forward_ref::main (line: 3, column: 17) at:
+
+3| var total = sum(lineTotals)
+                   ^^^^^^^^^^
+exit=255

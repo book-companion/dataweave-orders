@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (2026-06-16 25:00) to LocalDateTime, caused by: Text '2026-06-16 25:00' could not be parsed: Invalid value for HourOfDay (valid values 0 - 23): 25
+
+4| { hour25: "2026-06-16 25:00" as LocalDateTime {format: "yyyy-MM-dd HH:mm"} }
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 36_hour_25_fails::main (line: 4, column: 11) at:
+
+4| { hour25: "2026-06-16 25:00" as LocalDateTime {format: "yyyy-MM-dd HH:mm"} }
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

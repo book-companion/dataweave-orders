@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `bogus` is not valid. Valid options are: `writeDeclaration`, `indent`, `doubleQuoteInDeclaration`, `encoding`, `escapeGT`, `defaultNamespace`, `bufferSize`, `inlineCloseOn`, `onInvalidChar`, `writeNilOnNull`, `escapeCR`, `skipNullOn`, `writeDeclaredNamespaces`, `deferred`
+
+2| output application/xml bogus=true
+                          ^^^^^^^^^^
+Trace:
+  at 25_unknown_writer_prop::main (line: 2, column: 24) at:
+
+2| output application/xml bogus=true
+                          ^^^^^^^^^^
+exit=255

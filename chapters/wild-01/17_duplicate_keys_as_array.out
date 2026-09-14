@@ -1,0 +1,12 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `duplicateKeyAsArray` is not valid. Valid options are: `streaming`
+
+7|   collapsed:  read(raw, "application/json", { duplicateKeyAsArray: true })
+                                                 ^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 17_duplicate_keys_as_array::read (line: 7, column: 47)
+  at 17_duplicate_keys_as_array::main (line: 7, column: 15) at:
+
+7|   collapsed:  read(raw, "application/json", { duplicateKeyAsArray: true })
+                                                 ^^^^^^^^^^^^^^^^^^^
+exit=255

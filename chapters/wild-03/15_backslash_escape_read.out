@@ -1,0 +1,10 @@
+{
+  "defaultEscape": [
+    "Ballpoint pen \"blue\"",
+    "Notepad"
+  ],
+  "backslashEscape": [
+    "Ballpoint pen \"blue\"",
+    "Notepad"
+  ]
+}exit=0

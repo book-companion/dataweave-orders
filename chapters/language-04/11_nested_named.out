@@ -1,0 +1,23 @@
+[
+  {
+    "sku": "PEN-01",
+    "multiples": [
+      4,
+      8
+    ]
+  },
+  {
+    "sku": "PAD-22",
+    "multiples": [
+      2,
+      4
+    ]
+  },
+  {
+    "sku": "CLP-08",
+    "multiples": [
+      10,
+      20
+    ]
+  }
+]exit=0

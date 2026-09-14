@@ -1,0 +1,3 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/ex3-two-wildcards-swapped.dwl
+120
+exit=0

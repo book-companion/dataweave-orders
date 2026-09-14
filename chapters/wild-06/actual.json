@@ -1,0 +1,22 @@
+{
+  "id": "A-1001",
+  "customer": "Dana",
+  "lines": [
+    {
+      "sku": "PEN-01",
+      "qty": 4,
+      "lineTotal": 10
+    },
+    {
+      "sku": "PAD-22",
+      "qty": 2,
+      "lineTotal": 12
+    },
+    {
+      "sku": "CLP-08",
+      "qty": 10,
+      "lineTotal": 10
+    }
+  ],
+  "total": 38.4
+}

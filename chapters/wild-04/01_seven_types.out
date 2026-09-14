@@ -1,0 +1,30 @@
+{
+  "date": {
+    "value": "2026-06-16",
+    "kind": "Date"
+  },
+  "localTime": {
+    "value": "14:30:00",
+    "kind": "LocalTime"
+  },
+  "time": {
+    "value": "14:30:00Z",
+    "kind": "Time"
+  },
+  "localDateTime": {
+    "value": "2026-06-16T14:30:00",
+    "kind": "LocalDateTime"
+  },
+  "dateTime": {
+    "value": "2026-06-16T14:30:00-04:00",
+    "kind": "DateTime"
+  },
+  "zone": {
+    "value": "-04:00",
+    "kind": "TimeZone"
+  },
+  "period": {
+    "value": "P1Y2M10D",
+    "kind": "Period"
+  }
+}exit=0

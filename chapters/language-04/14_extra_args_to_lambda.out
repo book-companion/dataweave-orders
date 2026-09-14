@@ -1,0 +1,17 @@
+{
+  "oneParam": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ],
+  "twoParams": [
+    "PEN-01@0",
+    "PAD-22@1",
+    "CLP-08@2"
+  ],
+  "viaShorthand": [
+    "PEN-01@0",
+    "PAD-22@1",
+    "CLP-08@2"
+  ]
+}exit=0

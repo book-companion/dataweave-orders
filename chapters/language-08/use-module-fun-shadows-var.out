@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/use-module-fun-shadows-var.dwl
+{
+  "local": 0.2,
+  "viaModule": 108
+}
+exit=0

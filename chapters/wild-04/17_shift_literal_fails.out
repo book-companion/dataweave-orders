@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input 'A', expected anyDateExpression (line 5, column 20):
+
+
+5| { la: placedAt >> |America/Los_Angeles| }
+                      ^
+Location:
+17_shift_literal_fails (line: 5, column:20)
+exit=255

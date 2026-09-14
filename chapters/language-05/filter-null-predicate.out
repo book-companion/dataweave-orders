@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/filter-null-predicate.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Null (null) to Boolean
+Trace:
+  at main (Unknown) at:
+Unknown location
+
+exit=255

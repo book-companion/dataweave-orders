@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input "payload.", expected FieldName (line 5, column 1):
+
+
+5| payload.customer
+   ^^^^^^^
+Location:
+04_two_expressions_fail (line: 5, column:1)
+exit=255

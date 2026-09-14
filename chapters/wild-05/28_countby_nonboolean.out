@@ -1,0 +1,13 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid if condition type. Expecting type `Boolean` but got `Number(4)`
+
+229|            if (matchingFunction(item))
+                    ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at dw::core::Arrays::reduce (line: 229, column: 16)
+  at dw::core::Arrays::countBy (line: 228, column: 13)
+  at 28_countby_nonboolean::main (line: 5, column: 20) at:
+
+229|            if (matchingFunction(item))
+                    ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

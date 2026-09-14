@@ -1,0 +1,6 @@
+exit=0
+elapsed_s=11.4447
+peak_bytes=111382528
+out_bytes=17
+out_head={ "n": 400000 }
+docker_exit=0

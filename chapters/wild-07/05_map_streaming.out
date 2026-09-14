@@ -1,0 +1,6 @@
+exit=0
+elapsed_s=25.6022
+peak_bytes=180236288
+out_bytes=27339623
+out_head=[ { "id": "A-1001", "buyer": "Dana", "total": 8.5 }, { "id": "A-1002", "buyer": "Ravi", "t
+docker_exit=0

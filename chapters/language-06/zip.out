@@ -1,0 +1,28 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/zip.dwl
+{
+  "even": [
+    [
+      "PEN-01",
+      2.5
+    ],
+    [
+      "PAD-22",
+      6
+    ]
+  ],
+  "uneven": [
+    [
+      "PEN-01",
+      2.5
+    ],
+    [
+      "PAD-22",
+      6
+    ]
+  ],
+  "toObject": {
+    "PEN-01": 2.5,
+    "PAD-22": 6
+  }
+}
+exit=0

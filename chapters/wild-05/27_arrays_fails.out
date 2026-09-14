@@ -1,0 +1,29 @@
+[ERROR] Error while executing the script:
+[ERROR] You called the function '+' with these arguments: 
+  1: Null (null)
+  2: Number (0)
+
+But it expects one of these combinations:
+  (Array, Any)
+  (Date, Period)
+  (DateTime, Period)
+  (LocalDateTime, Period)
+  (LocalTime, Period)
+  (Number, Number)
+  (Period, DateTime)
+  (Period, LocalDateTime)
+  (Period, Time)
+  (Period, Date)
+  (Period, LocalTime)
+  (Time, Period)
+
+293|         ($ reduce (item: T, carry: Number = 0) -> numberSelector(item) + carry)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at dw::core::Arrays::reduce (line: 293, column: 51)
+  at dw::core::Arrays::sumBy (line: 293, column: 12)
+  at 27_arrays_fails::main (line: 5, column: 28) at:
+
+293|         ($ reduce (item: T, carry: Number = 0) -> numberSelector(item) + carry)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

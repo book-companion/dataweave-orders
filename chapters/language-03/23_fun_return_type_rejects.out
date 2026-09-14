@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Expecting Type: `String`, but got: `Number`.
+
+3| fun label(price: Number): String = price * 2
+                                      ^^^^^^^^^
+Location:
+23_fun_return_type_rejects (line: 3, column:36)
+exit=255

@@ -1,0 +1,14 @@
+{
+  "single": "Ballpoint pen",
+  "many": [
+    "Ballpoint pen",
+    "Notepad",
+    "Binder clip"
+  ],
+  "singleSku": "PEN-01",
+  "manySku": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ]
+}exit=0

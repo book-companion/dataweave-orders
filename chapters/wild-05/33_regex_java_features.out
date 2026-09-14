@@ -1,0 +1,17 @@
+{
+  "lookahead": true,
+  "named": [
+    "AC-1099",
+    "AC",
+    "1099"
+  ],
+  "wordBound": [
+    [
+      "PEN"
+    ],
+    [
+      "PAD"
+    ]
+  ],
+  "caseFlag": true
+}exit=0

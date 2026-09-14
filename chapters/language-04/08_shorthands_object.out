@@ -1,0 +1,29 @@
+{
+  "renamed": {
+    "SKU": "PEN-01",
+    "PRICE": 2.5,
+    "QTY": 4
+  },
+  "positions": {
+    "sku_0": "PEN-01",
+    "price_1": 2.5,
+    "qty_2": 4
+  },
+  "plucked": [
+    {
+      "key": "sku",
+      "value": "PEN-01",
+      "index": 0
+    },
+    {
+      "key": "price",
+      "value": 2.5,
+      "index": 1
+    },
+    {
+      "key": "qty",
+      "value": 4,
+      "index": 2
+    }
+  ]
+}exit=0

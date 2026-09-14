@@ -1,0 +1,14 @@
+[
+  {
+    "sku": "PEN-01",
+    "name": "Ballpoint pen, blue"
+  },
+  {
+    "sku": "PAD-22",
+    "name": "Notepad "
+  },
+  {
+    "sku": "CLP-08",
+    "name": "Binder clip"
+  }
+]exit=0

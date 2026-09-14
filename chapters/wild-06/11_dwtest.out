@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve module with identifier dw::test::Tests.
+
+2| import * from dw::test::Tests
+                 ^^^^^^^^^^^^^^^
+Location:
+11_dwtest (line: 2, column:15)
+Unable to resolve module with identifier dw::test::Asserts.
+
+3| import * from dw::test::Asserts
+                 ^^^^^^^^^^^^^^^^^
+Location:
+11_dwtest (line: 3, column:15)
+exit=255

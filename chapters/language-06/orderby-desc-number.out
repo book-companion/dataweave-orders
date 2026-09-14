@@ -1,0 +1,24 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/orderby-desc-number.dwl
+[
+  {
+    "sku": "PAD-22",
+    "price": 6.0
+  },
+  {
+    "sku": "INK-03",
+    "price": 3.0
+  },
+  {
+    "sku": "PEN-01",
+    "price": 2.5
+  },
+  {
+    "sku": "PEN-01",
+    "price": 2.5
+  },
+  {
+    "sku": "CLP-08",
+    "price": 1.0
+  }
+]
+exit=0

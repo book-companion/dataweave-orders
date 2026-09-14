@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Function to String
+
+4| (price) -> price * 0.9
+   ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 03_lambda_as_output_fails::main (line: 4, column: 1) at:
+
+4| (price) -> price * 0.9
+   ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

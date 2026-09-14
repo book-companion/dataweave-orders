@@ -1,0 +1,12 @@
+{
+  "batchId": null,
+  "orders": [
+    {
+      "id": "A-1004",
+      "lines": null,
+      "orderTotal": null
+    }
+  ],
+  "revenueByCategory": null,
+  "batchTotal": null
+}exit=0

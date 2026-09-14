@@ -1,0 +1,14 @@
+{
+  "year": 2026,
+  "month": 6,
+  "day": 16,
+  "hour": 14,
+  "minutes": 30,
+  "seconds": 45,
+  "nanos": 250000000,
+  "dayOfWeek": 2,
+  "dayOfYear": 167,
+  "quarter": 2,
+  "timezone": "-04:00",
+  "offsetSeconds": -14400
+}exit=0

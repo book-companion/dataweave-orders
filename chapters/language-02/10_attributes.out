@@ -1,0 +1,14 @@
+{
+  "currency": "USD",
+  "allAttrs": {
+    "id": "A-1001",
+    "currency": "USD"
+  },
+  "tier": "gold",
+  "skus": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ],
+  "customer": "Dana"
+}exit=0

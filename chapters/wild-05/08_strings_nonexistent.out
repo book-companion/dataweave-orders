@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `titleize`.
+
+5| titleize("premium gift wrap")
+   ^^^^^^^^
+Location:
+08_strings_nonexistent (line: 5, column:1)
+Unable to resolve reference of: `titleize`.
+
+2| import titleize from dw::core::Strings
+          ^^^^^^^^
+Location:
+08_strings_nonexistent (line: 2, column:8)
+exit=255

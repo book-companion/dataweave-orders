@@ -1,0 +1,6 @@
+{
+  "defaults": "sku,name\nPEN-01,Ballpoint pen\\, blue\nPAD-22,Notepad \\\"A5\\\"\n",
+  "quoteValues": "sku,name\n\"PEN-01\",\"Ballpoint pen, blue\"\n\"PAD-22\",\"Notepad \\\"A5\\\"\"\n",
+  "rfc4180": "sku,name\n\"PEN-01\",\"Ballpoint pen, blue\"\n\"PAD-22\",\"Notepad \"\"A5\"\"\"\n",
+  "quoteHeader": "\"sku\",\"name\"\n\"PEN-01\",\"Ballpoint pen, blue\"\n\"PAD-22\",\"Notepad \"\"A5\"\"\"\n"
+}exit=0

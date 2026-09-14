@@ -1,0 +1,12 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/use-module-alias.dwl
+[
+  {
+    "orderId": "A-1001",
+    "total": 34.56
+  },
+  {
+    "orderId": "A-1002",
+    "total": 12.42
+  }
+]
+exit=0

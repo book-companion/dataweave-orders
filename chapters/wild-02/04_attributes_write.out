@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<order id="A-1001" status="shipped">
+  <customer>Dana</customer>
+  <item sku="PEN-01" qty="4">PEN-01</item>
+  <item sku="PAD-22" qty="2">PAD-22</item>
+  <item sku="CLP-08" qty="10">CLP-08</item>
+  <total currency="USD">32</total>
+</order>exit=0

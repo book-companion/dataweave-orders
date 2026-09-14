@@ -1,0 +1,17 @@
+[
+  {
+    "sku": "PEN-01",
+    "qty": 4,
+    "name": "Gel pen"
+  },
+  {
+    "sku": "PAD-22",
+    "qty": 2,
+    "name": "A5 notepad"
+  },
+  {
+    "sku": "CLP-08",
+    "qty": 10,
+    "name": "(not in catalog)"
+  }
+]exit=0

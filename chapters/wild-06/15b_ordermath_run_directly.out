@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Missing Mapping Expression ie. var a = 1 
+ --- 
+ a 
+
+16|   items sumBy (i) -> lineTotal(i)
+...
+
+Location:
+OrderMath (line: 16, column:34)
+exit=255

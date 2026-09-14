@@ -1,0 +1,6 @@
+{
+  "stampAgainstPlainIso": false,
+  "prefixedIso": false,
+  "exactIso": true,
+  "containsInstead": true
+}exit=0

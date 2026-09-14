@@ -1,0 +1,5 @@
+limit=512m xmx=64m exit=0
+elapsed_s=7.7
+peak_bytes=299040768
+out_bytes=95
+out_head={ "first": "A-1001", "n": 400000, "ids": [ "A-1001", "A-1002", "A-1003" ]}

@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input "output ", expected Function Call (line 4, column 1):
+
+
+4| output application/json
+   ^^^^^^
+Location:
+18_header_after_body_fails (line: 4, column:1)
+exit=255

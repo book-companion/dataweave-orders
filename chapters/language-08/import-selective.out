@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/import-selective.dwl
+{
+  "label": "Usb C Hub",
+  "field": "unitPrice",
+  "withSpace": "unit price"
+}
+exit=0

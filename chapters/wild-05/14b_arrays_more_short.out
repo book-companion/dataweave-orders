@@ -1,0 +1,21 @@
+{
+  "sumOfNothing": 0,
+  "countOfNothing": 0,
+  "allPositive": true,
+  "anyBulk": true,
+  "firstBulk": {
+    "sku": "CLP-08",
+    "price": 1.0,
+    "qty": 10
+  },
+  "noneFound": null,
+  "skuIndex": 1,
+  "head": [
+    {
+      "sku": "PEN-01",
+      "price": 2.5,
+      "qty": 4,
+      "note": null
+    }
+  ]
+}exit=0

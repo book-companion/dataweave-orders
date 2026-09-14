@@ -1,0 +1,22 @@
+[
+  {
+    "id": "A-1001",
+    "placedAt": "2026-06-16T14:30:00-04:00",
+    "kind": "DateTime"
+  },
+  {
+    "id": "A-1002",
+    "placedAt": "16/06/2026 09:15",
+    "kind": "LocalDateTime"
+  },
+  {
+    "id": "A-1003",
+    "placedAt": "2026-06-15T20:30:00Z",
+    "kind": "DateTime"
+  },
+  {
+    "id": "A-1004",
+    "placedAt": "06/16/2026",
+    "kind": "Date"
+  }
+]exit=0

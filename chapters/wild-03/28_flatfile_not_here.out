@@ -1,0 +1,12 @@
+[ERROR] Error while executing the script:
+[ERROR] Unknown content type `application/flatfile`. Supported content types are: `application/dw`, `application/json`, `application/xml`, `application/csv`, `application/octet-stream`, `text/plain`, `application/x-www-form-urlencoded`, `multipart/form-data`, `text/x-java-properties`, `application/yaml`
+
+4| read(payload, "application/flatfile", { schemaPath: "customers.ffd" }) map {
+                 ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 28_flatfile_not_here::read (line: 4, column: 15)
+  at 28_flatfile_not_here::main (line: 4, column: 1) at:
+
+4| read(payload, "application/flatfile", { schemaPath: "customers.ffd" }) map {
+                 ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

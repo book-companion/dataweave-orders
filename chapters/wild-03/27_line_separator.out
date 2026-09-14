@@ -1,0 +1,4 @@
+{
+  "unix": "sku,qty\nPEN-01,4\nPAD-22,2\nCLP-08,10\n",
+  "windows": "sku,qty\r\nPEN-01,4\r\nPAD-22,2\r\nCLP-08,10\r\n"
+}exit=0

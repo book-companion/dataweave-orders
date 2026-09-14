@@ -1,0 +1,11 @@
+13_mixed_content                     exit=0
+16_cdata_write                       exit=0
+18_encoding                          exit=0
+33_cdata_lowercase_fails             exit=255
+34_two_roots_model                   exit=255
+35_descend                           exit=0
+36_many_on_none                      exit=0
+37_sizeof_null_fails                 exit=0
+38_null_value_on                     exit=0
+39_inline_close                      exit=0
+40_xsi_nil_read                      exit=0

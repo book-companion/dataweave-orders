@@ -1,0 +1,6 @@
+{
+  order @(id: "A-1001", channel: "web"): {
+    customer: "Dana",
+    total @(currency: "USD"): "42.00"
+  }
+} as Object {encoding: "UTF-8", mediaType: "application/xml"}exit=0

@@ -1,0 +1,5 @@
+limit=512m xmx=64m exit=0
+elapsed_s=13.8
+peak_bytes=93089792
+out_bytes=222484
+out_head=[ { "id": "A-1077", "total": 43 }, { "id": "A-1161", "total": 43 }, {

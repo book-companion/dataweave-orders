@@ -1,0 +1,6 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (t) to Boolean
+Trace:
+  at main (Unknown) at:
+Unknown location
+exit=255

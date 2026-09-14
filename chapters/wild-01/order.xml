@@ -1,0 +1,4 @@
+<order id="A-1001" channel="web">
+  <customer>Dana</customer>
+  <total currency="USD">42.00</total>
+</order>

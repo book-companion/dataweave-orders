@@ -1,0 +1,8 @@
+{
+  "hasEmail": true,
+  "hasPhone": false,
+  "nullValueCounts": true,
+  "deepMissing": false,
+  "indexExists": true,
+  "indexMissing": false
+}exit=0

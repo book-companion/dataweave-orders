@@ -1,0 +1,13 @@
+[
+  { "orderId": "A-1001", "customer": "Dana",
+    "items": [
+      { "sku": "PEN-01", "price": 2.5, "qty": 4 },
+      { "sku": "PAD-22", "price": 6.0, "qty": 2 },
+      { "sku": "CLP-08", "price": 1.0, "qty": 10 }
+    ] },
+  { "orderId": "A-1002", "customer": "Femi",
+    "items": [
+      { "sku": "PEN-01", "price": 2.5, "qty": 1 },
+      { "sku": "INK-03", "price": 3.0, "qty": 3 }
+    ] }
+]

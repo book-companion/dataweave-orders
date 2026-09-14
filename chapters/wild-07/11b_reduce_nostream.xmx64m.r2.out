@@ -1,0 +1,5 @@
+limit=512m xmx=64m exit=0
+elapsed_s=27.6
+peak_bytes=92635136
+out_bytes=24
+out_head={ "revenue": 6333312}

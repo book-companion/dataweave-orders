@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `skipNulls` is not valid. Valid options are: `writeAttributes`, `indent`, `encoding`, `bufferSize`, `skipNullOn`, `deferred`, `duplicateKeyAsArray`
+
+2| output application/json skipNulls=true
+                           ^^^^^^^^^^^^^^
+Trace:
+  at 12_unknown_writer_property::main (line: 2, column: 25) at:
+
+2| output application/json skipNulls=true
+                           ^^^^^^^^^^^^^^
+exit=255

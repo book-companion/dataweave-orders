@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (06/16/2026) to Date
+
+7|   placedAt: order.ord#placedAt as Date
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 02e_naive_date_fails::main (line: 7, column: 13) at:
+
+7|   placedAt: order.ord#placedAt as Date
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

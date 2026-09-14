@@ -1,0 +1,5 @@
+limit=512m xmx=32m exit=0
+elapsed_s=8.1
+peak_bytes=113786880
+out_bytes=27339623
+out_head=[ { "id": "A-1001", "buyer": "Dana", "total": 8.5 }, { "id": "A-1002", "bu

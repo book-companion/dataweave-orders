@@ -1,0 +1,6 @@
+%YAML 1.2
+---
+order:
+  id: A-1001
+  customer: Dana
+  total: 32exit=0

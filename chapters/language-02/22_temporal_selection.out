@@ -1,0 +1,12 @@
+{
+  "year": 2026,
+  "taken": [
+    "PEN-01",
+    "PAD-22"
+  ],
+  "takenPastEnd": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ]
+}exit=0

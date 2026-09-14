@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Duplicated variable: `describe`.
+
+3| var describe = (n: Number) -> "a number: " ++ n
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Location:
+34_var_overload_fails (line: 3, column:1)
+Duplicated variable: `describe`.
+
+4| var describe = (s: String) -> "a string: " ++ s
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Location:
+34_var_overload_fails (line: 4, column:1)
+exit=255

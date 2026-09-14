@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -p rate=0.2 -f chapters/language-08/params.dwl
+[
+  {
+    "orderId": "A-1001",
+    "rate": "0.2",
+    "rateType": "String",
+    "total": 38.4
+  },
+  {
+    "orderId": "A-1002",
+    "rate": "0.2",
+    "rateType": "String",
+    "total": 13.8
+  }
+]
+exit=0

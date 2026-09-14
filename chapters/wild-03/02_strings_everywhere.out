@@ -1,0 +1,37 @@
+{
+  "types": {
+    "sku": "String",
+    "name": "String",
+    "qty": "String",
+    "price": "String"
+  },
+  "uncoerced": [
+    {
+      "sku": "PEN-01",
+      "qty": "4"
+    },
+    {
+      "sku": "PAD-22",
+      "qty": "2"
+    },
+    {
+      "sku": "CLP-08",
+      "qty": "10"
+    }
+  ],
+  "arithmetic": [
+    10,
+    12,
+    10
+  ],
+  "joined": [
+    "42.50",
+    "26.00",
+    "101.00"
+  ],
+  "sorted": [
+    "10",
+    "2",
+    "4"
+  ]
+}exit=0

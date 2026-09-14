@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `$`.
+
+3| fun lineTotal(item) = $.price * $.qty
+                         ^
+Location:
+40_dollar_in_fun_body (line: 3, column:23)
+Unable to resolve reference of: `$`.
+
+3| fun lineTotal(item) = $.price * $.qty
+                                   ^
+Location:
+40_dollar_in_fun_body (line: 3, column:33)
+exit=255

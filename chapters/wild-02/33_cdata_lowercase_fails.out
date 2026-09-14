@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `cdata`.
+
+4| { item: { wrapped: payload.item.escaped as cdata } }
+                                              ^^^^^
+Location:
+33_cdata_lowercase_fails (line: 4, column:44)
+exit=255

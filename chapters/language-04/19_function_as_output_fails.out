@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Function to String
+
+3| fun discount(rate) = (price) -> price * (1 - rate)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 19_function_as_output_fails::main (line: 3, column: 22) at:
+
+3| fun discount(rate) = (price) -> price * (1 - rate)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

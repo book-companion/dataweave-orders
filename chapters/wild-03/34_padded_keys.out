@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "sku ",
+    "name         ",
+    "qty",
+    "unit_price"
+  ],
+  "bareKey": "2.50",
+  "spaceKey": "Ballpoint pen "
+}exit=0

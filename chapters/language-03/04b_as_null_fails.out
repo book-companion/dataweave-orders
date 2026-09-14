@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Null (null) to Number
+
+4| { coupon: payload.coupon as Number }
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 04b_as_null_fails::main (line: 4, column: 11) at:
+
+4| { coupon: payload.coupon as Number }
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

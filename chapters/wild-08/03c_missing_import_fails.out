@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `sumBy`.
+
+8|   orderTotal: order.*ord#line sumBy (line) -> money(line.ord#price) * (line.ord#qty as Number)
+                                 ^^^^^
+Location:
+03c_missing_import_fails (line: 8, column:31)
+exit=255

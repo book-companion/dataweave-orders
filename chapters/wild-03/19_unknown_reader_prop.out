@@ -1,0 +1,20 @@
+[ERROR] Error while executing the script:
+[ERROR] You called the function 'read' with these arguments: 
+  1: Array ([...])
+  2: String ("application/csv")
+  3: Object ({bogus: true})
+
+But it expects arguments of these types:
+  1: String | Binary
+  2: String
+  3: Object
+
+
+4| read(payload, "application/csv", { bogus: true })
+   ^^^^
+Trace:
+  at 19_unknown_reader_prop::main (line: 4, column: 1) at:
+
+4| read(payload, "application/csv", { bogus: true })
+   ^^^^
+exit=255

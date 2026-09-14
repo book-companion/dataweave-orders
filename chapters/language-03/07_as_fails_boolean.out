@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (yes) to Boolean
+
+4| { b: "yes" as Boolean }
+        ^^^^^
+Trace:
+  at 07_as_fails_boolean::main (line: 4, column: 6) at:
+
+4| { b: "yes" as Boolean }
+        ^^^^^
+exit=255

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (13/09/2026) to Date, caused by: Text '13/09/2026' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13
+
+4| { placed: payload.placed as Date {format: "MM/dd/yyyy"} }
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 14_date_parse_wrong_format::main (line: 4, column: 11) at:
+
+4| { placed: payload.placed as Date {format: "MM/dd/yyyy"} }
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

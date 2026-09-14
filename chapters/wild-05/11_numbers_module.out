@@ -1,0 +1,9 @@
+{
+  "hex": "ff",
+  "fromHex": 255,
+  "binary": "1010",
+  "fromBin": 10,
+  "radix": "ff",
+  "fromRadix": 1295,
+  "roundStillGlobal": 3
+}exit=0

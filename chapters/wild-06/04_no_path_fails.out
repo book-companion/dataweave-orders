@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve module with identifier orders::OrderMath.
+
+2| import orderTotal from orders::OrderMath
+                          ^^^^^^^^^^^^^^^^^
+Location:
+04_no_path_fails (line: 2, column:24)
+exit=255

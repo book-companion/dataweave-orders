@@ -1,0 +1,16 @@
+--boundary42
+Content-Type: text/plain
+Content-Disposition: form-data; name="orderId"
+
+A-1001
+--boundary42
+Content-Type: application/csv
+Content-Disposition: form-data; name="items"; filename="items.csv"
+
+sku,qty
+PEN-01,4
+PAD-22,2
+CLP-08,10
+
+--boundary42--
+exit=0

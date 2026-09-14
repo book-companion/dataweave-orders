@@ -1,0 +1,4 @@
+run1 05_map_streaming     exit=0 elapsed_s=8.9 peak_bytes=207814656 out_bytes=27339623 
+run1 06_map_nostream      exit=0 elapsed_s=8.1 peak_bytes=113381376 out_bytes=27339623 
+run2 05_map_streaming     exit=0 elapsed_s=8.0 peak_bytes=113950720 out_bytes=27339623 
+run2 06_map_nostream      exit=0 elapsed_s=8.0 peak_bytes=131002368 out_bytes=27339623 

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (42abc) to Number
+
+4| { trailing: "42abc" as Number }
+               ^^^^^^^^^^^^^^^^^
+Trace:
+  at 06c_as_trailing::main (line: 4, column: 13) at:
+
+4| { trailing: "42abc" as Number }
+               ^^^^^^^^^^^^^^^^^
+exit=255

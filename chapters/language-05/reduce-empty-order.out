@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-05/order-empty.json -f chapters/language-05/reduce-empty-order.dwl
+{
+  "orderId": "A-1002",
+  "total": null
+}
+exit=0

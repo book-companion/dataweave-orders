@@ -1,0 +1,17 @@
+{
+  "order": {
+    "currency": "USD",
+    "giftWrap": false,
+    "orderId": "A-1001",
+    "customer": "Dana",
+    "coupon": null
+  },
+  "bulk": [
+    "PEN-01",
+    "CLP-08"
+  ],
+  "single": [
+    "PAD-22"
+  ],
+  "bulkRevenue": 20
+}exit=0

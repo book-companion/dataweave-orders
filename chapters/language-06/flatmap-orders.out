@@ -1,0 +1,31 @@
+$ dw run -i payload=chapters/language-06/orders.json -f chapters/language-06/flatmap-orders.dwl
+{
+  "mapped": [
+    3,
+    2
+  ],
+  "flat": [
+    {
+      "orderId": "A-1001",
+      "sku": "PEN-01"
+    },
+    {
+      "orderId": "A-1001",
+      "sku": "PAD-22"
+    },
+    {
+      "orderId": "A-1001",
+      "sku": "CLP-08"
+    },
+    {
+      "orderId": "A-1002",
+      "sku": "PEN-01"
+    },
+    {
+      "orderId": "A-1002",
+      "sku": "INK-03"
+    }
+  ],
+  "same": true
+}
+exit=0

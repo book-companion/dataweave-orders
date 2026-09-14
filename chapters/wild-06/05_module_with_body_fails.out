@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `lineTotal`.
+
+5| lineTotal(payload.items[0])
+   ^^^^^^^^^
+Location:
+05_module_with_body_fails (line: 5, column:1)
+Unable to resolve reference of: `lineTotal`.
+
+2| import lineTotal from orders::Broken
+          ^^^^^^^^^
+Location:
+05_module_with_body_fails (line: 2, column:8)
+exit=255

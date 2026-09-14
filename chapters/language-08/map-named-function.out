@@ -1,0 +1,13 @@
+$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/map-named-function.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Function to String
+
+3| fun lineTotal(item) = item.price * item.qty
+                         ^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at map-named-function::main (line: 3, column: 23) at:
+
+3| fun lineTotal(item) = item.price * item.qty
+                         ^^^^^^^^^^^^^^^^^^^^^
+
+exit=255

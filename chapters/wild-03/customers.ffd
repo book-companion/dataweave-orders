@@ -1,0 +1,6 @@
+form: FIXEDWIDTH
+id: 'Customer'
+values:
+  - { name: 'customerId', type: String, length: 10 }
+  - { name: 'name', type: String, length: 30 }
+  - { name: 'amount', type: Integer, length: 12, format: { justify: ZEROES } }

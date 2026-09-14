@@ -1,0 +1,11 @@
+{
+  "intType": "Number",
+  "decType": "Number",
+  "equal": true,
+  "division": 33.33333333333333333333333333333333,
+  "tenOverFour": 2.5,
+  "lineTotal": 10,
+  "pointOnePlusPointTwo": 0.3,
+  "big": 12345678901234567891,
+  "bigTimes": 30864197253086419725
+}exit=0

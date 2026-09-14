@@ -1,0 +1,8 @@
+{
+  "thousands": "1,234.50",
+  "twoPlaces": "10.00",
+  "optionalDecimals": "10",
+  "rounded": "12.50",
+  "parsedBack": 1234.5,
+  "total": "32.00"
+}exit=0

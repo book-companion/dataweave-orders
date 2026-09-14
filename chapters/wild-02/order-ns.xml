@@ -1,0 +1,7 @@
+<ord:order xmlns:ord="http://acme.com/orders" id="A-1001">
+  <ord:customer>Dana</ord:customer>
+  <ord:item sku="PEN-01" qty="4">Ballpoint pen</ord:item>
+  <ord:item sku="PAD-22" qty="2">Notepad</ord:item>
+  <ord:item sku="CLP-08" qty="10">Binder clip</ord:item>
+  <ord:total currency="USD">32.00</ord:total>
+</ord:order>

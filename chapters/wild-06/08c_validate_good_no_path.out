@@ -1,0 +1,9 @@
+Compiling `01_import_name`...
+[ERROR] Unable to resolve module with identifier orders::OrderMath.
+
+2| import orderTotal from orders::OrderMath
+                          ^^^^^^^^^^^^^^^^^
+Location:
+01_import_name (line: 2, column:24)
+1 errors found
+exit=255

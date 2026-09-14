@@ -1,0 +1,15 @@
+{
+  "all": {
+    "id": "A-1001",
+    "channel": "web"
+  },
+  "keys": [
+    "id",
+    "channel"
+  ],
+  "qtys": [
+    "4",
+    "2",
+    "10"
+  ]
+}exit=0

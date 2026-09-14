@@ -1,0 +1,9 @@
+{
+  "window": "P30D",
+  "sixHours": "PT6H",
+  "turnaround": "P2D",
+  "reversed": "P-2D",
+  "built": "P1Y2M10D",
+  "duration": "PT6H30M",
+  "windowType": "Period"
+}exit=0

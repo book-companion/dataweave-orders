@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] There is no key named 'email'
+
+4| { email: payload.customer.email! }
+            ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 14_assertion_fails::main (line: 4, column: 10) at:
+
+4| { email: payload.customer.email! }
+            ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

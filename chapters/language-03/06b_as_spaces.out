@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String ( 42 ) to Number
+
+4| { spaced: " 42 " as Number }
+             ^^^^^^^^^^^^^^^^
+Trace:
+  at 06b_as_spaces::main (line: 4, column: 11) at:
+
+4| { spaced: " 42 " as Number }
+             ^^^^^^^^^^^^^^^^
+exit=255

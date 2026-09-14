@@ -1,0 +1,7 @@
+{
+  "mixedIsNumbers": true,
+  "wordIsNumbers": true,
+  "numbersAreStrings": true,
+  "emptyIsNumbers": true,
+  "objectsAreNumbers": true
+}exit=0

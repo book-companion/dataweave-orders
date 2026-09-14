@@ -1,0 +1,7 @@
+{
+  note: {
+    "__text": "Ship to ",
+    name: "Dana",
+    "__text": " before Friday."
+  }
+} as Object {encoding: "UTF-8", mediaType: "application/xml"}exit=0

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Object to String
+
+4| { s: payload.items[0] as String }
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 09_as_fails_object::main (line: 4, column: 6) at:
+
+4| { s: payload.items[0] as String }
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

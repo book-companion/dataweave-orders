@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (06/16/2026) to Date
+
+4| { us: "06/16/2026" as Date }
+         ^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 07_no_format_fails::main (line: 4, column: 7) at:
+
+4| { us: "06/16/2026" as Date }
+         ^^^^^^^^^^^^^^^^^^^^
+exit=255

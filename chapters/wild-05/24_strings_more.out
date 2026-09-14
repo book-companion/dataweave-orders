@@ -1,0 +1,19 @@
+{
+  "lines": [
+    "PEN-01",
+    "PAD-22"
+  ],
+  "words": [
+    "premium",
+    "gift",
+    "wrap"
+  ],
+  "wrapped": "'A-1001'",
+  "unwrapped": "A-1001",
+  "ensureSuffix": "order.json",
+  "keepSuffix": "order.json",
+  "numeric": true,
+  "alpha": true,
+  "removed": "A1001",
+  "reversed": "10-NEP"
+}exit=0

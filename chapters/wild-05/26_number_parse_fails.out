@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (1,234.50) to Number
+
+4| { parsed: "1,234.50" as Number }
+             ^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 26_number_parse_fails::main (line: 4, column: 11) at:
+
+4| { parsed: "1,234.50" as Number }
+             ^^^^^^^^^^^^^^^^^^^^
+exit=255

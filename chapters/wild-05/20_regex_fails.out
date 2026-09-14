@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid Regex: Unclosed group near index 4
+(\d+
+
+4| { bad: "AC-1099" matches /(\d+/ }
+                            ^^^^^^
+Location:
+20_regex_fails (line: 4, column:26)
+exit=255

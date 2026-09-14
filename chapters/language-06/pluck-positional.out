@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/pluck-positional.dwl
+[
+  {
+    "key": "orderId",
+    "value": "A-1001",
+    "index": 0
+  },
+  {
+    "key": "customer",
+    "value": "Dana",
+    "index": 1
+  }
+]
+exit=0

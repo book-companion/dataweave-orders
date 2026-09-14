@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/ex3-two-wildcards-qualified.dwl
+{
+  "orders": 108,
+  "pricing": 120
+}
+exit=0

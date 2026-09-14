@@ -1,0 +1,20 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/map-on-object.dwl
+[ERROR] Error while executing the script:
+[ERROR] You called the function 'map' with these arguments: 
+  1: Object ({orderId: "A-1001",customer: "Dana",items: [{sku: "PEN-01",price: 2.5,qty: 4}...)
+  2: Function ((item:Any, $$:Any) -> ???)
+
+But it expects arguments of these types:
+  1: Array
+  2: Function
+
+
+4| payload map (item) -> item.sku
+           ^^^
+Trace:
+  at map-on-object::main (line: 4, column: 9) at:
+
+4| payload map (item) -> item.sku
+           ^^^
+
+exit=255

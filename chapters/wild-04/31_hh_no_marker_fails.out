@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (02:00) to LocalTime, caused by: Text '02:00' could not be parsed: Unable to obtain LocalTime from TemporalAccessor: {MinuteOfHour=0, HourOfAmPm=2},ISO of type java.time.format.Parsed
+
+4| { morning: "02:00" as LocalTime {format: "hh:mm"} }
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 31_hh_no_marker_fails::main (line: 4, column: 12) at:
+
+4| { morning: "02:00" as LocalTime {format: "hh:mm"} }
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

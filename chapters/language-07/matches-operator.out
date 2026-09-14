@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/language-07/order.json -f chapters/language-07/matches-operator.dwl
+{
+  "asBoolean": true,
+  "asGroups": [
+    "PEN-01",
+    "PEN",
+    "01"
+  ]
+}
+exit=0

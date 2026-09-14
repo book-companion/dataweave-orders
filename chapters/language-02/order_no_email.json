@@ -1,0 +1,7 @@
+{
+  "orderId": "A-1002",
+  "customer": { "name": "Dana", "tier": "gold" },
+  "items": [
+    { "sku": "PEN-01", "price": 2.5, "qty": 4 }
+  ]
+}

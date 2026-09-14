@@ -1,0 +1,4 @@
+<order id="A-1002" channel="web">
+  <customer>Dana</customer>
+  <item sku="PEN-01" qty="1">Ballpoint pen</item>
+</order>

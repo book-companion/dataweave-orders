@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/language-07/order.json -f chapters/language-07/match-type.dwl
+[
+  6,
+  6,
+  0,
+  "unexpected Boolean"
+]
+exit=0

@@ -1,0 +1,5 @@
+limit=512m xmx=64m exit=0
+elapsed_s=40.7
+peak_bytes=99115008
+out_bytes=17
+out_head={ "n": 400000}

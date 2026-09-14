@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `toOctal`.
+
+5| toOctal(8)
+   ^^^^^^^
+Location:
+12_numbers_nonexistent (line: 5, column:1)
+Unable to resolve reference of: `toOctal`.
+
+2| import toOctal from dw::core::Numbers
+          ^^^^^^^
+Location:
+12_numbers_nonexistent (line: 2, column:8)
+exit=255

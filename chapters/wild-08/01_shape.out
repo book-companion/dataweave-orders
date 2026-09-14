@@ -1,0 +1,41 @@
+[
+  {
+    "id": "A-1001",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "category": "stationery"
+      },
+      {
+        "sku": "PAD-22",
+        "category": "paper"
+      },
+      {
+        "sku": "CLP-08",
+        "category": "stationery"
+      }
+    ]
+  },
+  {
+    "id": "A-1002",
+    "lines": [
+      {
+        "sku": "PAD-22",
+        "category": "paper"
+      }
+    ]
+  },
+  {
+    "id": "A-1003",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "category": "stationery"
+      },
+      {
+        "sku": "CLP-08",
+        "category": "stationery"
+      }
+    ]
+  }
+]exit=0

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Date (|2026-06-16|) to DateTime
+
+4| { bad: |2026-06-16| as DateTime }
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 32_date_to_datetime_fails::main (line: 4, column: 8) at:
+
+4| { bad: |2026-06-16| as DateTime }
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

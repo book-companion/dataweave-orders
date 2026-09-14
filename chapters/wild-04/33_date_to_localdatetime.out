@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Date (|2026-06-16|) to LocalDateTime
+
+4| { viaLocal: |2026-06-16| as LocalDateTime }
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 33_date_to_localdatetime::main (line: 4, column: 13) at:
+
+4| { viaLocal: |2026-06-16| as LocalDateTime }
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

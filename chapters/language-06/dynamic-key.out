@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/dynamic-key.dwl
+{
+  "grandTotal": 43.5,
+  "total_PEN-01": 10,
+  "4": "a number as a key"
+}
+exit=0

@@ -1,0 +1,20 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/spread.dwl
+{
+  "withFlag": {
+    "orderId": "A-1001",
+    "sku": "PEN-01",
+    "name": "Gel Pen",
+    "category": "writing",
+    "price": 2.5,
+    "qty": 4,
+    "flagged": true
+  },
+  "bySku": {
+    "PEN-01": 4,
+    "PAD-22": 2,
+    "CLP-08": 10,
+    "PEN-01": 1,
+    "INK-03": 3
+  }
+}
+exit=0

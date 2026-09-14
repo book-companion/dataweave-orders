@@ -1,0 +1,36 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid field name identifier. Reason: The name `type` is a reserved word. List of reserved words: 
+ - if
+ - else
+ - unless
+ - using
+ - ---
+ - as
+ - is
+ - null
+ - true
+ - false
+ - default
+ - case
+ - fun
+ - input
+ - output
+ - ns
+ - type
+ - import
+ - var
+ - and
+ - or
+ - throw
+ - do
+ - for
+ - yield
+ - enum
+ - private
+ - async. Possible solution wrap `type` into quotes e.g payload.'type'
+
+4| { type: typeOf(|2026-06-16|) as String }
+     ^^^^
+Location:
+29_reserved_word_key (line: 4, column:3)
+exit=255

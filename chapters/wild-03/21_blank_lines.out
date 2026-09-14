@@ -1,0 +1,36 @@
+{
+  "defaultRead": [
+    {
+      "sku": "PEN-01",
+      "name": "Ballpoint pen",
+      "qty": "4",
+      "price": "2.50"
+    },
+    {
+      "sku": "PAD-22",
+      "name": "Notepad",
+      "qty": "2",
+      "price": "6.00"
+    }
+  ],
+  "keepEmpty": [
+    {
+      "sku": "PEN-01",
+      "name": "Ballpoint pen",
+      "qty": "4",
+      "price": "2.50"
+    },
+    {
+      "sku": ""
+    },
+    {
+      "sku": "PAD-22",
+      "name": "Notepad",
+      "qty": "2",
+      "price": "6.00"
+    },
+    {
+      "sku": ""
+    }
+  ]
+}exit=0

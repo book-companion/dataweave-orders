@@ -1,0 +1,22 @@
+[
+  {
+    "sku": "PEN-01",
+    "name": "Gel pen",
+    "qty": 4
+  },
+  {
+    "sku": "PAD-22",
+    "name": "(not in catalog)",
+    "qty": 2
+  },
+  {
+    "sku": "CLP-08",
+    "name": "(not in catalog)",
+    "qty": 10
+  },
+  {
+    "sku": "STP-03",
+    "name": "Stapler",
+    "qty": 0
+  }
+]exit=0

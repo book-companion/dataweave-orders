@@ -1,0 +1,14 @@
+01_seven_types                       exit=0
+06_mm_trap_parse                     exit=255
+08_hh_trap                           exit=0
+10_coercions                         exit=0
+24_dates_module                      exit=255
+26_exercise_mixed_feed               exit=0
+27_exercise_local_day                exit=0
+29_reserved_word_key                 exit=255
+30_mm_trap_parse_conflict            exit=255
+31_hh_no_marker_fails                exit=255
+32_date_to_datetime_fails            exit=255
+33_date_to_localdatetime             exit=255
+34_lenient_day_overflow              exit=255
+35_between_order                     exit=0

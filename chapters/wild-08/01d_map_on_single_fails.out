@@ -1,0 +1,18 @@
+[ERROR] Error while executing the script:
+[ERROR] You called the function 'map' with these arguments: 
+  1: Object (do {ns ord http://shipping.acme.com/orders---{ord#sku: "PEN-01",ord#category:...)
+  2: Function ((line:Any, $$:Any) -> ???)
+
+But it expects arguments of these types:
+  1: Array
+  2: Function
+
+
+7|   lines: order.ord#line map (line) -> line.ord#sku
+                           ^^^
+Trace:
+  at 01d_map_on_single_fails::main (line: 7, column: 25) at:
+
+7|   lines: order.ord#line map (line) -> line.ord#sku
+                           ^^^
+exit=255

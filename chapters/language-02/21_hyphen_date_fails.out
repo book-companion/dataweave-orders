@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `date`.
+
+4| { "ship-date": "2026-09-13" }.ship-date
+                                      ^^^^
+Location:
+21_hyphen_date_fails (line: 4, column:36)
+exit=255

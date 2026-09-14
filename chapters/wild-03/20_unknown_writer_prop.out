@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `bogus` is not valid. Valid options are: `separator`, `encoding`, `quote`, `escape`, `lineSeparator`, `bufferSize`, `bodyStartLineNumber`, `ignoreEmptyLine`, `header`, `quoteHeader`, `headerLineNumber`, `quoteValues`, `deferred`
+
+2| output application/csv bogus=true
+                          ^^^^^^^^^^
+Trace:
+  at 20_unknown_writer_prop::main (line: 2, column: 24) at:
+
+2| output application/csv bogus=true
+                          ^^^^^^^^^^
+exit=255

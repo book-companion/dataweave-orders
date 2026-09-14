@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/pluck-summary.dwl
+[
+  {
+    "category": "writing",
+    "lineCount": 3
+  },
+  {
+    "category": "paper",
+    "lineCount": 1
+  },
+  {
+    "category": "desk",
+    "lineCount": 1
+  }
+]
+exit=0

@@ -1,0 +1,11 @@
+{
+  "parsed": {
+    "order": {
+      "customer": "Dana"
+    }
+  },
+  "asJson": "{\"order\": {\"customer\": \"Dana\"}}",
+  "asXml": "<order><id>A-1001</id></order>",
+  "asCsv": "sku,price,qty,note\nPEN-01,2.5,4,\nPAD-22,6,2\nCLP-08,1,10\n",
+  "typeOfWrite": "String"
+}exit=0

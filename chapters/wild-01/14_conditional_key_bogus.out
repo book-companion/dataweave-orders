@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input '?', expected `}` or ',' for the object expression. (line 6, column 16):
+
+
+6|   ($.qty >= 10)? bulk: true
+                  ^
+Location:
+14_conditional_key_bogus (line: 6, column:16)
+exit=255

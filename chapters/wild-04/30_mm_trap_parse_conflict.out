@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (2026-06-16) to Date, caused by: Text '2026-06-16' could not be parsed: Unable to convert `2026-06-16` to Date.
+
+4| { wrong: "2026-06-16" as Date {format: "yyyy-mm-dd"} }
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 30_mm_trap_parse_conflict::main (line: 4, column: 10) at:
+
+4| { wrong: "2026-06-16" as Date {format: "yyyy-mm-dd"} }
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

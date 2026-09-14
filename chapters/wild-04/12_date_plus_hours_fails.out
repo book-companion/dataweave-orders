@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid temporal addition. Reason: Unsupported unit: Seconds
+
+4| { bad: |2026-06-16| + |PT6H| }
+          ^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 12_date_plus_hours_fails::main (line: 4, column: 8) at:
+
+4| { bad: |2026-06-16| + |PT6H| }
+          ^^^^^^^^^^^^^^^^^^^^^
+exit=255

@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/filter-non-boolean.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Number (4) to Boolean at:
+112
+
+exit=255

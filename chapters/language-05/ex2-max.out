@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/ex2-max.dwl
+{
+  "sku": "PAD-22",
+  "price": 6,
+  "qty": 2
+}
+exit=0

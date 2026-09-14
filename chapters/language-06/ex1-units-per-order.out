@@ -1,0 +1,21 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/ex1-units-per-order.dwl
+[
+  {
+    "orderId": "A-1001",
+    "units": 16,
+    "skus": [
+      "PEN-01",
+      "PAD-22",
+      "CLP-08"
+    ]
+  },
+  {
+    "orderId": "A-1002",
+    "units": 4,
+    "skus": [
+      "PEN-01",
+      "INK-03"
+    ]
+  }
+]
+exit=0

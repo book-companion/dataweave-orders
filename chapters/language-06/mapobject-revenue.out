@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/mapobject-revenue.dwl
+{
+  "writing": 21.5,
+  "paper": 12,
+  "desk": 10
+}
+exit=0

@@ -1,0 +1,22 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to call: `-` with arguments: (`Null`, (from: Number, to: Number) -> Range).
+ Reasons:
+	- Expecting Type: `Array<T>`, but got: `Null`.
+		|-- From: `Array<T>`	
+		|- From: -<T>(lhs: Array<T>, rhs: Any) -> Array<T>		
+			4| { "ship-to": "Lisbon" }.ship-to
+			   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	- Expecting Type: `Number`, but got: `Null`.
+		|-- From: `Number`
+	- Expecting Type: `Number`, but got: (from: Number, to: Number) -> Range.
+		|-- From: `Number`	
+		|- From: -(lhs: Number, rhs: Number) -> Number		
+			4| { "ship-to": "Lisbon" }.ship-to
+			   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	- 17 more options ...
+
+4| { "ship-to": "Lisbon" }.ship-to
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Location:
+03_hyphen_dot_fails (line: 4, column:1)
+exit=255

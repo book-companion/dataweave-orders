@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/import-alias.dwl
+{
+  "one": "orders",
+  "many": "box"
+}
+exit=0

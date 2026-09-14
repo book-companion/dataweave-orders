@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `$`.
+
+5| map(payload.items, lineTotal($))
+                                ^
+Location:
+48_check_prefix_with_dollar (line: 5, column:30)
+exit=255

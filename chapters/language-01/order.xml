@@ -1,0 +1,9 @@
+<order>
+  <orderId>A-1001</orderId>
+  <customer>Dana</customer>
+  <items>
+    <item><sku>PEN-01</sku><price>2.5</price><qty>4</qty></item>
+    <item><sku>PAD-22</sku><price>6.0</price><qty>2</qty></item>
+    <item><sku>CLP-08</sku><price>1.0</price><qty>10</qty></item>
+  </items>
+</order>

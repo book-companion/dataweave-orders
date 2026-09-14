@@ -1,0 +1,19 @@
+[ERROR] Error while executing the script:
+[ERROR] You called the function 'mapObject' with these arguments: 
+  1: String ("gold")
+  2: Function ((orders:Any, tier:Any, $$$:Any) -> ???)
+
+But it expects arguments of these types:
+  1: Object
+  2: Function
+
+
+8|   mapObject (orders, tier) -> {
+     ^^^^^^^^^
+Trace:
+  at 05_exercise_precedence_fails::groupBy (line: 8, column: 3)
+  at 05_exercise_precedence_fails::main (line: 7, column: 35) at:
+
+8|   mapObject (orders, tier) -> {
+     ^^^^^^^^^
+exit=255

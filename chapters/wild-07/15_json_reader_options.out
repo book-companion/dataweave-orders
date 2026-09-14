@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `bogus` is not valid. Valid options are: `streaming`
+
+2| input payload application/json bogus=true
+                                  ^^^^^^^^^^
+Trace:
+  at 15_json_reader_options::main (line: 2, column: 32) at:
+
+2| input payload application/json bogus=true
+                                  ^^^^^^^^^^
+exit=255

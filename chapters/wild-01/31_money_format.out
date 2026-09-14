@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "PEN-01",
+    "price": 2.5,
+    "priceText": "2.50",
+    "lineTotal": "10.00"
+  },
+  {
+    "sku": "PAD-22",
+    "price": 6,
+    "priceText": "6.00",
+    "lineTotal": "12.00"
+  },
+  {
+    "sku": "CLP-08",
+    "price": 1,
+    "priceText": "1.00",
+    "lineTotal": "10.00"
+  }
+]exit=0

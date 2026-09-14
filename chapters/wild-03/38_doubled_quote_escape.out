@@ -1,0 +1,12 @@
+{
+  "defaultEscape": [
+    "Ballpoint pen, blue",
+    "Notepad ",
+    "Binder clip"
+  ],
+  "rfc4180": [
+    "Ballpoint pen, blue",
+    "Notepad \"A5\"",
+    "Binder clip"
+  ]
+}exit=0

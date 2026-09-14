@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/ex3-lookup.dwl
+{
+  "PEN-01": "Gel Pen",
+  "PAD-22": "Notepad A5",
+  "CLP-08": "Binder Clips",
+  "INK-03": "Ink Refill"
+}
+exit=0

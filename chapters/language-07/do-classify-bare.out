@@ -1,0 +1,13 @@
+$ dw run -i payload=chapters/language-07/orders.json -f chapters/language-07/do-classify-bare.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Function to String
+
+3| fun classify(order) = { orderId: order.orderId, lines: sizeOf(order.items default []) }
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at do-classify-bare::main (line: 3, column: 23) at:
+
+3| fun classify(order) = { orderId: order.orderId, lines: sizeOf(order.items default []) }
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+exit=255

@@ -1,0 +1,9 @@
+$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/unless-expression.dwl
+[
+  "PEN-01",
+  "PAD-22 (single)",
+  "CLP-08",
+  "PEN-01 (single)",
+  "INK-03"
+]
+exit=0

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (1,234.50) to Number
+
+4| { n: "1,234.50" as Number }
+        ^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 06_as_fails_thousands::main (line: 4, column: 6) at:
+
+4| { n: "1,234.50" as Number }
+        ^^^^^^^^^^^^^^^^^^^^
+exit=255

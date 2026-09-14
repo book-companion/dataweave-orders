@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] There is no key named 'email'
+
+6|   email: payload.customer.email!
+            ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 18_exercise_assert_no_email::main (line: 6, column: 10) at:
+
+6|   email: payload.customer.email!
+            ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Array to String
+
+4| payload.order.*item
+   ^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 21_array_root_output::main (line: 4, column: 1) at:
+
+4| payload.order.*item
+   ^^^^^^^^^^^^^^^^^^^
+exit=255

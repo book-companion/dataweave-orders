@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `capitalize`.
+
+4| { title: capitalize("premium gift wrap") }
+            ^^^^^^^^^^
+Location:
+04_no_import_fails (line: 4, column:10)
+exit=255

@@ -1,0 +1,1 @@
+for p in 13_mixed_content.dwl 16_cdata_write.dwl 18_encoding.dwl 33_cdata_lowercase_fails.dwl 34_two_roots_model.dwl 35_descend.dwl 36_many_on_none.dwl 37_sizeof_null_fails.dwl 38_null_value_on.dwl 39_inline_close.dwl 40_xsi_nil_read.dwl; do ./run.sh $p; done

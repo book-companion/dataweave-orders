@@ -1,0 +1,6 @@
+Exception in thread "main" java.lang.OutOfMemoryError: Garbage-collected heap size exceeded. Consider increasing the maximum Java heap size, for example with '-Xmx'.
+limit=512m xmx=64m exit=1
+elapsed_s=0.9
+peak_bytes=164417536
+out_bytes=0
+out_head=

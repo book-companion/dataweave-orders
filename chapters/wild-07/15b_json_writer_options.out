@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Option `bogus` is not valid. Valid options are: `writeAttributes`, `indent`, `encoding`, `bufferSize`, `skipNullOn`, `deferred`, `duplicateKeyAsArray`
+
+2| output application/json bogus=true
+                           ^^^^^^^^^^
+Trace:
+  at 15b_json_writer_options::main (line: 2, column: 25) at:
+
+2| output application/json bogus=true
+                           ^^^^^^^^^^
+exit=255

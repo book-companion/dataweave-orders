@@ -1,0 +1,9 @@
+$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/reduce-to-object-unseeded.dwl
+{
+  "sku": "PEN-01",
+  "price": 2.5,
+  "qty": 4,
+  "PAD-22": 2,
+  "CLP-08": 10
+}
+exit=0

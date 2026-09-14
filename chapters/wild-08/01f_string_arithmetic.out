@@ -1,0 +1,17 @@
+[
+  {
+    "id": "A-1001",
+    "glued": "2.504",
+    "multiplied": 10
+  },
+  {
+    "id": "A-1002",
+    "glued": "6.001",
+    "multiplied": 6
+  },
+  {
+    "id": "A-1003",
+    "glued": "2.5012",
+    "multiplied": 30
+  }
+]exit=0

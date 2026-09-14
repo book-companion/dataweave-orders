@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `$`.
+
+4| map(payload.items, $.price * $.qty)
+                      ^
+Location:
+41_dollar_in_prefix_call (line: 4, column:20)
+Unable to resolve reference of: `$`.
+
+4| map(payload.items, $.price * $.qty)
+                                ^
+Location:
+41_dollar_in_prefix_call (line: 4, column:30)
+exit=255
