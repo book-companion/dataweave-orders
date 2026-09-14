@@ -1,9 +1,9 @@
 Compiling `08b_validate_unresolved`...
-1 errors found
 [ERROR] Unable to resolve reference of: `sumBy`.
 
 4| { id: payload.orderId, total: payload.items sumBy (i) -> i.price * i.qty }
                                                ^^^^^
 Location:
 08b_validate_unresolved (line: 4, column:45)
+1 errors found
 exit=255

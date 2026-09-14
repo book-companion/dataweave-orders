@@ -1,5 +1,4 @@
 Compiling `08_validate_bad`...
-1 errors found
 [ERROR] Invalid input '\n', expected `}` or ',' for the object expression. (line 4, column 73):
 
 
@@ -7,4 +6,5 @@ Compiling `08_validate_bad`...
                                                                            ^
 Location:
 08_validate_bad (line: 4, column:73)
+1 errors found
 exit=255
