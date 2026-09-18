@@ -13,7 +13,15 @@
 # of this one container. The guard that matters is unchanged: the engine is
 # still given `--untrusted`, so a script reads the inputs bound to it and
 # nothing else. And the repository is still mounted read-only.
-FROM --platform=linux/amd64 node:22-bookworm-slim
+
+# Node comes from the base image — that is the whole of it, there is nothing to
+# download. The version is pinned rather than floating on `node:22`, so a rebuild
+# gets the same runtime: this book pins what it runs on, and the server that
+# serves the Runner should not be the one exception. It does not touch a result
+# — DataWeave output comes from the engine below — but `start.mjs` chooses its
+# flags from the running version, and that choice should not move on its own.
+ARG NODE_VERSION=22.23.2
+FROM --platform=linux/amd64 node:${NODE_VERSION}-bookworm-slim
 
 ARG DW_VERSION=2.12.0
 
