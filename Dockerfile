@@ -3,7 +3,19 @@
 # (linux/amd64) on every host. Build once:
 #   docker build --platform linux/amd64 -t dw-cli:2.12.0 .
 # Then ./dw.sh <args> runs the CLI with this directory mounted at /lab.
-FROM --platform=linux/amd64 debian:bookworm-slim
+
+# The base is pinned to a dated Debian snapshot rather than floating on
+# `bookworm-slim`, which moves every few weeks. Today they are the same image;
+# the point is that they stay the same later, so a reader building this months
+# from now gets the layer the book's outputs were produced on. Dated tags are
+# immutable — Debian publishes a new one instead of re-pushing this one.
+#
+# It does not make the build byte-identical. The `apt-get` line below resolves
+# against the live bookworm archive, and the engine comes from a GitHub release.
+# What is pinned is what decides behaviour: the engine version, and the libc and
+# system libraries it runs against.
+ARG DEBIAN_VERSION=bookworm-20260824-slim
+FROM --platform=linux/amd64 debian:${DEBIAN_VERSION}
 ARG DW_VERSION=2.12.0
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl unzip \
  && rm -rf /var/lib/apt/lists/*
