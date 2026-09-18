@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DataWeave Runner</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="rail">
+  <div class="identity">
+    <span class="sep code" aria-hidden="true">---</span>
+    <h1>DataWeave Runner</h1>
+    <p class="companion">Companion to <cite>DataWeave in Depth</cite></p>
+  </div>
+
+  <div class="controls">
+    <label class="field">
+      <span>Example</span>
+      <select id="example">
+        <option value="">Start from scratch</option>
+      </select>
+    </label>
+    <label class="switch" title="Off, the script runs with no privileges: it can read the inputs you bind and nothing else.">
+      <input type="checkbox" id="privileges" />
+      <span>Allow file and URL reads</span>
+    </label>
+    <button id="run" class="run" type="button">
+      Run
+      <kbd>&#8984;&#9166;</kbd>
+    </button>
+  </div>
+</header>
+
+<main class="bench">
+  <section class="stage stage-input" aria-labelledby="h-input">
+    <div class="stage-head">
+      <h2 id="h-input">Input</h2>
+      <span id="input-summary" class="reading"></span>
+      <button id="add-input" class="quiet" type="button">Add input</button>
+    </div>
+    <div id="input-list" class="stage-body"></div>
+    <label class="params">
+      <span>Parameters</span>
+      <input type="text" id="params" placeholder="env=prod  taxRate=0.2" spellcheck="false" autocomplete="off" />
+    </label>
+  </section>
+
+  <section class="stage stage-script" aria-labelledby="h-script">
+    <div class="stage-head">
+      <h2 id="h-script">Script</h2>
+      <span id="script-path" class="reading"></span>
+      <label class="switch modules" id="modules-label" hidden>
+        <input type="checkbox" id="modules" checked />
+        <span id="modules-text">Resolve modules</span>
+      </label>
+    </div>
+    <textarea id="script" class="code" spellcheck="false" autocomplete="off" aria-label="DataWeave script"></textarea>
+  </section>
+
+  <section class="stage stage-result" aria-labelledby="h-result">
+    <div class="stage-head">
+      <h2 id="h-result">Result</h2>
+      <span id="status" class="reading"></span>
+    </div>
+    <pre id="output" class="code out" tabindex="0" aria-live="polite"><span class="empty">Nothing has run yet. Press Run, or &#8984;&#9166;.</span></pre>
+    <section id="compare" class="compare" hidden aria-labelledby="h-compare">
+      <div class="compare-head">
+        <h3 id="h-compare">Against the book</h3>
+        <span id="compare-verdict" class="verdict"></span>
+      </div>
+      <pre id="compare-body" class="code out compare-out"></pre>
+    </section>
+  </section>
+</main>
+
+<footer class="foot">
+  <span id="engine">Checking the engine</span>
+  <span id="privacy">Runs on your machine, offline. Nothing is uploaded.</span>
+</footer>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>

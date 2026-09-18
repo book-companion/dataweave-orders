@@ -1,0 +1,13 @@
+{
+  "name": "dataweave-playground",
+  "private": true,
+  "type": "module",
+  "description": "A local DataWeave playground backed by the book's pinned CLI image.",
+  "scripts": {
+    "start": "node start.mjs",
+    "build": "esbuild src/client/app.ts --bundle --format=esm --target=es2022 --outfile=public/app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

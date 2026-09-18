@@ -11,6 +11,20 @@ make verify   # two golden checks: the opening order summary and the final XML-t
 
 `make verify` compares parsed JSON with the saved results and fails on a changed value or an unexpected process failure. It is a small smoke suite, not a re-run of every chapter. The image pins the CLI release; its Debian base is not guaranteed to rebuild byte for byte over time.
 
+## DataWeave Runner, in your browser
+
+```bash
+make playground   # http://127.0.0.1:4444
+```
+
+Three panes — input, script, result — running on the same pinned CLI, offline.
+Bind a file from this repository and read its contents beside your script, or
+type an input inline. Open any example from the book and the Runner will tell
+you whether your result matches the one the book printed. See
+[`playground/README.md`](playground/README.md).
+
+## Run one script from the shell
+
 To run one script, pass its input and module path through `dw.sh`. The capstone, for example:
 
 ```bash
