@@ -41,12 +41,15 @@ var readFixture = (p) => api(`/api/file?path=${encodeURIComponent(p)}`);
 function collectInputs() {
   return [...els.inputList.querySelectorAll(".input")].map((card) => {
     const name = card.querySelector(".input-name").value.trim();
-    if (card.dataset.mode === "file") {
+    if (card.dataset.mode === "book") {
       return { name, fixture: card.querySelector(".fixture-pick").value };
     }
+    const area = card.querySelector("textarea");
+    const view = card.querySelector(".input-view");
+    const content = area ? area.value : view && !view.classList.contains("loading") ? view.textContent ?? "" : "";
     return {
       name,
-      content: card.querySelector("textarea").value,
+      content,
       format: card.querySelector(".format-pick").value
     };
   });
@@ -74,6 +77,19 @@ function guessFormat(fixture) {
   const found = FORMATS.find(([mime]) => mime.endsWith(`/${ext}`) || ext === "yml" && mime.endsWith("/yaml"));
   return found?.[0] ?? (ext === "txt" ? "text/plain" : "application/json");
 }
+function formatPick(format) {
+  const pick = document.createElement("select");
+  pick.className = "format-pick";
+  pick.setAttribute("aria-label", "How to read this input");
+  for (const [value, label] of FORMATS) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = label;
+    if (value === format) option.selected = true;
+    pick.append(option);
+  }
+  return pick;
+}
 function addInput(row = { name: "payload", content: "", format: "application/json" }) {
   const card = document.createElement("div");
   card.className = "input";
@@ -91,13 +107,22 @@ function addInput(row = { name: "payload", content: "", format: "application/jso
   source.className = "source";
   source.setAttribute("role", "group");
   source.setAttribute("aria-label", "Where this input comes from");
-  const fileBtn = document.createElement("button");
-  fileBtn.type = "button";
-  fileBtn.textContent = "File";
-  const inlineBtn = document.createElement("button");
-  inlineBtn.type = "button";
-  inlineBtn.textContent = "Inline";
-  source.append(fileBtn, inlineBtn);
+  const sourceBtn = (label, title) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = label;
+    button.title = title;
+    return button;
+  };
+  const bookBtn = sourceBtn("Book", "A file that comes with this book");
+  const fileBtn = sourceBtn("File", "A file from your own machine");
+  const inlineBtn = sourceBtn("Inline", "Text you type here");
+  source.append(bookBtn, fileBtn, inlineBtn);
+  const press = (active) => {
+    for (const button of [bookBtn, fileBtn, inlineBtn]) {
+      button.setAttribute("aria-pressed", String(button === active));
+    }
+  };
   const drop = document.createElement("button");
   drop.type = "button";
   drop.className = "drop";
@@ -111,16 +136,15 @@ function addInput(row = { name: "payload", content: "", format: "application/jso
   head.append(name, source, drop);
   const body = document.createElement("div");
   card.append(head, body);
-  const showFile = async (fixture) => {
-    card.dataset.mode = "file";
-    fileBtn.setAttribute("aria-pressed", "true");
-    inlineBtn.setAttribute("aria-pressed", "false");
+  const showBook = async (fixture) => {
+    card.dataset.mode = "book";
+    press(bookBtn);
     body.replaceChildren();
     const chooser = document.createElement("div");
     chooser.className = "input-file";
     const pick = document.createElement("select");
     pick.className = "fixture-pick";
-    pick.setAttribute("aria-label", "Which file to bind");
+    pick.setAttribute("aria-label", "Which of the book\u2019s files to bind");
     for (const path of allFixtures) {
       const option = document.createElement("option");
       option.value = path;
@@ -149,33 +173,33 @@ function addInput(row = { name: "payload", content: "", format: "application/jso
     await load();
     summariseInputs();
   };
-  const showInline = (content, format) => {
-    card.dataset.mode = "inline";
-    fileBtn.setAttribute("aria-pressed", "false");
-    inlineBtn.setAttribute("aria-pressed", "true");
+  const showFile = (content, format, filename = "") => {
+    card.dataset.mode = "file";
+    press(fileBtn);
     body.replaceChildren();
     const chooser = document.createElement("div");
     chooser.className = "input-file";
-    const pick = document.createElement("select");
-    pick.className = "format-pick";
-    pick.setAttribute("aria-label", "How to read this input");
-    for (const [value, label] of FORMATS) {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = label;
-      if (value === format) option.selected = true;
-      pick.append(option);
-    }
-    chooser.append(pick);
     const open = document.createElement("button");
     open.type = "button";
     open.className = "quiet open-file";
-    open.textContent = "Open a file\u2026";
     const chosen = document.createElement("span");
     chosen.className = "chosen";
+    const pick = formatPick(format);
     const picker = document.createElement("input");
     picker.type = "file";
     picker.hidden = true;
+    const view = document.createElement("pre");
+    view.className = "code input-view";
+    const empty = () => {
+      view.className = "code input-view loading";
+      view.textContent = "No file chosen yet. Pick one and its contents appear here.";
+      open.textContent = "Choose a file\u2026";
+    };
+    if (content) {
+      view.textContent = content;
+      open.textContent = "Choose another\u2026";
+      chosen.textContent = filename;
+    } else empty();
     picker.onchange = async () => {
       const file = picker.files?.[0];
       if (!file) return;
@@ -183,14 +207,26 @@ function addInput(row = { name: "payload", content: "", format: "application/jso
         chosen.textContent = `${file.name} is too large to open here`;
         return;
       }
-      area.value = await file.text();
+      view.className = "code input-view";
+      view.textContent = await file.text();
       const guess = guessFormat(file.name);
       if ([...pick.options].some((o) => o.value === guess)) pick.value = guess;
       chosen.textContent = file.name;
+      open.textContent = "Choose another\u2026";
       summariseInputs();
     };
     open.onclick = () => picker.click();
-    chooser.append(open, chosen, picker);
+    chooser.append(open, chosen, pick, picker);
+    body.append(chooser, view);
+    summariseInputs();
+  };
+  const showInline = (content, format) => {
+    card.dataset.mode = "inline";
+    press(inlineBtn);
+    body.replaceChildren();
+    const chooser = document.createElement("div");
+    chooser.className = "input-file";
+    chooser.append(formatPick(format));
     const area = document.createElement("textarea");
     area.className = "code";
     area.spellcheck = false;
@@ -199,18 +235,24 @@ function addInput(row = { name: "payload", content: "", format: "application/jso
     body.append(chooser, area);
     summariseInputs();
   };
+  const shown = () => {
+    const area = body.querySelector("textarea");
+    if (area) return area.value;
+    const view = body.querySelector(".input-view");
+    return view && !view.classList.contains("loading") ? view.textContent ?? "" : "";
+  };
+  const shownFormat = () => body.querySelector(".format-pick")?.value ?? guessFormat(body.querySelector(".fixture-pick")?.value ?? "");
+  bookBtn.onclick = () => {
+    if (card.dataset.mode !== "book") void showBook(allFixtures[0] ?? "");
+  };
   fileBtn.onclick = () => {
-    if (card.dataset.mode !== "file") void showFile(allFixtures[0] ?? "");
+    if (card.dataset.mode !== "file") showFile("", shownFormat());
   };
   inlineBtn.onclick = () => {
-    if (card.dataset.mode === "inline") return;
-    const shown = body.querySelector(".input-view");
-    const fixture = body.querySelector(".fixture-pick")?.value ?? "";
-    const loaded = shown && !shown.classList.contains("loading") ? shown.textContent ?? "" : "";
-    showInline(loaded, guessFormat(fixture));
+    if (card.dataset.mode !== "inline") showInline(shown(), shownFormat());
   };
   els.inputList.append(card);
-  if (row.fixture) void showFile(row.fixture);
+  if (row.fixture) void showBook(row.fixture);
   else showInline(row.content ?? "", row.format ?? "application/json");
 }
 async function loadExamples() {

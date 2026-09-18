@@ -66,21 +66,30 @@ async function api<T>(path: string, init?: RequestInit): Promise<T> {
 const readFixture = (p: string) => api<{ content: string }>(`/api/file?path=${encodeURIComponent(p)}`);
 
 /* ── inputs ──────────────────────────────────────────────────────────────
-   An input is one binding with two possible sources. In file mode it shows the
-   fixture's contents, not just its name — a reader is comparing an expression
-   against its input, and should not have to leave the page to see what the
-   input says. Switching to inline carries those contents across, so changing
-   the book's fixture is one click and an edit. */
+   An input is one binding, and it can come from three places: a file that
+   ships with the book, a file on the reader's own machine, or text typed here.
+   The first two show their contents rather than merely naming them — a reader
+   is comparing an expression against its input, and should not have to leave
+   the page to see what the input says.
+
+   Only the first is read by the server. A file from the reader's machine is
+   opened by the browser and arrives here as text, so the server's reach stays
+   exactly what it was: this repository, read-only, with nothing new mounted
+   into the container. */
 
 function collectInputs(): InputRow[] {
 	return [...els.inputList.querySelectorAll<HTMLDivElement>('.input')].map((card) => {
 		const name = card.querySelector<HTMLInputElement>('.input-name')!.value.trim();
-		if (card.dataset.mode === 'file') {
+		if (card.dataset.mode === 'book') {
 			return { name, fixture: card.querySelector<HTMLSelectElement>('.fixture-pick')!.value };
 		}
+		// The other two sources are both just text by the time they reach here.
+		const area = card.querySelector<HTMLTextAreaElement>('textarea');
+		const view = card.querySelector<HTMLElement>('.input-view');
+		const content = area ? area.value : view && !view.classList.contains('loading') ? view.textContent ?? '' : '';
 		return {
 			name,
-			content: card.querySelector<HTMLTextAreaElement>('textarea')!.value,
+			content,
 			format: card.querySelector<HTMLSelectElement>('.format-pick')!.value,
 		};
 	});
@@ -115,6 +124,21 @@ function guessFormat(fixture: string): string {
 	return found?.[0] ?? (ext === 'txt' ? 'text/plain' : 'application/json');
 }
 
+/** The format dropdown, shared by the two sources that carry their own text. */
+function formatPick(format: string): HTMLSelectElement {
+	const pick = document.createElement('select');
+	pick.className = 'format-pick';
+	pick.setAttribute('aria-label', 'How to read this input');
+	for (const [value, label] of FORMATS) {
+		const option = document.createElement('option');
+		option.value = value;
+		option.textContent = label;
+		if (value === format) option.selected = true;
+		pick.append(option);
+	}
+	return pick;
+}
+
 function addInput(row: InputRow = { name: 'payload', content: '', format: 'application/json' }): void {
 	const card = document.createElement('div');
 	card.className = 'input';
@@ -135,13 +159,22 @@ function addInput(row: InputRow = { name: 'payload', content: '', format: 'appli
 	source.className = 'source';
 	source.setAttribute('role', 'group');
 	source.setAttribute('aria-label', 'Where this input comes from');
-	const fileBtn = document.createElement('button');
-	fileBtn.type = 'button';
-	fileBtn.textContent = 'File';
-	const inlineBtn = document.createElement('button');
-	inlineBtn.type = 'button';
-	inlineBtn.textContent = 'Inline';
-	source.append(fileBtn, inlineBtn);
+	const sourceBtn = (label: string, title: string): HTMLButtonElement => {
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.textContent = label;
+		button.title = title;
+		return button;
+	};
+	const bookBtn = sourceBtn('Book', 'A file that comes with this book');
+	const fileBtn = sourceBtn('File', 'A file from your own machine');
+	const inlineBtn = sourceBtn('Inline', 'Text you type here');
+	source.append(bookBtn, fileBtn, inlineBtn);
+	const press = (active: HTMLButtonElement): void => {
+		for (const button of [bookBtn, fileBtn, inlineBtn]) {
+			button.setAttribute('aria-pressed', String(button === active));
+		}
+	};
 
 	const drop = document.createElement('button');
 	drop.type = 'button';
@@ -155,17 +188,17 @@ function addInput(row: InputRow = { name: 'payload', content: '', format: 'appli
 	const body = document.createElement('div');
 	card.append(head, body);
 
-	const showFile = async (fixture: string): Promise<void> => {
-		card.dataset.mode = 'file';
-		fileBtn.setAttribute('aria-pressed', 'true');
-		inlineBtn.setAttribute('aria-pressed', 'false');
+	/** Book: one of the fixtures in this repository, read by the server. */
+	const showBook = async (fixture: string): Promise<void> => {
+		card.dataset.mode = 'book';
+		press(bookBtn);
 		body.replaceChildren();
 
 		const chooser = document.createElement('div');
 		chooser.className = 'input-file';
 		const pick = document.createElement('select');
 		pick.className = 'fixture-pick';
-		pick.setAttribute('aria-label', 'Which file to bind');
+		pick.setAttribute('aria-label', 'Which of the book’s files to bind');
 		for (const path of allFixtures) {
 			const option = document.createElement('option');
 			option.value = path;
@@ -197,55 +230,66 @@ function addInput(row: InputRow = { name: 'payload', content: '', format: 'appli
 		summariseInputs();
 	};
 
-	const showInline = (content: string, format: string): void => {
-		card.dataset.mode = 'inline';
-		fileBtn.setAttribute('aria-pressed', 'false');
-		inlineBtn.setAttribute('aria-pressed', 'true');
+	/** File: anything on the reader's machine, opened by the browser. */
+	const showFile = (content: string, format: string, filename = ''): void => {
+		card.dataset.mode = 'file';
+		press(fileBtn);
 		body.replaceChildren();
 
 		const chooser = document.createElement('div');
 		chooser.className = 'input-file';
-		const pick = document.createElement('select');
-		pick.className = 'format-pick';
-		pick.setAttribute('aria-label', 'How to read this input');
-		for (const [value, label] of FORMATS) {
-			const option = document.createElement('option');
-			option.value = value;
-			option.textContent = label;
-			if (value === format) option.selected = true;
-			pick.append(option);
-		}
-		chooser.append(pick);
-
-		// Any file on the machine, opened by the browser rather than by the
-		// server. The reader picks it, the browser reads it, and it arrives here
-		// as text — so the server's reach stays exactly what it was: this
-		// repository, read-only. Nothing new is mounted into the container.
 		const open = document.createElement('button');
 		open.type = 'button';
 		open.className = 'quiet open-file';
-		open.textContent = 'Open a file\u2026';
 		const chosen = document.createElement('span');
 		chosen.className = 'chosen';
-
+		const pick = formatPick(format);
 		const picker = document.createElement('input');
 		picker.type = 'file';
 		picker.hidden = true;
+
+		const view = document.createElement('pre');
+		view.className = 'code input-view';
+		const empty = (): void => {
+			view.className = 'code input-view loading';
+			view.textContent = 'No file chosen yet. Pick one and its contents appear here.';
+			open.textContent = 'Choose a file…';
+		};
+		if (content) { view.textContent = content; open.textContent = 'Choose another…'; chosen.textContent = filename; }
+		else empty();
+
 		picker.onchange = async () => {
 			const file = picker.files?.[0];
 			if (!file) return;
+			// The browser holds the whole file in memory and it is posted with
+			// every run, so this is a working limit rather than an engine one.
 			if (file.size > 2_000_000) {
 				chosen.textContent = `${file.name} is too large to open here`;
 				return;
 			}
-			area.value = await file.text();
+			view.className = 'code input-view';
+			view.textContent = await file.text();
 			const guess = guessFormat(file.name);
 			if ([...pick.options].some((o) => o.value === guess)) pick.value = guess;
 			chosen.textContent = file.name;
+			open.textContent = 'Choose another…';
 			summariseInputs();
 		};
 		open.onclick = () => picker.click();
-		chooser.append(open, chosen, picker);
+		chooser.append(open, chosen, pick, picker);
+		body.append(chooser, view);
+		summariseInputs();
+	};
+
+	/** Inline: typed here, and editable. */
+	const showInline = (content: string, format: string): void => {
+		card.dataset.mode = 'inline';
+		press(inlineBtn);
+		body.replaceChildren();
+
+		const chooser = document.createElement('div');
+		chooser.className = 'input-file';
+		chooser.append(formatPick(format));
 
 		const area = document.createElement('textarea');
 		area.className = 'code';
@@ -256,21 +300,33 @@ function addInput(row: InputRow = { name: 'payload', content: '', format: 'appli
 		summariseInputs();
 	};
 
-	fileBtn.onclick = () => {
-		if (card.dataset.mode !== 'file') void showFile(allFixtures[0] ?? '');
+	/** Whatever this card is showing now, so a switch can carry it across. */
+	const shown = (): string => {
+		const area = body.querySelector<HTMLTextAreaElement>('textarea');
+		if (area) return area.value;
+		const view = body.querySelector('.input-view');
+		return view && !view.classList.contains('loading') ? view.textContent ?? '' : '';
 	};
-	// Carry the file's contents across, so "what if this field were missing?" is
-	// one click and an edit rather than a copy out of another window.
+	const shownFormat = (): string =>
+		body.querySelector<HTMLSelectElement>('.format-pick')?.value ??
+		guessFormat(body.querySelector<HTMLSelectElement>('.fixture-pick')?.value ?? '');
+
+	bookBtn.onclick = () => {
+		if (card.dataset.mode !== 'book') void showBook(allFixtures[0] ?? '');
+	};
+	// File starts empty: the point of this source is to go and pick one, and
+	// carrying the book's text into it would only look like a file was open.
+	fileBtn.onclick = () => {
+		if (card.dataset.mode !== 'file') showFile('', shownFormat());
+	};
+	// Inline does carry it across, so "what if this field were missing?" is one
+	// click and an edit rather than a copy out of another window.
 	inlineBtn.onclick = () => {
-		if (card.dataset.mode === 'inline') return;
-		const shown = body.querySelector('.input-view');
-		const fixture = body.querySelector<HTMLSelectElement>('.fixture-pick')?.value ?? '';
-		const loaded = shown && !shown.classList.contains('loading') ? shown.textContent ?? '' : '';
-		showInline(loaded, guessFormat(fixture));
+		if (card.dataset.mode !== 'inline') showInline(shown(), shownFormat());
 	};
 
 	els.inputList.append(card);
-	if (row.fixture) void showFile(row.fixture);
+	if (row.fixture) void showBook(row.fixture);
 	else showInline(row.content ?? '', row.format ?? 'application/json');
 }
 

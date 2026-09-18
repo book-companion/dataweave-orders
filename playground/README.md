@@ -80,18 +80,25 @@ above the script. One example in the modules chapter omits it deliberately, to
 show what an unresolved import looks like, so supplying one always would erase
 the lesson.
 
-## Your own data
+## Where an input comes from
 
-Two ways, neither of which lets the server read your disk:
+Each input card offers three sources, and only the first is read by the server.
 
-**Open a file** from the inline input. The browser's own picker opens it, reads
-it, and drops the text into the box — so you can point at anything on your
-machine without the server gaining the ability to read anything new.
+**Book** lists every fixture in this repository — the orders, feeds and CSVs the
+chapters use — and shows the chosen file's contents underneath. Drop your own
+files in `scratch/` at the root of the repository and they appear in the same
+list. That folder is gitignored, so your own orders stay out of git, and it is
+inside the repository, which is already mounted read-only, so nothing new
+reaches the container.
 
-**Drop files in `scratch/`** at the root of this repository, and they appear in
-the file dropdown beside the book's fixtures. The folder is gitignored, so your
-own orders stay out of git. It is inside the repository, which is already
-mounted read-only, so nothing new reaches the container.
+**File** opens anything on your machine through the browser's own picker. The
+browser reads it and posts the text, so the server gains no ability to read
+anything new. Files above 2 MB are refused: the whole thing is held in memory
+and sent with every run.
+
+**Inline** is a box you type in. Switching to it from either of the others
+carries the contents across, which is how "what if this field were missing?"
+becomes one click and an edit.
 
 Paths outside the repository are refused, on purpose: this is a local HTTP
 service that runs scripts, and the less of your disk it can name, the better.
