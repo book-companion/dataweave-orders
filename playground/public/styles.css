@@ -355,6 +355,18 @@ body {
   background: #fff;
 }
 
+/* A Mule developer reaches for `vars.abc` out of habit, and there is no `vars`
+   outside a flow. Say where a bound input actually lands, next to the inputs. */
+.inputs-hint {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 calc(var(--step) * 4) calc(var(--step) * 2.5);
+  color: var(--ink-soft);
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+.inputs-hint .code { font-size: 11px; color: var(--ink); }
+
 /* Named for what the reader types in the script, not for the CLI flag behind
    it: a value here is reached as `params.env`, which is the only name that
    appears in their own code. */
@@ -415,7 +427,11 @@ body {
 #privacy { margin-left: auto; }
 
 @media (max-width: 1080px) {
-  .bench { grid-template-columns: 1fr; grid-auto-rows: minmax(240px, auto); overflow: auto; }
+  /* Stacked, a row has to be tall enough to hold an input card whole: at 240px
+     the editor was scrolled out of sight below the fold of its own pane. */
+  .bench { grid-template-columns: 1fr; grid-auto-rows: minmax(360px, auto); overflow: auto; }
+  .stage-body { overflow: visible; }
+  .input textarea, .input-view { max-height: none; }
   .controls { width: 100%; margin-left: 0; }
   #privacy { margin-left: 0; }
 }

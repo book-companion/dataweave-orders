@@ -15,6 +15,7 @@ var els = {
   addInput: $("add-input"),
   inputList: $("input-list"),
   inputSummary: $("input-summary"),
+  inputsHint: $("inputs-hint"),
   params: $("params"),
   script: $("script"),
   scriptPath: $("script-path"),
@@ -52,7 +53,21 @@ function collectInputs() {
 }
 function summariseInputs() {
   const rows = collectInputs();
-  els.inputSummary.textContent = rows.length ? rows.map((r) => r.name || "?").join(", ") : "none bound";
+  const names = rows.map((r) => r.name).filter(Boolean);
+  els.inputSummary.textContent = names.length ? names.join(", ") : "none bound";
+  els.inputsHint.replaceChildren();
+  if (!names.length) {
+    els.inputsHint.textContent = "Add an input and the script reads it by name.";
+    return;
+  }
+  els.inputsHint.append("Read in the script by name: ");
+  names.forEach((name, i) => {
+    const code = document.createElement("span");
+    code.className = "code";
+    code.textContent = name;
+    els.inputsHint.append(code, i < names.length - 1 ? ", " : ". ");
+  });
+  els.inputsHint.append("Mule's vars and attributes do not exist outside a flow.");
 }
 function guessFormat(fixture) {
   const ext = fixture.slice(fixture.lastIndexOf(".") + 1).toLowerCase();
