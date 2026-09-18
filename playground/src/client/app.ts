@@ -217,6 +217,36 @@ function addInput(row: InputRow = { name: 'payload', content: '', format: 'appli
 		}
 		chooser.append(pick);
 
+		// Any file on the machine, opened by the browser rather than by the
+		// server. The reader picks it, the browser reads it, and it arrives here
+		// as text — so the server's reach stays exactly what it was: this
+		// repository, read-only. Nothing new is mounted into the container.
+		const open = document.createElement('button');
+		open.type = 'button';
+		open.className = 'quiet open-file';
+		open.textContent = 'Open a file\u2026';
+		const chosen = document.createElement('span');
+		chosen.className = 'chosen';
+
+		const picker = document.createElement('input');
+		picker.type = 'file';
+		picker.hidden = true;
+		picker.onchange = async () => {
+			const file = picker.files?.[0];
+			if (!file) return;
+			if (file.size > 2_000_000) {
+				chosen.textContent = `${file.name} is too large to open here`;
+				return;
+			}
+			area.value = await file.text();
+			const guess = guessFormat(file.name);
+			if ([...pick.options].some((o) => o.value === guess)) pick.value = guess;
+			chosen.textContent = file.name;
+			summariseInputs();
+		};
+		open.onclick = () => picker.click();
+		chooser.append(open, chosen, picker);
+
 		const area = document.createElement('textarea');
 		area.className = 'code';
 		area.spellcheck = false;
@@ -251,6 +281,7 @@ async function loadExamples(): Promise<void> {
 	chapters = data.chapters;
 	allFixtures = [...new Set(chapters.flatMap((c) => c.inputs))].sort();
 	for (const chapter of chapters) {
+		if (!chapter.examples.length) continue;
 		const group = document.createElement('optgroup');
 		group.label = chapter.id;
 		for (const example of chapter.examples) {

@@ -37,6 +37,15 @@ export async function discover(repoRoot: string): Promise<Chapter[]> {
 	}
 
 	const chapters: Chapter[] = [];
+	// A gitignored folder for a reader's own files. It sits inside the repository,
+	// so the Runner can bind it without mounting anything new into the container
+	// or widening what the server will read.
+	const scratch = await readdir(path.join(repoRoot, 'scratch')).catch(() => [] as string[]);
+	const scratchInputs = scratch
+		.filter((entry) => INPUT_EXT.has(path.extname(entry)))
+		.sort()
+		.map((entry) => `scratch/${entry}`);
+	if (scratchInputs.length) chapters.push({ id: 'scratch', examples: [], inputs: scratchInputs });
 	for (const chapter of dirs) {
 		const entries = await readdir(path.join(base, chapter));
 		const examples: Example[] = [];

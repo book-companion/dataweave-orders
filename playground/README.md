@@ -58,6 +58,22 @@ above the script. One example in the modules chapter omits it deliberately, to
 show what an unresolved import looks like, so supplying one always would erase
 the lesson.
 
+## Your own data
+
+Two ways, neither of which lets the server read your disk:
+
+**Open a file** from the inline input. The browser's own picker opens it, reads
+it, and drops the text into the box — so you can point at anything on your
+machine without the server gaining the ability to read anything new.
+
+**Drop files in `scratch/`** at the root of this repository, and they appear in
+the file dropdown beside the book's fixtures. The folder is gitignored, so your
+own orders stay out of git. It is inside the repository, which is already
+mounted read-only, so nothing new reaches the container.
+
+Paths outside the repository are refused, on purpose: this is a local HTTP
+service that runs scripts, and the less of your disk it can name, the better.
+
 The **params** box under the inputs passes `-p name=value` pairs. They arrive in
 a script as a `params` object — `params.env` — and always as strings, so coerce
 them (`params.taxRate as Number`) when you need a number. Two examples in the
