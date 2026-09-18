@@ -58,6 +58,11 @@ above the script. One example in the modules chapter omits it deliberately, to
 show what an unresolved import looks like, so supplying one always would erase
 the lesson.
 
+The **params** box under the inputs passes `-p name=value` pairs. They arrive in
+a script as a `params` object — `params.env` — and always as strings, so coerce
+them (`params.taxRate as Number`) when you need a number. Two examples in the
+book use them; chapter 14 explains why.
+
 `--untrusted` means the script has no privileges: it cannot read files or URLs,
 only the inputs you bind. Most of the book needs nothing more. The **Allow file
 & URL reads** switch drops that flag for the chapters that do — `readUrl`, for

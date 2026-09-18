@@ -40,10 +40,13 @@
       <button id="add-input" class="quiet" type="button">Add input</button>
     </div>
     <div id="input-list" class="stage-body"></div>
-    <label class="params">
-      <span>Parameters</span>
-      <input type="text" id="params" placeholder="env=prod  taxRate=0.2" spellcheck="false" autocomplete="off" />
-    </label>
+    <div class="params">
+      <label class="params-row">
+        <span class="code">params</span>
+        <input type="text" id="params" placeholder="env=prod  taxRate=0.2" spellcheck="false" autocomplete="off" />
+      </label>
+      <p class="params-hint">Read in the script as <span class="code">params.env</span>. Values arrive as strings.</p>
+    </div>
   </section>
 
   <section class="stage stage-script" aria-labelledby="h-script">
