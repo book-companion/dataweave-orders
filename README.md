@@ -5,11 +5,11 @@ Companion code for *DataWeave in Depth* by Simon Sarkar, the second book of the 
 ## Run it
 
 ```bash
-make image    # builds the pinned DataWeave CLI 2.12.0 image (engine 2.12.2)
+make image    # builds the pinned image: DataWeave CLI 2.12.0 (engine 2.12.2)
 make verify   # two golden checks: the opening order summary and the final XML-to-JSON report
 ```
 
-`make verify` compares parsed JSON with the saved results and fails on a changed value or an unexpected process failure. It is a small smoke suite, not a re-run of every chapter. The image pins the CLI release and a dated Debian snapshot, so a rebuild gets the engine and the system libraries it runs against. It is not byte-identical: `apt-get` still resolves against the live archive.
+`make verify` compares parsed JSON with the saved results and fails on a changed value or an unexpected process failure. It is a small smoke suite, not a re-run of every chapter. One image serves both the command line and the Runner, and it pins everything it installs: the CLI release, the Node that serves the Runner, and a dated Debian snapshot underneath them. So a rebuild gets the engine and the system libraries it runs against. It is not byte-identical: `apt-get` still resolves against the live archive.
 
 ## DataWeave Runner, in your browser
 

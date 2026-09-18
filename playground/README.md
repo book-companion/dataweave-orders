@@ -19,15 +19,18 @@ make image        # once: builds dw-cli:2.12.0 from the Dockerfile
 make playground   # then: http://127.0.0.1:4444
 ```
 
-**`make runner` needs only Docker.** It builds `playground/Dockerfile`, which holds
-the engine and this server together, and publishes the page to your loopback
-address with the repository mounted read-only. Each run is then a subprocess
+**`make runner` needs only Docker.** There is one image and one Dockerfile: it
+carries the engine and the Node that serves this page, both installed the same
+way, from pinned release tarballs. `make runner` publishes the page to your
+loopback address with the repository mounted read-only. The image runs the
+engine by default, so serving the page overrides the entrypoint — which is the
+only difference between the two roles. Each run is then a subprocess
 beside the server rather than a container of its own, which is also why it is
 faster — about 180 ms against 450.
 
 That trade is worth stating. On the host path every run gets its own container:
 no network, capabilities dropped, memory and process caps, thrown away
-afterwards. In one image those become the container's, set once at start. The
+afterwards. Served from inside, those become the one container's, set once at start. The
 guard that was always doing the real work is unchanged — the engine is still
 given `--untrusted`, so a script reads the inputs bound to it and nothing else.
 `selfcheck.mjs` passes identically either way, which is the point of having it.
