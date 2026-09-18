@@ -14,6 +14,18 @@ import path from 'node:path';
 /** The image `make image` builds. Keep in step with the Dockerfile's ARG. */
 export const IMAGE = process.env.DW_IMAGE ?? 'dw-cli:2.12.0';
 
+/**
+ * Set when the engine sits in the same container as this server, which is how
+ * `make runner` starts it: the reader then needs Docker and nothing else, and
+ * every run is a subprocess here rather than a container of its own.
+ *
+ * The per-run container is what supplied `--network none`, the dropped
+ * capabilities and the memory and process caps. In this mode those are the
+ * container's, set once when it starts. What does not change is the guard that
+ * was always doing the real work — the engine is still given `--untrusted`.
+ */
+export const ENGINE = process.env.DW_BIN ?? null;
+
 const RUN_TIMEOUT_MS = Number(process.env.DW_TIMEOUT_MS ?? 30_000);
 const MAX_OUTPUT_BYTES = 1_000_000;
 
@@ -151,6 +163,28 @@ function modulePathArgs(repoRoot: string, paths: string[] | undefined): string[]
 	return ['--path', mapped.join(':')];
 }
 
+/**
+ * The same engine invocation as `buildArgv`, minus the container around it.
+ * Paths are real ones rather than the /lab and /work the mounts created.
+ */
+export function engineArgv(
+	repoRoot: string,
+	workDir: string,
+	req: RunRequest,
+	inputArgs: string[],
+	scriptFile: string,
+): string[] {
+	const real = (p: string) => p.replace(/^\/lab\//, `${repoRoot}/`).replace(/^\/work\//, `${workDir}/`);
+	return [
+		'run', '-s',
+		...(req.allowPrivileges ? [] : ['--untrusted']),
+		...modulePathArgs(repoRoot, req.modulePaths).map((a) => (a === '--path' ? a : a.split(':').map(real).join(':'))),
+		...(req.params ?? []).flatMap(({ name, value }) => ['-p', `${name}=${value}`]),
+		...inputArgs.map((a) => (a === '-i' ? a : a.replace(/=(.*)$/, (_m, p) => `=${real(p)}`))),
+		'-f', `${workDir}/${scriptFile}`,
+	];
+}
+
 export async function runScript(repoRoot: string, req: RunRequest): Promise<RunResult> {
 	if (typeof req.script !== 'string' || req.script.length === 0) fail('The script is empty.');
 	if (req.script.length > 200_000) fail('That script is larger than this playground accepts.');
@@ -182,9 +216,11 @@ export async function runScript(repoRoot: string, req: RunRequest): Promise<RunR
 			}
 		}
 
-		const argv = buildArgv(repoRoot, workDir, req, inputArgs, scriptFile);
+		const argv = ENGINE
+			? engineArgv(repoRoot, workDir, req, inputArgs, scriptFile)
+			: buildArgv(repoRoot, workDir, req, inputArgs, scriptFile);
 		const started = Date.now();
-		const { code, out, timedOut } = await exec('docker', argv);
+		const { code, out, timedOut } = await exec(ENGINE ?? 'docker', argv);
 		const explained = explainDockerFailure(out, code);
 		return {
 			output: explained ?? normalise(out).replace(/\s*$/, ''),
@@ -222,7 +258,13 @@ function exec(cmd: string, argv: string[]): Promise<{ code: number; out: string;
 				resolve({ code, out, timedOut });
 			},
 		);
-		child.on('error', () => resolve({ code: 127, out: 'Could not start docker. Is it running?', timedOut: false }));
+		// Close the child's stdin at once. An example that binds no input reads
+		// `payload` from stdin, and `docker run` without -i hands it a closed one:
+		// the engine reports the empty input and exits 255, which is what the book
+		// prints. A plain subprocess would sit on an open pipe instead and fail
+		// differently, so the two modes must agree here.
+		child.stdin?.end();
+		child.on('error', () => resolve({ code: 127, out: 'Could not start the engine. Is Docker running?', timedOut: false }));
 	});
 }
 
@@ -245,13 +287,16 @@ export function explainDockerFailure(out: string, code: number): string | null {
 
 /** True when the pinned image is present locally. Used for the startup notice. */
 export async function imageIsBuilt(): Promise<boolean> {
+	if (ENGINE) return true; // it is right here
 	const { code } = await exec('docker', ['image', 'inspect', IMAGE]);
 	return code === 0;
 }
 
 /** The engine's own version banner, shown in the header so the pin is visible. */
 export async function engineVersion(): Promise<string> {
-	const { out, code } = await exec('docker', ['run', '--rm', '--platform', 'linux/amd64', '--network', 'none', IMAGE, '--version']);
+	const { out, code } = ENGINE
+		? await exec(ENGINE, ['--version'])
+		: await exec('docker', ['run', '--rm', '--platform', 'linux/amd64', '--network', 'none', IMAGE, '--version']);
 	const explained = explainDockerFailure(out, code);
 	if (explained) throw new Error(explained);
 	const clean = normalise(out).trim();

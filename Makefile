@@ -13,6 +13,12 @@ playground:
 	  echo "  ./dw.sh run -s -i payload=chapters/language-01/order.json -f chapters/language-01/02_summary.dwl"; \
 	  exit 1; }
 	@node playground/start.mjs
+# The whole Runner in one image: the reader needs Docker and nothing else.
+runner:
+	docker build --platform linux/amd64 -f playground/Dockerfile -t dw-runner:2.12.0 .
+	@echo "DataWeave Runner -> http://127.0.0.1:4444   (ctrl-c to stop)"
+	@docker run --rm -it -p 127.0.0.1:4444:4444 -v "$(PWD)":/lab:ro dw-runner:2.12.0
+
 playground-check:
 	node playground/selfcheck.mjs --all
-.PHONY: image verify playground playground-check
+.PHONY: image verify playground runner playground-check

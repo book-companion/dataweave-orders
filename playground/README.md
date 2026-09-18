@@ -9,11 +9,30 @@ just its name — or be typed inline. Switching a file input to inline carries i
 contents across, so changing the book's fixture is one click and an edit.
 
 ```bash
+make runner       # Docker only — builds one image and serves it
+```
+
+Or, with Node on your machine and the engine image already built:
+
+```bash
 make image        # once: builds dw-cli:2.12.0 from the Dockerfile
 make playground   # then: http://127.0.0.1:4444
 ```
 
-**Node 22.6 or newer, and Docker.** Nothing to install: the page's JavaScript is
+**`make runner` needs only Docker.** It builds `playground/Dockerfile`, which holds
+the engine and this server together, and publishes the page to your loopback
+address with the repository mounted read-only. Each run is then a subprocess
+beside the server rather than a container of its own, which is also why it is
+faster — about 180 ms against 450.
+
+That trade is worth stating. On the host path every run gets its own container:
+no network, capabilities dropped, memory and process caps, thrown away
+afterwards. In one image those become the container's, set once at start. The
+guard that was always doing the real work is unchanged — the engine is still
+given `--untrusted`, so a script reads the inputs bound to it and nothing else.
+`selfcheck.mjs` passes identically either way, which is the point of having it.
+
+**The host path needs Node 22.6 or newer, and Docker.** Nothing to install: the page's JavaScript is
 committed, and Node runs the server's TypeScript directly. `start.mjs` works out
 whether your Node needs `--experimental-strip-types` — it was required when type
 stripping arrived, became the default in 22.18 and 23.6, and passing it on a Node

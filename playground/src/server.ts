@@ -17,11 +17,16 @@ import { discover, readRepoFile, splitSavedOutput } from './fixtures.ts';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PLAYGROUND = path.resolve(HERE, '..');
-const REPO_ROOT = path.resolve(PLAYGROUND, '..');
+// Normally the repository this file sits in; in the one-image mode it is
+// wherever the reader's clone is mounted.
+const REPO_ROOT = process.env.DW_REPO ?? path.resolve(PLAYGROUND, '..');
 const PUBLIC = path.join(PLAYGROUND, 'public');
 
 const PORT = Number(process.env.PORT ?? 4444);
-const HOST = '127.0.0.1';
+// Loopback on the host. Inside the container it binds to all interfaces, which
+// is what lets Docker publish it back to 127.0.0.1 on the reader's machine —
+// the port is published to loopback there, so it is still not on the network.
+const HOST = process.env.HOST ?? '127.0.0.1';
 const MAX_BODY = 4_000_000;
 
 const TYPES: Record<string, string> = {

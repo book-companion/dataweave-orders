@@ -14,7 +14,7 @@ make verify   # two golden checks: the opening order summary and the final XML-t
 ## DataWeave Runner, in your browser
 
 ```bash
-make playground   # http://127.0.0.1:4444
+make runner       # Docker only: http://127.0.0.1:4444
 ```
 
 Three panes — input, script, result — running on the same pinned CLI, offline.
