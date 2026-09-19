@@ -9,7 +9,18 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
-export interface Binding { name: string; fixture?: string; content?: string; format?: string }
+export interface Binding {
+	name: string;
+	fixture?: string;
+	content?: string;
+	format?: string;
+	/**
+	 * `-li`, a literal with no MIME type at all. Not the same as inline content
+	 * in some format: one chapter turns on the difference, because a literal
+	 * without an `input` directive is exactly what the engine refuses.
+	 */
+	literal?: boolean;
+}
 
 /** Exactly what the book's own `run.sh` passed when it produced the saved output. */
 export interface Bindings {
@@ -50,6 +61,53 @@ const splitOnce = (s: string): [string, string] => {
 	return [s.slice(0, at), s.slice(at + 1)];
 };
 
+/** The CLI's own flags, read back off a command line. */
+function parseArgs(command: string): Bindings {
+	const args = command.match(/'[^']*'|"[^"]*"|\S+/g) ?? [];
+	const inputs: Binding[] = [];
+	const params: Array<{ name: string; value: string }> = [];
+	const modulePaths: string[] = [];
+	for (let i = 0; i < args.length; i++) {
+		const flag = args[i];
+		const value = (args[i + 1] ?? '').replace(/^['"]|['"]$/g, '');
+		if (flag === '-i') {
+			const [n, file] = splitOnce(value);
+			inputs.push({ name: n, fixture: file });
+			i++;
+		} else if (flag === '-li') {
+			const [n, content] = splitOnce(value);
+			inputs.push({ name: n, content, literal: true });
+			i++;
+		} else if (flag === '-p') {
+			const [n, v] = splitOnce(value);
+			params.push({ name: n, value: v });
+			i++;
+		} else if (flag.startsWith('--path=')) {
+			modulePaths.push(...flag.slice('--path='.length).split(':').filter(Boolean));
+		} else if (flag === '--path') {
+			modulePaths.push(...value.split(':').filter(Boolean));
+			i++;
+		}
+	}
+	return { inputs, params, modulePaths };
+}
+
+/**
+ * The other half of the catalogue.
+ *
+ * Eleven of the sixteen chapters do not use `go` lines: their run.sh loops over
+ * every `.dwl` in the folder and writes the exact command it ran as the first
+ * line of the `.out`. That header is the binding source for those 393 examples
+ * — and, until it was stripped, the reason none of the 117 that carry one could
+ * ever match, because the saved file held a command line that no run produces.
+ */
+const SAVED_HEADER = /^\$ dw [^\n]*\n/;
+function parseSavedHeader(saved: string): Bindings | null {
+	const m = saved.match(SAVED_HEADER);
+	if (!m || !/^\$ dw run\b/.test(m[0])) return null;
+	return parseArgs(m[0].replace(/^\$ dw run\b/, ''));
+}
+
 /**
  * Pull the `go <name> [args]` lines out of a chapter's run.sh — the script that
  * produced every `.out` file beside it — and read the bindings back off them.
@@ -61,7 +119,7 @@ const splitOnce = (s: string): [string, string] => {
  * payload=$C/order.json"` nests one variable inside another, so expansion
  * repeats until it settles rather than running once.
  */
-function parseRunScript(source: string, chapter: string): Map<string, Bindings> {
+function parseRunScript(source: string, chapter: string, dwlNames: string[]): Map<string, Bindings> {
 	const vars: Record<string, string> = { C: `chapters/${chapter}` };
 	for (const m of source.matchAll(/\b([A-Z][A-Z0-9_]*)="([^"]*)"/g)) vars[m[1]] = m[2];
 	const expand = (s: string): string => {
@@ -77,33 +135,37 @@ function parseRunScript(source: string, chapter: string): Map<string, Bindings> 
 		const m = line.match(/^go\s+(\S+)\s*(.*)$/);
 		if (!m) continue;
 		const [, name, rest] = m;
-		const args = expand(rest).match(/'[^']*'|"[^"]*"|\S+/g) ?? [];
-		const inputs: Binding[] = [];
-		const params: Array<{ name: string; value: string }> = [];
-		const modulePaths: string[] = [];
-		for (let i = 0; i < args.length; i++) {
-			const flag = args[i];
-			const value = (args[i + 1] ?? '').replace(/^['"]|['"]$/g, '');
-			if (flag === '-i') {
-				const [n, file] = splitOnce(value);
-				inputs.push({ name: n, fixture: file });
-				i++;
-			} else if (flag === '-li') {
-				const [n, content] = splitOnce(value);
-				inputs.push({ name: n, content, format: 'application/json' });
-				i++;
-			} else if (flag === '-p') {
-				const [n, v] = splitOnce(value);
-				params.push({ name: n, value: v });
-				i++;
-			} else if (flag.startsWith('--path=')) {
-				modulePaths.push(...flag.slice('--path='.length).split(':').filter(Boolean));
-			} else if (flag === '--path') {
-				modulePaths.push(...value.split(':').filter(Boolean));
-				i++;
-			}
-		}
-		found.set(name, { inputs, params, modulePaths });
+		found.set(name, parseArgs(expand(rest)));
+	}
+
+	// Two chapters call the same `go` from a loop instead of listing the calls —
+	// `for n in 01_named_fun 02_… ; do go $n $J; done`, or the same with
+	// `$(ls [0-9]*.dwl)` in place of the list. Same bindings for every probe.
+	for (const m of source.matchAll(/for\s+(\w+)\s+in\s+([\s\S]*?)\s*;\s*do\s*\n?\s*go\s+\$\1\s*([^\n;]*)/g)) {
+		const [, , list, rest] = m;
+		const names = list.includes('$(ls') ? dwlNames : list.trim().split(/\s+/).filter(Boolean);
+		const args = parseArgs(expand(rest));
+		for (const name of names) if (!found.has(name)) found.set(name, args);
+	}
+	return found;
+}
+
+/**
+ * The fourth shape: four chapters drive `run-chapter.sh` from a `manifest`,
+ * one probe per line — `<probe.dwl> <input|-> [extra dw args]`, paths relative
+ * to the folder, and `@` standing for the chapter directory.
+ */
+function parseManifest(source: string, chapter: string): Map<string, Bindings> {
+	const found = new Map<string, Bindings>();
+	const rel = `chapters/${chapter}`;
+	for (const line of source.split('\n')) {
+		const trimmed = line.trim();
+		if (!trimmed || trimmed.startsWith('#')) continue;
+		const [probe, input, ...extra] = trimmed.split(/\s+/);
+		if (!probe.endsWith('.dwl')) continue;
+		const bound = parseArgs(extra.join(' ').replace(/@/g, `${rel}/`));
+		if (input && input !== '-') bound.inputs.unshift({ name: 'payload', fixture: `${rel}/${input}` });
+		found.set(probe.slice(0, -4), bound);
 	}
 	return found;
 }
@@ -131,20 +193,30 @@ export async function discover(repoRoot: string): Promise<Chapter[]> {
 		const entries = await readdir(path.join(base, chapter));
 		const examples: Example[] = [];
 		const inputs: string[] = [];
+		const dwlNames = entries.filter((e) => e.endsWith('.dwl')).map((e) => e.slice(0, -4));
 		const runScript = await readFile(path.join(base, chapter, 'run.sh'), 'utf8').catch(() => '');
-		const bindings = runScript ? parseRunScript(runScript, chapter) : new Map<string, Bindings>();
+		const manifest = await readFile(path.join(base, chapter, 'manifest'), 'utf8').catch(() => '');
+		const bindings = runScript ? parseRunScript(runScript, chapter, dwlNames) : new Map<string, Bindings>();
+		for (const [name, bound] of parseManifest(manifest, chapter)) bindings.set(name, bound);
 		for (const entry of entries.sort()) {
 			const ext = path.extname(entry);
 			if (ext === '.dwl') {
 				const name = entry.slice(0, -4);
 				const out = entries.includes(`${name}.out`) ? `chapters/${chapter}/${name}.out` : undefined;
+				// A `go` line if the chapter has one, the saved output's own header
+				// otherwise. Both are the command that produced the .out beside it.
+				let bound = bindings.get(name);
+				if (!bound && out) {
+					const saved = await readFile(path.join(repoRoot, out), 'utf8').catch(() => '');
+					bound = parseSavedHeader(saved) ?? undefined;
+				}
 				examples.push({
 					id: `${chapter}/${name}`,
 					chapter,
 					name,
 					script: `chapters/${chapter}/${entry}`,
 					savedOutput: out,
-					bindings: bindings.get(name),
+					bindings: bound,
 				});
 			} else if (INPUT_EXT.has(ext)) {
 				inputs.push(`chapters/${chapter}/${entry}`);
@@ -170,7 +242,10 @@ export async function readRepoFile(repoRoot: string, relative: string, limit = 2
  * Split it off so the playground can compare the transformation and the exit
  * status separately, and show the reader which of the two differs.
  */
-export function splitSavedOutput(saved: string): { body: string; exitCode: number | null } {
+export function splitSavedOutput(input: string): { body: string; exitCode: number | null } {
+	// Drop the echoed command line. It is provenance, not output: no run produces
+	// it, so leaving it in makes the comparison fail for every example that has one.
+	const saved = input.replace(SAVED_HEADER, '');
 	const match = saved.match(/exit=(\d+)\s*$/);
 	if (!match) return { body: saved.replace(/\s*$/, ''), exitCode: null };
 	return {

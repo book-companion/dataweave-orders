@@ -5,7 +5,7 @@
  * Node and Docker.
  */
 
-interface Binding { name: string; fixture?: string; content?: string; format?: string }
+interface Binding { name: string; fixture?: string; content?: string; format?: string; literal?: boolean }
 interface Bindings { inputs: Binding[]; params: Array<{ name: string; value: string }>; modulePaths: string[] }
 interface Example {
 	id: string;
@@ -28,6 +28,9 @@ const FORMATS: Array<[string, string]> = [
 	['application/yaml', 'YAML'],
 	['text/plain', 'Text'],
 	['application/java-properties', 'Properties'],
+	// A literal with no MIME type — what `dw -li` passes. Chapter 8 shows the
+	// engine refusing it when the script declares no `input` directive.
+	['', 'None (no MIME type)'],
 ];
 
 const $ = <T extends HTMLElement>(id: string): T => document.getElementById(id) as T;
@@ -58,7 +61,7 @@ let currentExample: Example | null = null;
 /** Every fixture in the repository, so any input can be pointed at any of them. */
 let allFixtures: string[] = [];
 
-interface InputRow { name: string; fixture?: string; content?: string; format?: string }
+interface InputRow { name: string; fixture?: string; content?: string; format?: string; literal?: boolean }
 
 async function api<T>(path: string, init?: RequestInit): Promise<T> {
 	const res = await fetch(path, init);
@@ -91,11 +94,8 @@ function collectInputs(): InputRow[] {
 		const area = card.querySelector<HTMLTextAreaElement>('textarea');
 		const view = card.querySelector<HTMLElement>('.input-view');
 		const content = area ? area.value : view && !view.classList.contains('loading') ? view.textContent ?? '' : '';
-		return {
-			name,
-			content,
-			format: card.querySelector<HTMLSelectElement>('.format-pick')!.value,
-		};
+		const format = card.querySelector<HTMLSelectElement>('.format-pick')!.value;
+		return format ? { name, content, format } : { name, content, literal: true };
 	});
 }
 
@@ -412,7 +412,12 @@ async function openExample(id: string): Promise<void> {
 			addInput(
 				input.fixture
 					? { name: input.name, fixture: input.fixture }
-					: { name: input.name, content: input.content ?? '', format: input.format ?? 'application/json' },
+					: {
+							name: input.name,
+							content: input.content ?? '',
+							// A literal keeps the empty format, which is what it means.
+							format: input.literal ? '' : input.format ?? 'application/json',
+						},
 			);
 		}
 	} else {

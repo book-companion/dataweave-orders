@@ -78,7 +78,10 @@ function parseRunScript(source, chapter) {
 				i++;
 			} else if (flag === '-li') {
 				const [n, content] = splitOnce(value);
-				inputs.push({ name: n, content, format: 'application/json' });
+				// A literal carries no MIME type. Giving it one hides the chapter's
+				// point, which is that the engine refuses a literal without an
+				// `input` directive.
+				inputs.push({ name: n, content, literal: true });
 				i++;
 			} else if (flag === '-p') {
 				const [n, v] = splitOnce(value);
@@ -176,7 +179,49 @@ for (const chapter of chapters) {
 	if (!ALL && checked >= 30) break;
 }
 
+/**
+ * The 137 above are the examples whose chapters use `go` lines. The other
+ * eleven chapters drive a manifest or a loop, and their bindings come off the
+ * saved output's own header — 370 more examples the page will happily open and
+ * compare. Check those too, using what the server declares, because that is
+ * what a reader actually runs.
+ */
+let wide = 0, wideMatched = 0, wideDrift = 0;
+const wideFailures = [];
+for (const chapter of chapters) {
+	if (ONLY && chapter.id !== ONLY) continue;
+	for (const example of chapter.examples) {
+		if (!example.savedOutput || !example.bindings) continue;
+		const { content: script } = await get(`/api/file?path=${encodeURIComponent(example.script)}`);
+		const { saved } = await get(`/api/file?path=${encodeURIComponent(example.savedOutput)}`);
+		if (!saved) continue;
+		const res = await fetch(BASE + '/api/run', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				script,
+				inputs: example.bindings.inputs,
+				scriptName: example.name,
+				modulePaths: example.bindings.modulePaths,
+				params: example.bindings.params,
+			}),
+		}).then((r) => r.json());
+		wide++;
+		const got = (res.output ?? '').trim();
+		const want = saved.body.trim();
+		const sameExit = saved.exitCode === null || saved.exitCode === res.exitCode;
+		if (got === want && sameExit) wideMatched++;
+		else if (sameExit && identityHash(got) === identityHash(want)) wideDrift++;
+		else if (NONDETERMINISTIC.test(script)) wideDrift++;
+		else wideFailures.push({ id: example.id, exit: `${res.exitCode} vs ${saved.exitCode}` });
+	}
+}
+
 console.log(`checked ${checked} · matched ${matched} · expected drift ${drifted} · differs ${failures.length}`);
+console.log(
+	`whole catalogue: ran ${wide} · matched ${wideMatched} · expected drift ${wideDrift} · differs ${wideFailures.length}`,
+);
+for (const f of wideFailures.slice(0, 10)) console.log(`  ${f.id}  exit ${f.exit}`);
 console.log(
 	bindingMismatches.length
 		? `bindings the page would get wrong: ${bindingMismatches.length}`
@@ -189,4 +234,4 @@ for (const f of failures.slice(0, 8)) {
 	console.log(`    book: ${JSON.stringify(f.want.slice(0, 160))}`);
 	console.log(`    here: ${JSON.stringify(f.got.slice(0, 160))}`);
 }
-process.exit(failures.length || bindingMismatches.length ? 1 : 0);
+process.exit(failures.length || bindingMismatches.length || wideFailures.length ? 1 : 0);

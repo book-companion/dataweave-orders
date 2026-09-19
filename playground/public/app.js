@@ -5,7 +5,10 @@ var FORMATS = [
   ["application/csv", "CSV"],
   ["application/yaml", "YAML"],
   ["text/plain", "Text"],
-  ["application/java-properties", "Properties"]
+  ["application/java-properties", "Properties"],
+  // A literal with no MIME type — what `dw -li` passes. Chapter 8 shows the
+  // engine refusing it when the script declares no `input` directive.
+  ["", "None (no MIME type)"]
 ];
 var $ = (id) => document.getElementById(id);
 var els = {
@@ -47,11 +50,8 @@ function collectInputs() {
     const area = card.querySelector("textarea");
     const view = card.querySelector(".input-view");
     const content = area ? area.value : view && !view.classList.contains("loading") ? view.textContent ?? "" : "";
-    return {
-      name,
-      content,
-      format: card.querySelector(".format-pick").value
-    };
+    const format = card.querySelector(".format-pick").value;
+    return format ? { name, content, format } : { name, content, literal: true };
   });
 }
 function summariseInputs() {
@@ -312,7 +312,12 @@ async function openExample(id) {
   if (bound) {
     for (const input of bound.inputs) {
       addInput(
-        input.fixture ? { name: input.name, fixture: input.fixture } : { name: input.name, content: input.content ?? "", format: input.format ?? "application/json" }
+        input.fixture ? { name: input.name, fixture: input.fixture } : {
+          name: input.name,
+          content: input.content ?? "",
+          // A literal keeps the empty format, which is what it means.
+          format: input.literal ? "" : input.format ?? "application/json"
+        }
       );
     }
   } else {

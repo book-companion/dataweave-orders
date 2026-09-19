@@ -38,6 +38,8 @@ export interface RunInput {
 	content?: string;
 	/** Only used with `content`: decides the temp file's extension, and so the reader. */
 	format?: string;
+	/** With `content`: pass it as a literal (`-li`), which carries no MIME type. */
+	literal?: boolean;
 }
 
 export interface RunRequest {
@@ -209,6 +211,13 @@ export async function runScript(repoRoot: string, req: RunRequest): Promise<RunR
 			} else {
 				const body = input.content ?? '';
 				if (body.length > 2_000_000) fail(`Input "${input.name}" is too large.`);
+				// A literal goes straight in as `-li`. Writing it to a file would give
+				// it a MIME type from the extension, which is the one thing a literal
+				// does not have — and one chapter's whole lesson is what happens then.
+				if (input.literal) {
+					inputArgs.push('-li', `${input.name}=${body}`);
+					continue;
+				}
 				const ext = EXTENSION[input.format ?? 'application/json'] ?? 'txt';
 				const file = `${input.name}.${ext}`;
 				await writeFile(path.join(workDir, file), body, 'utf8');
