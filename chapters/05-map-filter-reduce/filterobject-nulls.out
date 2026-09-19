@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/filterobject-nulls.dwl
+{
+  "orderId": "A-1001",
+  "note": "gift"
+}
+exit=0

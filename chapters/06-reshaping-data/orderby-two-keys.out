@@ -1,0 +1,9 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/orderby-two-keys.dwl
+[
+  "desk:10",
+  "paper:2",
+  "writing:4",
+  "writing:3",
+  "writing:1"
+]
+exit=0

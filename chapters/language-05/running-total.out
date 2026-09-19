@@ -1,7 +1,0 @@
-$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/running-total.dwl
-[
-  10,
-  22,
-  32
-]
-exit=0

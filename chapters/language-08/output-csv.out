@@ -1,9 +1,0 @@
-$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/output-csv.dwl
-orderId,sku,amount
-A-1001,PEN-01,10
-A-1001,PAD-22,12
-A-1001,CLP-08,10
-A-1008,PEN-01,2.5
-A-1008,INK-03,9
-
-exit=0

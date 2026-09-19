@@ -1,0 +1,5 @@
+$ dw run -li 'payload={"orderId":"A-1001","items":[{"sku":"PEN-01","price":2.5,"qty":4}]}' -f chapters/08-composing-and-reusing/input-literal-nodirective.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unable to detect reader type for `payload`, as no MimeType was set. Please declare the input directive i.e. input `payload` application/xml
+
+exit=255

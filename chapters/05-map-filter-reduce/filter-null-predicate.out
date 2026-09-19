@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/filter-null-predicate.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Null (null) to Boolean
+Trace:
+  at main (Unknown) at:
+Unknown location
+
+exit=255

@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/orderby-array-key.dwl
+[ERROR] Error while executing the script:
+[ERROR] You cannot compare a value of type :Array
+
+4| payload orderBy (line) -> [line.category, -line.qty]
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at orderby-array-key::orderBy (line: 4, column: 27)
+  at orderby-array-key::main (line: 4, column: 9) at:
+
+4| payload orderBy (line) -> [line.category, -line.qty]
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+exit=255

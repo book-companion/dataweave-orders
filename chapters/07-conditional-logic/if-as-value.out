@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/if-as-value.dwl
+{
+  "shipping": 9.99,
+  "grand": 41.99,
+  "label": "Order A-1001"
+}
+exit=0

@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/pluck-summary.dwl
+[
+  {
+    "category": "writing",
+    "lineCount": 3
+  },
+  {
+    "category": "paper",
+    "lineCount": 1
+  },
+  {
+    "category": "desk",
+    "lineCount": 1
+  }
+]
+exit=0

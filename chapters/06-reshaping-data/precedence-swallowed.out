@@ -1,0 +1,19 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/precedence-swallowed.dwl
+[ERROR] Error while executing the script:
+[ERROR] You called the function '-' with these arguments: 
+  1: Null (null)
+
+But it expects arguments of these types:
+  1: Number
+
+
+9|   orderBy (row) -> -row.revenue
+                      ^^^^^^^^^^^^
+Trace:
+  at precedence-swallowed::orderBy (line: 9, column: 20)
+  at precedence-swallowed::main (line: 9, column: 3) at:
+
+9|   orderBy (row) -> -row.revenue
+                      ^^^^^^^^^^^^
+
+exit=255

@@ -1,0 +1,12 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json --path=chapters/08-composing-and-reusing -f chapters/08-composing-and-reusing/use-nested-module.dwl
+[
+  {
+    "orderId": "A-1001",
+    "total": 34.56
+  },
+  {
+    "orderId": "A-1008",
+    "total": 12.42
+  }
+]
+exit=0

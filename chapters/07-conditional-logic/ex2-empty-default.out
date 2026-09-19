@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/ex2-empty-default.dwl
+{
+  "withDefault": "",
+  "withIsEmpty": "no notes"
+}
+exit=0

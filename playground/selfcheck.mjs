@@ -6,7 +6,7 @@
  * the same bindings, and compares the result with what the book printed.
  *
  *   make playground            # in one terminal
- *   node playground/selfcheck.mjs [--all] [--chapter language-01]
+ *   node playground/selfcheck.mjs [--all] [--chapter 01-a-functional-language]
  *
  * It exists because the runner's first version lost a closing brace: the CLI's
  * stdout has no trailing newline, so concatenating stderr put `}` on the same

@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/07-conditional-logic/empty.json -f chapters/07-conditional-logic/short-circuit-safe.dwl
+{
+  "hasItems": false,
+  "noItems": true
+}
+exit=0

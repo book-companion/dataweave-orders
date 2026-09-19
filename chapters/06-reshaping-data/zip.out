@@ -1,0 +1,28 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/zip.dwl
+{
+  "even": [
+    [
+      "PEN-01",
+      2.5
+    ],
+    [
+      "PAD-22",
+      6
+    ]
+  ],
+  "uneven": [
+    [
+      "PEN-01",
+      2.5
+    ],
+    [
+      "PAD-22",
+      6
+    ]
+  ],
+  "toObject": {
+    "PEN-01": 2.5,
+    "PAD-22": 6
+  }
+}
+exit=0

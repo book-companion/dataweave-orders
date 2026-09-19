@@ -1,0 +1,3 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/reduce-sum.dwl
+60
+exit=0

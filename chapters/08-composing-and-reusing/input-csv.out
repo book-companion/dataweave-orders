@@ -1,0 +1,19 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/lines.csv  -f chapters/08-composing-and-reusing/input-csv.dwl
+[
+  {
+    "sku": "PEN-01",
+    "qty": 4,
+    "rawType": "String"
+  },
+  {
+    "sku": "PAD-22",
+    "qty": 2,
+    "rawType": "String"
+  },
+  {
+    "sku": "CLP-08",
+    "qty": 10,
+    "rawType": "String"
+  }
+]
+exit=0

@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/header-funs.dwl
+[
+  {
+    "orderId": "A-1001",
+    "subtotal": 32,
+    "total": 34.56
+  },
+  {
+    "orderId": "A-1008",
+    "subtotal": 11.5,
+    "total": 12.42
+  }
+]
+exit=0

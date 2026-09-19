@@ -30,7 +30,7 @@ export interface Bindings {
 }
 
 export interface Example {
-	/** `language-01/02_summary` — what the picker shows and the client sends back. */
+	/** `01-a-functional-language/02_summary` — what the picker shows and the client sends back. */
 	id: string;
 	chapter: string;
 	name: string;

@@ -1,0 +1,12 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/number-format.dwl
+{
+  "fromInput": 6.0,
+  "literal": 6,
+  "computed": 10,
+  "passthrough": {
+    "sku": "CLP-08",
+    "price": 1.0,
+    "qty": 10
+  }
+}
+exit=0

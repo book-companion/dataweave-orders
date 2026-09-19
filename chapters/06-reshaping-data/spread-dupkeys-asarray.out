@@ -1,0 +1,11 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/spread-dupkeys-asarray.dwl
+{
+  "PEN-01": [
+  4,
+  1
+  ],
+  "PAD-22": 2,
+  "CLP-08": 10,
+  "INK-03": 3
+}
+exit=0

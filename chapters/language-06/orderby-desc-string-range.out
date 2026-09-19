@@ -1,9 +1,0 @@
-$ dw run -i payload=chapters/language-06/lines.json -f chapters/language-06/orderby-desc-string-range.dwl
-[
-  "Notepad A5",
-  "Ink Refill",
-  "Gel Pen",
-  "Gel Pen",
-  "Binder Clips"
-]
-exit=0

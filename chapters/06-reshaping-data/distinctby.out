@@ -1,0 +1,17 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/distinctby.dwl
+{
+  "bySku": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08",
+    "INK-03"
+  ],
+  "byLine": [
+    "A-1001/PEN-01",
+    "A-1001/PAD-22",
+    "A-1001/CLP-08",
+    "A-1008/PEN-01",
+    "A-1008/INK-03"
+  ]
+}
+exit=0

@@ -1,0 +1,27 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/conditional-key.dwl
+[
+  {
+    "sku": "PEN-01",
+    "qty": 4,
+    "bulk": true
+  },
+  {
+    "sku": "PAD-22",
+    "qty": 2
+  },
+  {
+    "sku": "CLP-08",
+    "qty": 10,
+    "bulk": true
+  },
+  {
+    "sku": "PEN-01",
+    "qty": 1
+  },
+  {
+    "sku": "INK-03",
+    "qty": 3,
+    "bulk": true
+  }
+]
+exit=0

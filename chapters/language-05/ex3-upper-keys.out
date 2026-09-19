@@ -1,7 +1,0 @@
-$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/ex3-upper-keys.dwl
-{
-  "SKU": "PEN-01",
-  "PRICE": 2.5,
-  "QTY": 4
-}
-exit=0

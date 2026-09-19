@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/default-chain.dwl
+{
+  "chained": "NONE",
+  "withIf": "NONE"
+}
+exit=0

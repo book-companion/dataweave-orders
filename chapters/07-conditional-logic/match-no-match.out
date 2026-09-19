@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/match-no-match.dwl
+[ERROR] Error while executing the script:
+[ERROR] None of the match cases matched: `String("returned")`.
+TIP: Use `else -> <expression>` to match other cases.
+
+4| "returned" match {
+   ^^^^^^^^^^
+Trace:
+  at match-no-match::main (line: 4, column: 1) at:
+
+4| "returned" match {
+   ^^^^^^^^^^
+
+exit=255

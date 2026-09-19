@@ -343,7 +343,8 @@ async function loadExamples(): Promise<void> {
 	for (const chapter of chapters) {
 		if (!chapter.examples.length) continue;
 		const group = document.createElement('optgroup');
-		group.label = chapter.id;
+		// The folder is the chapter, so read it out rather than showing the slug.
+		group.label = chapter.id.replace(/-/g, ' ');
 		for (const example of chapter.examples) {
 			const option = document.createElement('option');
 			option.value = example.id;

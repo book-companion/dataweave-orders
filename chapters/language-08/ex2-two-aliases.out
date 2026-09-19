@@ -1,6 +1,0 @@
-$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/ex2-two-aliases.dwl
-{
-  "flat": 108,
-  "nested": 108
-}
-exit=0

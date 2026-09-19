@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/reduce-seed-forms.dwl
+{
+  "seeded": 60,
+  "unseeded": 60,
+  "emptySeeded": 0,
+  "emptyUnseeded": null
+}
+exit=0

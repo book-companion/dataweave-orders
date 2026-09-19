@@ -1,0 +1,9 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/orderby-desc-string-range.dwl
+[
+  "Notepad A5",
+  "Ink Refill",
+  "Gel Pen",
+  "Gel Pen",
+  "Binder Clips"
+]
+exit=0

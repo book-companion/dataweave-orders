@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/do-scope-leak.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `items`.
+
+9| { total: subtotal(payload), count: sizeOf(items) }
+                                             ^^^^^
+Location:
+do-scope-leak (line: 9, column:43)
+
+exit=255

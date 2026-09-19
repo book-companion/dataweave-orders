@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/lines.csv  -f chapters/08-composing-and-reusing/input-mismatch.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unexpected character 's' at payload@[-1:-1] (line:column), expected false or true or null or {...} or [...] or number but was , while reading `payload` as Json.
+ 0 at:
+0
+
+exit=255

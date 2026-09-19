@@ -1,0 +1,23 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/flatten-levels.dwl
+{
+  "oneLevel": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "onlyOne": [
+    1,
+    [
+      2
+    ],
+    3
+  ],
+  "notNested": [
+    1,
+    2,
+    3
+  ]
+}
+exit=0

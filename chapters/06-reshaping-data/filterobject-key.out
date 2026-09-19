@@ -1,0 +1,19 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/filterobject-key.dwl
+{
+  "byName": {
+    "orderId": "A-1001",
+    "sku": "PEN-01",
+    "name": "Gel Pen",
+    "category": "writing",
+    "price": 2.5,
+    "qty": 4
+  },
+  "byPrefix": {
+    "sku": "PEN-01",
+    "name": "Gel Pen",
+    "category": "writing",
+    "price": 2.5,
+    "qty": 4
+  }
+}
+exit=0

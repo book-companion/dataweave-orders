@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/use-module-nopath.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve module with identifier Orders.
+
+3| import subtotal, withTax from Orders
+                                 ^^^^^^
+Location:
+use-module-nopath (line: 3, column:31)
+
+exit=255

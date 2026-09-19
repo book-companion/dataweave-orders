@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json --path=chapters/08-composing-and-reusing -f chapters/08-composing-and-reusing/use-module-fun-shadows-var.dwl
+{
+  "local": 0.2,
+  "viaModule": 108
+}
+exit=0

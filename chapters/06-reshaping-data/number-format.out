@@ -1,0 +1,15 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/number-format.dwl
+{
+  "fromInput": 6.0,
+  "literal": 6,
+  "computed": 10,
+  "passthrough": {
+    "orderId": "A-1001",
+    "sku": "CLP-08",
+    "name": "Binder Clips",
+    "category": "desk",
+    "price": 1.0,
+    "qty": 10
+  }
+}
+exit=0

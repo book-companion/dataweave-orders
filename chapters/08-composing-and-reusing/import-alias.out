@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/import-alias.dwl
+{
+  "one": "orders",
+  "many": "box"
+}
+exit=0

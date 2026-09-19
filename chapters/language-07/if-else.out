@@ -1,3 +1,0 @@
-$ dw run -i payload=chapters/language-07/order.json -f chapters/language-07/if-else.dwl
-"standard"
-exit=0

@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json --path=chapters/08-composing-and-reusing -p rate=0.2 -f chapters/08-composing-and-reusing/params.dwl
+[
+  {
+    "orderId": "A-1001",
+    "rate": "0.2",
+    "rateType": "String",
+    "total": 38.4
+  },
+  {
+    "orderId": "A-1008",
+    "rate": "0.2",
+    "rateType": "String",
+    "total": 13.8
+  }
+]
+exit=0

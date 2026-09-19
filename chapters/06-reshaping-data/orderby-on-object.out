@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/orderby-on-object.dwl
+{
+  "a": 1,
+  "b": 2,
+  "c": 3
+}
+exit=0

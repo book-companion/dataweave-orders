@@ -1,6 +1,0 @@
-$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/filterobject-nulls.dwl
-{
-  "orderId": "A-1001",
-  "note": "gift"
-}
-exit=0

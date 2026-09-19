@@ -1,0 +1,11 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/output-props-json-error.dwl
+[ERROR] Error while executing the script:
+[ERROR] Invalid input 'm', expected , (line 2, column 32):
+
+
+2| output application/json indent=maybe
+                                  ^
+Location:
+output-props-json-error (line: 2, column:32)
+
+exit=255

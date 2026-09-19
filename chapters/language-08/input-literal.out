@@ -1,6 +1,0 @@
-$ dw run -li 'payload={"orderId":"A-1001","items":[{"sku":"PEN-01","price":2.5,"qty":4}]}' -f chapters/language-08/input-literal.dwl
-{
-  "orderId": "A-1001",
-  "lines": 1
-}
-exit=0

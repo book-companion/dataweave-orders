@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/unless-else.dwl
+{
+  "couponLabel": "no coupon",
+  "sameWithIf": "no coupon"
+}
+exit=0

@@ -1,0 +1,8 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/mapobject.dwl
+{
+  "pen": 250,
+  "pos_0": "pen",
+  "pad": 600,
+  "pos_1": "pad"
+}
+exit=0

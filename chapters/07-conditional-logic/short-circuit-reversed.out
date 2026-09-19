@@ -1,0 +1,13 @@
+$ dw run -i payload=chapters/07-conditional-logic/empty.json -f chapters/07-conditional-logic/short-circuit-reversed.dwl
+[ERROR] Error while executing the script:
+[ERROR] Types `Null` and `Number` can not be compared.
+
+4| (sizeOf(payload.items) > 0) and (payload.items != null)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at short-circuit-reversed::main (line: 4, column: 2) at:
+
+4| (sizeOf(payload.items) > 0) and (payload.items != null)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+exit=255

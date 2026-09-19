@@ -262,7 +262,7 @@ async function loadExamples() {
   for (const chapter of chapters) {
     if (!chapter.examples.length) continue;
     const group = document.createElement("optgroup");
-    group.label = chapter.id;
+    group.label = chapter.id.replace(/-/g, " ");
     for (const example of chapter.examples) {
       const option = document.createElement("option");
       option.value = example.id;

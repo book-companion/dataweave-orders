@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order-empty.json -f chapters/05-map-filter-reduce/reduce-empty-order.dwl
+{
+  "orderId": "A-1007",
+  "total": null
+}
+exit=0

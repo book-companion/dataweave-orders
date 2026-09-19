@@ -1,0 +1,48 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/do-receipt.dwl
+[
+  {
+    "orderId": "A-1001",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 4,
+        "total": 10
+      },
+      {
+        "sku": "PAD-22",
+        "price": 6,
+        "qty": 2,
+        "total": 12
+      },
+      {
+        "sku": "CLP-08",
+        "price": 1,
+        "qty": 10,
+        "total": 10
+      }
+    ],
+    "subtotal": 32,
+    "tax": 2.56
+  },
+  {
+    "orderId": "A-1008",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "price": 2.5,
+        "qty": 1,
+        "total": 2.5
+      },
+      {
+        "sku": "INK-03",
+        "price": 3,
+        "qty": 3,
+        "total": 9
+      }
+    ],
+    "subtotal": 11.5,
+    "tax": 0.92
+  }
+]
+exit=0

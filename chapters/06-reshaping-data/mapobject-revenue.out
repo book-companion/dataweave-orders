@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/mapobject-revenue.dwl
+{
+  "writing": 21.5,
+  "paper": 12,
+  "desk": 10
+}
+exit=0

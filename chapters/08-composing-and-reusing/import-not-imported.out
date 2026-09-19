@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/import-not-imported.dwl
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `capitalize`.
+
+4| capitalize("gel pen")
+   ^^^^^^^^^^
+Location:
+import-not-imported (line: 4, column:1)
+
+exit=255

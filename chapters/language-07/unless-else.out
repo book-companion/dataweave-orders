@@ -1,6 +1,0 @@
-$ dw run -i payload=chapters/language-07/order.json -f chapters/language-07/unless-else.dwl
-{
-  "couponLabel": "no coupon",
-  "sameWithIf": "no coupon"
-}
-exit=0

@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/running-total.dwl
+[
+  10,
+  22,
+  32
+]
+exit=0

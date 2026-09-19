@@ -1,0 +1,27 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/match-regex.dwl
+[
+  {
+    "sku": "PEN-01",
+    "family": "PEN",
+    "number": 1
+  },
+  {
+    "sku": "PAD-22",
+    "family": "PAD",
+    "number": 22
+  },
+  {
+    "sku": "CLP-08",
+    "family": "CLP",
+    "number": 8
+  },
+  {
+    "sku": "pen-1",
+    "error": "unrecognized format"
+  },
+  {
+    "sku": "X-9999",
+    "error": "unrecognized format"
+  }
+]
+exit=0

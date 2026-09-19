@@ -1,0 +1,18 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/reduce-flatten.dwl
+{
+  "byHand": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "stock": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}
+exit=0

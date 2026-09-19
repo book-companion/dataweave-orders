@@ -1,0 +1,21 @@
+$ dw run -i payload=chapters/06-reshaping-data/lines.json -f chapters/06-reshaping-data/ex1-units-per-order.dwl
+[
+  {
+    "orderId": "A-1001",
+    "units": 16,
+    "skus": [
+      "PEN-01",
+      "PAD-22",
+      "CLP-08"
+    ]
+  },
+  {
+    "orderId": "A-1008",
+    "units": 4,
+    "skus": [
+      "PEN-01",
+      "INK-03"
+    ]
+  }
+]
+exit=0

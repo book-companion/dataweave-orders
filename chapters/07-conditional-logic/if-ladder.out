@@ -1,0 +1,11 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/if-ladder.dwl
+{
+  "thisOrder": "standard",
+  "others": [
+    "standard",
+    "gold",
+    "gold",
+    "platinum"
+  ]
+}
+exit=0

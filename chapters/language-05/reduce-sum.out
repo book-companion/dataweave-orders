@@ -1,3 +1,0 @@
-$ dw run -i payload=chapters/language-05/order.json -f chapters/language-05/reduce-sum.dwl
-60
-exit=0

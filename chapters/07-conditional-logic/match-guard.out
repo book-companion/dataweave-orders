@@ -1,0 +1,16 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/match-guard.dwl
+{
+  "right": [
+    "empty cart",
+    "standard",
+    "gold",
+    "platinum"
+  ],
+  "wrong": [
+    "empty cart",
+    "standard",
+    "standard",
+    "standard"
+  ]
+}
+exit=0

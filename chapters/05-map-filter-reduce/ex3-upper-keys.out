@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/ex3-upper-keys.dwl
+{
+  "SKU": "PEN-01",
+  "PRICE": 2.5,
+  "QTY": 4
+}
+exit=0

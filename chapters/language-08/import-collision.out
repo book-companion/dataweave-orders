@@ -1,3 +1,0 @@
-$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/import-collision.dwl
-"GEL PEN"
-exit=0

@@ -1,0 +1,25 @@
+$ dw run -i payload=chapters/07-conditional-logic/orders.json -f chapters/07-conditional-logic/do-classify.dwl
+[
+  {
+    "orderId": "A-1001",
+    "subtotal": 32,
+    "shipping": 0,
+    "total": 32,
+    "tier": "gold"
+  },
+  {
+    "orderId": "A-1008",
+    "subtotal": 11.5,
+    "shipping": 4.99,
+    "total": 16.49,
+    "tier": "standard"
+  },
+  {
+    "orderId": "A-1009",
+    "subtotal": 0,
+    "shipping": 4.99,
+    "total": 4.99,
+    "tier": "empty cart"
+  }
+]
+exit=0

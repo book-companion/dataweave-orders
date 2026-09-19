@@ -1,0 +1,7 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/ex1-tags.dwl
+[
+  "gift",
+  "(none)",
+  "RUSH"
+]
+exit=0

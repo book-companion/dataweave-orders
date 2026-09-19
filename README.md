@@ -28,12 +28,12 @@ you whether your result matches the one the book printed. See
 To run one script, pass its input and module path through `dw.sh`. The capstone, for example:
 
 ```bash
-./dw.sh run -s -i payload=chapters/wild-08/feed.xml --path=chapters/wild-08 -f chapters/wild-08/04_final.dwl
+./dw.sh run -s -i payload=chapters/16-a-real-transform/feed.xml --path=chapters/16-a-real-transform -f chapters/16-a-real-transform/04_final.dwl
 ```
 
 ## Layout
 
-`chapters/language-01` to `language-08` hold chapters 1–8, and `chapters/wild-01` to `wild-08` hold chapters 9–16. The directory names keep the original experiment numbering. Each one holds the chapter's scripts, small fixtures, modules and saved `.out` files. Many examples fail on purpose, and each saved output records the expected exit. Timestamps, UUIDs, object identity strings and some diagnostic ordering vary between runs.
+`chapters/01-a-functional-language` to `08-composing-and-reusing` hold chapters 1–8, and `chapters/09-json-and-java` to `16-a-real-transform` hold chapters 9–16. The directory names keep the original experiment numbering. Each one holds the chapter's scripts, small fixtures, modules and saved `.out` files. Many examples fail on purpose, and each saved output records the expected exit. Timestamps, UUIDs, object identity strings and some diagnostic ordering vary between runs.
 
 Each chapter directory has a `run.sh` that regenerates its saved outputs. Keep a clean copy before running one, because it overwrites the files the book quotes.
 

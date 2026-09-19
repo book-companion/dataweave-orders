@@ -1,0 +1,3 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/match-literal.dwl
+"On its way"
+exit=0

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json,pathlib,subprocess
 root=pathlib.Path(__file__).resolve().parent
-cases=[("summary",["-i","payload=chapters/language-01/order.json","-f","chapters/language-01/02_summary.dwl"],"chapters/language-01/02_summary.out"),("capstone",["-i","payload=chapters/wild-08/feed.xml","--path=chapters/wild-08","-f","chapters/wild-08/04_final.dwl"],"chapters/wild-08/04_final.out")]
+cases=[("summary",["-i","payload=chapters/01-a-functional-language/order.json","-f","chapters/01-a-functional-language/02_summary.dwl"],"chapters/01-a-functional-language/02_summary.out"),("capstone",["-i","payload=chapters/16-a-real-transform/feed.xml","--path=chapters/16-a-real-transform","-f","chapters/16-a-real-transform/04_final.dwl"],"chapters/16-a-real-transform/04_final.out")]
 for name,args,golden in cases:
     result=subprocess.run([str(root/"dw.sh"),"run","-s",*args],capture_output=True,text=True,cwd=root)
     assert result.returncode==0,(name,result.stderr)

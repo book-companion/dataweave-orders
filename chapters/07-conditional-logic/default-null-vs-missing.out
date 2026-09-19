@@ -1,0 +1,9 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/default-null-vs-missing.dwl
+{
+  "coupon": "NONE",
+  "giftWrap": false,
+  "notes": "",
+  "zero": 0,
+  "falsy": false
+}
+exit=0

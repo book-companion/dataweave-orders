@@ -1,0 +1,10 @@
+$ dw run -i payload=chapters/07-conditional-logic/order.json -f chapters/07-conditional-logic/if-no-else.dwl
+[ERROR] Error while executing the script:
+[ERROR] Missing Else
+
+4| if (payload.total > 100) "free"
+                                  ^
+Location:
+if-no-else (line: 4, column:32)
+
+exit=255

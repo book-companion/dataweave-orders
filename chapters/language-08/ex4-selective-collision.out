@@ -1,3 +1,0 @@
-$ dw run -i payload=chapters/language-08/orders.json --path=chapters/language-08 -f chapters/language-08/ex4-selective-collision.dwl
-108
-exit=0

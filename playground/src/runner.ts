@@ -54,7 +54,7 @@ export interface RunRequest {
 	scriptName?: string;
 	/**
 	 * Repository-relative folders the engine resolves `import … from x::Y` against.
-	 * The modules chapter passes `--path=chapters/wild-06`, and one of its examples
+	 * The modules chapter passes `--path=chapters/14-modules-and-testing`, and one of its examples
 	 * passes nothing at all to show the failure — so this is optional, and when it
 	 * is empty no `--path` is sent.
 	 */

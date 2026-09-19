@@ -1,9 +1,0 @@
-$ dw run -i payload=chapters/language-07/order.json -f chapters/language-07/default-null-vs-missing.dwl
-{
-  "coupon": "NONE",
-  "giftWrap": false,
-  "notes": "",
-  "zero": 0,
-  "falsy": false
-}
-exit=0

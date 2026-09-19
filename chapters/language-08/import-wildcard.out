@@ -1,7 +1,0 @@
-$ dw run -i payload=chapters/language-08/orders.json  -f chapters/language-08/import-wildcard.dwl
-{
-  "mouse": "Wireless Mouse",
-  "pen": "Gel Pen",
-  "snake": "Unit Price"
-}
-exit=0

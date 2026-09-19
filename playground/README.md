@@ -131,7 +131,7 @@ bindings, and compares:
 ```bash
 make playground                      # in one terminal
 node playground/selfcheck.mjs --all  # in another
-node playground/selfcheck.mjs --chapter language-01 --all
+node playground/selfcheck.mjs --chapter 01-a-functional-language --all
 ```
 
 Three kinds of difference are reported as expected drift, the same three the

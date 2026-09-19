@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json --path=chapters/08-composing-and-reusing -f chapters/08-composing-and-reusing/do-inline.dwl
+[
+  {
+    "orderId": "A-1001",
+    "subtotal": 32,
+    "tax": 2.56
+  },
+  {
+    "orderId": "A-1008",
+    "subtotal": 11.5,
+    "tax": 0.92
+  }
+]
+exit=0

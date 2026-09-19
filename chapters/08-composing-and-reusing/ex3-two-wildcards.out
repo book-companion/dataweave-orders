@@ -1,0 +1,3 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json --path=chapters/08-composing-and-reusing -f chapters/08-composing-and-reusing/ex3-two-wildcards.dwl
+108
+exit=0

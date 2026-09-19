@@ -1,0 +1,3 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/header-order.dwl
+108
+exit=0

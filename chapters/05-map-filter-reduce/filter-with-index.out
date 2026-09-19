@@ -1,0 +1,14 @@
+$ dw run -i payload=chapters/05-map-filter-reduce/order.json -f chapters/05-map-filter-reduce/filter-with-index.dwl
+[
+  {
+    "sku": "PAD-22",
+    "price": 6,
+    "qty": 2
+  },
+  {
+    "sku": "CLP-08",
+    "price": 1,
+    "qty": 10
+  }
+]
+exit=0

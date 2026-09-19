@@ -1,0 +1,6 @@
+$ dw run -i payload=chapters/08-composing-and-reusing/orders.json  -f chapters/08-composing-and-reusing/output-csv-nested.dwl
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Array to String at:
+225
+
+exit=255
