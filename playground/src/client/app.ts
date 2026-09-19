@@ -5,12 +5,16 @@
  * Node and Docker.
  */
 
+interface Binding { name: string; fixture?: string; content?: string; format?: string }
+interface Bindings { inputs: Binding[]; params: Array<{ name: string; value: string }>; modulePaths: string[] }
 interface Example {
 	id: string;
 	chapter: string;
 	name: string;
 	script: string;
 	savedOutput?: string;
+	/** What the book's run.sh bound when it produced savedOutput. */
+	bindings?: Bindings;
 }
 interface Chapter { id: string; examples: Example[]; inputs: string[] }
 interface RunResult { output: string; exitCode: number; durationMs: number; timedOut: boolean; argv: string[] }
@@ -391,13 +395,30 @@ async function openExample(id: string): Promise<void> {
 	els.script.value = file.content;
 	els.scriptPath.textContent = example.script.replace(/^chapters\//, '');
 
-	// The chapter's own folder is where its imports resolve from, which is what
-	// its run.sh passes. One example omits it deliberately, so this stays a choice.
+	// Bind exactly what the book bound. Anything else and the verdict below the
+	// result is comparing two different runs: this used to bind the chapter's
+	// first JSON file to `payload` regardless, which was the wrong input for 72
+	// of the 137 examples — every XML and CSV one, every one that reads nothing,
+	// and the two that need an inline input or params.
+	const bound = example.bindings;
 	els.modulesLabel.hidden = false;
-	els.modules.checked = true;
+	els.modules.checked = (bound?.modulePaths.length ?? 0) > 0;
+	els.params.value = (bound?.params ?? []).map((p) => `${p.name}=${p.value}`).join(' ');
 
-	const fixture = chapter.inputs.find((p) => p.endsWith('.json')) ?? chapter.inputs[0];
-	if (fixture) addInput({ name: 'payload', fixture });
+	if (bound) {
+		// No inputs is a real answer, not a missing one: several examples read
+		// `payload` from a stdin that is closed, and the error is the lesson.
+		for (const input of bound.inputs) {
+			addInput(
+				input.fixture
+					? { name: input.name, fixture: input.fixture }
+					: { name: input.name, content: input.content ?? '', format: input.format ?? 'application/json' },
+			);
+		}
+	} else {
+		const fixture = chapter.inputs.find((p) => p.endsWith('.json')) ?? chapter.inputs[0];
+		if (fixture) addInput({ name: 'payload', fixture });
+	}
 	summariseInputs();
 }
 
@@ -424,13 +445,30 @@ async function compareWithBook(result: RunResult): Promise<void> {
 		els.compareVerdict.textContent = 'Matches';
 		els.compareVerdict.className = 'verdict match';
 		els.compareBody.textContent = '';
+		return;
+	}
+
+	// Three examples in the book cannot match, and saying only "Differs" leaves a
+	// reader hunting a mistake they did not make. A script calling now(), uuid or
+	// random produces a new value every run, and a type error against a JSON value
+	// prints the Java object's identity hash — JsonString@492fea76 — which is
+	// different every time. Name the reason instead of implying fault.
+	const nondeterministic = /\bnow\(\)|uuid|randomInt|random\b/.test(els.script.value);
+	const onlyIdentityHash =
+		!sameBody &&
+		result.output.trim().replace(/@[0-9a-f]{4,}\b/g, '@') === saved.body.trim().replace(/@[0-9a-f]{4,}\b/g, '@');
+
+	els.compareVerdict.className = 'verdict differs';
+	if (sameExit && onlyIdentityHash) {
+		els.compareVerdict.textContent = 'Differs only by an object identity hash — expected';
+	} else if (sameExit && nondeterministic) {
+		els.compareVerdict.textContent = 'Differs — this script produces a new value every run';
 	} else {
 		els.compareVerdict.textContent = sameBody ? 'Same result, different exit code' : 'Differs';
-		els.compareVerdict.className = 'verdict differs';
-		els.compareBody.textContent = saved.exitCode === null
-			? saved.body
-			: `${saved.body}\n\nexit=${saved.exitCode}`;
 	}
+	els.compareBody.textContent = saved.exitCode === null
+		? saved.body
+		: `${saved.body}\n\nexit=${saved.exitCode}`;
 }
 
 async function run(): Promise<void> {
@@ -447,8 +485,14 @@ async function run(): Promise<void> {
 				allowPrivileges: els.privileges.checked,
 				// A failing example should report the file name the book prints.
 				scriptName: currentExample?.name,
+				// The book's own --path when it had one; the chapter folder otherwise,
+				// which is what a reader turning this on for their own script means.
 				modulePaths:
-					currentExample && els.modules.checked ? [`chapters/${currentExample.chapter}`] : [],
+					currentExample && els.modules.checked
+						? currentExample.bindings?.modulePaths.length
+							? currentExample.bindings.modulePaths
+							: [`chapters/${currentExample.chapter}`]
+						: [],
 				params: els.params.value
 					.split(/\s+/)
 					.filter((pair) => pair.includes('='))

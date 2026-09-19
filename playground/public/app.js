@@ -305,10 +305,20 @@ async function openExample(id) {
   const file = await readFixture(example.script);
   els.script.value = file.content;
   els.scriptPath.textContent = example.script.replace(/^chapters\//, "");
+  const bound = example.bindings;
   els.modulesLabel.hidden = false;
-  els.modules.checked = true;
-  const fixture = chapter.inputs.find((p) => p.endsWith(".json")) ?? chapter.inputs[0];
-  if (fixture) addInput({ name: "payload", fixture });
+  els.modules.checked = (bound?.modulePaths.length ?? 0) > 0;
+  els.params.value = (bound?.params ?? []).map((p) => `${p.name}=${p.value}`).join(" ");
+  if (bound) {
+    for (const input of bound.inputs) {
+      addInput(
+        input.fixture ? { name: input.name, fixture: input.fixture } : { name: input.name, content: input.content ?? "", format: input.format ?? "application/json" }
+      );
+    }
+  } else {
+    const fixture = chapter.inputs.find((p) => p.endsWith(".json")) ?? chapter.inputs[0];
+    if (fixture) addInput({ name: "payload", fixture });
+  }
   summariseInputs();
 }
 function setStatus(text, cls = "") {
@@ -335,13 +345,21 @@ async function compareWithBook(result) {
     els.compareVerdict.textContent = "Matches";
     els.compareVerdict.className = "verdict match";
     els.compareBody.textContent = "";
+    return;
+  }
+  const nondeterministic = /\bnow\(\)|uuid|randomInt|random\b/.test(els.script.value);
+  const onlyIdentityHash = !sameBody && result.output.trim().replace(/@[0-9a-f]{4,}\b/g, "@") === saved.body.trim().replace(/@[0-9a-f]{4,}\b/g, "@");
+  els.compareVerdict.className = "verdict differs";
+  if (sameExit && onlyIdentityHash) {
+    els.compareVerdict.textContent = "Differs only by an object identity hash \u2014 expected";
+  } else if (sameExit && nondeterministic) {
+    els.compareVerdict.textContent = "Differs \u2014 this script produces a new value every run";
   } else {
     els.compareVerdict.textContent = sameBody ? "Same result, different exit code" : "Differs";
-    els.compareVerdict.className = "verdict differs";
-    els.compareBody.textContent = saved.exitCode === null ? saved.body : `${saved.body}
+  }
+  els.compareBody.textContent = saved.exitCode === null ? saved.body : `${saved.body}
 
 exit=${saved.exitCode}`;
-  }
 }
 async function run() {
   els.run.disabled = true;
@@ -357,7 +375,9 @@ async function run() {
         allowPrivileges: els.privileges.checked,
         // A failing example should report the file name the book prints.
         scriptName: currentExample?.name,
-        modulePaths: currentExample && els.modules.checked ? [`chapters/${currentExample.chapter}`] : [],
+        // The book's own --path when it had one; the chapter folder otherwise,
+        // which is what a reader turning this on for their own script means.
+        modulePaths: currentExample && els.modules.checked ? currentExample.bindings?.modulePaths.length ? currentExample.bindings.modulePaths : [`chapters/${currentExample.chapter}`] : [],
         params: els.params.value.split(/\s+/).filter((pair) => pair.includes("=")).map((pair) => ({
           name: pair.slice(0, pair.indexOf("=")),
           value: pair.slice(pair.indexOf("=") + 1)

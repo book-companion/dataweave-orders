@@ -9,6 +9,15 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
+export interface Binding { name: string; fixture?: string; content?: string; format?: string }
+
+/** Exactly what the book's own `run.sh` passed when it produced the saved output. */
+export interface Bindings {
+	inputs: Binding[];
+	params: Array<{ name: string; value: string }>;
+	modulePaths: string[];
+}
+
 export interface Example {
 	/** `language-01/02_summary` — what the picker shows and the client sends back. */
 	id: string;
@@ -17,6 +26,15 @@ export interface Example {
 	script: string;
 	/** Repo-relative path of the saved output, when the chapter kept one. */
 	savedOutput?: string;
+	/**
+	 * What to bind when this example is opened. Without it the page has to guess,
+	 * and guessing was wrong for 72 of the 137 examples: it bound the chapter's
+	 * first JSON file to `payload` whatever the example actually read, so every
+	 * XML and CSV example, every example that reads nothing, the one with an
+	 * inline input and the one that takes params all ran against the wrong thing
+	 * and reported Differs against a book they had never been compared with.
+	 */
+	bindings?: Bindings;
 }
 
 export interface Chapter {
@@ -26,6 +44,69 @@ export interface Chapter {
 }
 
 const INPUT_EXT = new Set(['.json', '.xml', '.csv', '.yaml', '.yml', '.txt', '.properties', '.ffd']);
+
+const splitOnce = (s: string): [string, string] => {
+	const at = s.indexOf('=');
+	return [s.slice(0, at), s.slice(at + 1)];
+};
+
+/**
+ * Pull the `go <name> [args]` lines out of a chapter's run.sh — the script that
+ * produced every `.out` file beside it — and read the bindings back off them.
+ *
+ * Two things this has to get right, both of which were got wrong once:
+ * run.sh defines its fixtures on ONE line (`J="…"; X="…"; CSV="…"`), so the
+ * match must not anchor to the start of a line or only the first is ever found
+ * and the XML and CSV examples silently run with no input. And `J="-i
+ * payload=$C/order.json"` nests one variable inside another, so expansion
+ * repeats until it settles rather than running once.
+ */
+function parseRunScript(source: string, chapter: string): Map<string, Bindings> {
+	const vars: Record<string, string> = { C: `chapters/${chapter}` };
+	for (const m of source.matchAll(/\b([A-Z][A-Z0-9_]*)="([^"]*)"/g)) vars[m[1]] = m[2];
+	const expand = (s: string): string => {
+		let out = s;
+		for (let i = 0; i < 5 && /\$[A-Za-z_]/.test(out); i++) {
+			out = out.replace(/\$([A-Za-z_]+)/g, (_, n: string) => vars[n] ?? '');
+		}
+		return out;
+	};
+
+	const found = new Map<string, Bindings>();
+	for (const line of source.split('\n')) {
+		const m = line.match(/^go\s+(\S+)\s*(.*)$/);
+		if (!m) continue;
+		const [, name, rest] = m;
+		const args = expand(rest).match(/'[^']*'|"[^"]*"|\S+/g) ?? [];
+		const inputs: Binding[] = [];
+		const params: Array<{ name: string; value: string }> = [];
+		const modulePaths: string[] = [];
+		for (let i = 0; i < args.length; i++) {
+			const flag = args[i];
+			const value = (args[i + 1] ?? '').replace(/^['"]|['"]$/g, '');
+			if (flag === '-i') {
+				const [n, file] = splitOnce(value);
+				inputs.push({ name: n, fixture: file });
+				i++;
+			} else if (flag === '-li') {
+				const [n, content] = splitOnce(value);
+				inputs.push({ name: n, content, format: 'application/json' });
+				i++;
+			} else if (flag === '-p') {
+				const [n, v] = splitOnce(value);
+				params.push({ name: n, value: v });
+				i++;
+			} else if (flag.startsWith('--path=')) {
+				modulePaths.push(...flag.slice('--path='.length).split(':').filter(Boolean));
+			} else if (flag === '--path') {
+				modulePaths.push(...value.split(':').filter(Boolean));
+				i++;
+			}
+		}
+		found.set(name, { inputs, params, modulePaths });
+	}
+	return found;
+}
 
 export async function discover(repoRoot: string): Promise<Chapter[]> {
 	const base = path.join(repoRoot, 'chapters');
@@ -50,6 +131,8 @@ export async function discover(repoRoot: string): Promise<Chapter[]> {
 		const entries = await readdir(path.join(base, chapter));
 		const examples: Example[] = [];
 		const inputs: string[] = [];
+		const runScript = await readFile(path.join(base, chapter, 'run.sh'), 'utf8').catch(() => '');
+		const bindings = runScript ? parseRunScript(runScript, chapter) : new Map<string, Bindings>();
 		for (const entry of entries.sort()) {
 			const ext = path.extname(entry);
 			if (ext === '.dwl') {
@@ -61,6 +144,7 @@ export async function discover(repoRoot: string): Promise<Chapter[]> {
 					name,
 					script: `chapters/${chapter}/${entry}`,
 					savedOutput: out,
+					bindings: bindings.get(name),
 				});
 			} else if (INPUT_EXT.has(ext)) {
 				inputs.push(`chapters/${chapter}/${entry}`);

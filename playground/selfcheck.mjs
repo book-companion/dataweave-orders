@@ -104,6 +104,20 @@ const splitOnce = (s) => {
 const { chapters } = await get('/api/examples');
 let checked = 0, matched = 0, drifted = 0, noScript = 0;
 const failures = [];
+/**
+ * What the page will bind, against what run.sh bound.
+ *
+ * This check exists because the numbers above cannot see the page. Every
+ * example here passed while the browser was binding the chapter's first JSON
+ * file to `payload` whatever the example actually read — wrong for 72 of 137,
+ * and reported to the reader as Differs. This replays run.sh directly, so it
+ * proves the engine; only comparing the server's declared bindings with the
+ * same parse proves what a reader will actually run.
+ */
+const bindingMismatches = [];
+const sameBindings = (a, b) =>
+	JSON.stringify({ i: a.inputs, p: a.params, m: a.modulePaths }) ===
+	JSON.stringify({ i: b.inputs, p: b.params, m: b.modulePaths });
 
 for (const chapter of chapters) {
 	if (ONLY && chapter.id !== ONLY) continue;
@@ -118,6 +132,14 @@ for (const chapter of chapters) {
 	for (const testCase of parseRunScript(runScript, chapter.id)) {
 		const example = chapter.examples.find((e) => e.name === testCase.name);
 		if (!example?.savedOutput) continue;
+
+		if (!example.bindings) bindingMismatches.push({ id: example.id, why: 'server declares none' });
+		else if (!sameBindings(example.bindings, testCase)) {
+			bindingMismatches.push({
+				id: example.id,
+				why: `server ${JSON.stringify(example.bindings.inputs)} vs run.sh ${JSON.stringify(testCase.inputs)}`,
+			});
+		}
 
 		const { content: script } = await get(`/api/file?path=${encodeURIComponent(example.script)}`);
 		const { saved } = await get(`/api/file?path=${encodeURIComponent(example.savedOutput)}`);
@@ -155,10 +177,16 @@ for (const chapter of chapters) {
 }
 
 console.log(`checked ${checked} · matched ${matched} · expected drift ${drifted} · differs ${failures.length}`);
+console.log(
+	bindingMismatches.length
+		? `bindings the page would get wrong: ${bindingMismatches.length}`
+		: `bindings: all ${checked} match what run.sh bound`,
+);
+for (const m of bindingMismatches.slice(0, 10)) console.log(`  ${m.id}  ${m.why}`);
 if (noScript) console.log(`(${noScript} chapter(s) have no run.sh and were skipped)`);
 for (const f of failures.slice(0, 8)) {
 	console.log(`\n  ${f.id}  exit ${f.exit}`);
 	console.log(`    book: ${JSON.stringify(f.want.slice(0, 160))}`);
 	console.log(`    here: ${JSON.stringify(f.got.slice(0, 160))}`);
 }
-process.exit(failures.length ? 1 : 0);
+process.exit(failures.length || bindingMismatches.length ? 1 : 0);
