@@ -1,0 +1,30 @@
+{
+  "mapped": [
+    3,
+    2
+  ],
+  "flat": [
+    {
+      "orderId": "A-1001",
+      "sku": "PEN-01"
+    },
+    {
+      "orderId": "A-1001",
+      "sku": "PAD-22"
+    },
+    {
+      "orderId": "A-1001",
+      "sku": "CLP-08"
+    },
+    {
+      "orderId": "A-1008",
+      "sku": "PEN-01"
+    },
+    {
+      "orderId": "A-1008",
+      "sku": "INK-03"
+    }
+  ],
+  "same": true
+}
+exit=0

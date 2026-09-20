@@ -1,0 +1,8 @@
+{
+  "orderId": "A-1001",
+  "customer": {
+    "name": "Dana",
+    "email": "dana@example.test"
+  },
+  "delivery-method": "standard"
+}

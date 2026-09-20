@@ -1,0 +1,24 @@
+{
+  "reversed": {
+    "id": "A-1001",
+    "currency": "USD",
+    "giftWrap": false
+  },
+  "plusOp": {
+    "currency": "USD",
+    "giftWrap": false,
+    "id": "A-1001",
+    "giftWrap": true
+  },
+  "hasId": true,
+  "allSet": true,
+  "fromEntries": [
+    {
+      "id": "A-1001"
+    },
+    {
+      "giftWrap": true
+    }
+  ]
+}
+exit=0

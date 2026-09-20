@@ -1,0 +1,13 @@
+{
+  "first": "PEN-01",
+  "all": [
+    "PEN-01",
+    "PAD-22"
+  ],
+  "keys": [
+    "sku",
+    "sku",
+    "qty"
+  ]
+}
+exit=0

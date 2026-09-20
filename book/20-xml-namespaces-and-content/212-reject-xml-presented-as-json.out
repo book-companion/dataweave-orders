@@ -1,0 +1,16 @@
+[ERROR] Error while executing the script:
+[ERROR] Exception while reading '<order id="A-1001"/>' as 'application/json' cause by:
+Unexpected character '<' at root@[1:1] (line:column), expected false or true or null or {...} or [...] or number but was , while reading `root` as Json.
+ 
+1| <order id="A-1001"/>
+   ^
+
+4| read('<order id="A-1001"/>', "application/json")
+        ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 212-reject-xml-presented-as-json::read (line: 4, column: 6)
+  at 212-reject-xml-presented-as-json::main (line: 4, column: 1) at:
+
+4| read('<order id="A-1001"/>', "application/json")
+        ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

@@ -1,0 +1,11 @@
+{
+  "first": {
+    "sku": "PEN-01",
+    "price": 2.5,
+    "qty": 4
+  },
+  "secondSku": "PAD-22",
+  "lastSku": "CLP-08",
+  "beyondEnd": null
+}
+exit=0

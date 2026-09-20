@@ -1,0 +1,4 @@
+%dw 2.0
+output application/json
+---
+{ orderId: payload.orderId, customer: payload.customer }

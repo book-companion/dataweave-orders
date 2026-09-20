@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:orderBatch xmlns:ord="http://shipping.acme.com/orders" batchId="B-2026-06-20">
+  <ord:order id="A-1001">
+    <ord:placedAt>2026-06-14</ord:placedAt>
+    <ord:customer tier="gold">Dana</ord:customer>
+    <ord:note><![CDATA[Leave at <side door> & ring twice]]></ord:note>
+    <ord:line>
+      <ord:sku>PEN-01</ord:sku>
+      <ord:category>stationery</ord:category>
+      <ord:price currency="USD">2.50</ord:price>
+      <ord:qty>4</ord:qty>
+    </ord:line>
+    <ord:line>
+      <ord:sku>PAD-22</ord:sku>
+      <ord:category>paper</ord:category>
+      <ord:price currency="USD">6.00</ord:price>
+      <ord:qty>2</ord:qty>
+    </ord:line>
+    <ord:line>
+      <ord:sku>CLP-08</ord:sku>
+      <ord:category>stationery</ord:category>
+      <ord:price currency="USD">1.00</ord:price>
+      <ord:qty>10</ord:qty>
+    </ord:line>
+  </ord:order>
+  <ord:order id="A-1002">
+    <ord:placedAt>06/16/2026</ord:placedAt>
+    <ord:customer tier="standard">Ravi</ord:customer>
+    <ord:line>
+      <ord:sku>PAD-22</ord:sku>
+      <ord:category>paper</ord:category>
+      <ord:price currency="USD">6.00</ord:price>
+      <ord:qty>1</ord:qty>
+    </ord:line>
+  </ord:order>
+  <ord:order id="A-1003">
+    <ord:placedAt>2026-06-18T09:30:00Z</ord:placedAt>
+    <ord:customer tier="gold">Mei</ord:customer>
+    <ord:line>
+      <ord:sku>PEN-01</ord:sku>
+      <ord:category>stationery</ord:category>
+      <ord:price currency="USD">2.50</ord:price>
+      <ord:qty>12</ord:qty>
+    </ord:line>
+    <ord:line>
+      <ord:sku>CLP-08</ord:sku>
+      <ord:category>stationery</ord:category>
+      <ord:price currency="USD">1.00</ord:price>
+      <ord:qty>3</ord:qty>
+    </ord:line>
+  </ord:order>
+</ord:orderBatch>

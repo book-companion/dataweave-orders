@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] There is no key named 'orderId'
+
+4| { orderId: payload.orderId! }
+              ^^^^^^^^^^^^^^^
+Trace:
+  at 024-require-an-order-identifier::main (line: 4, column: 12) at:
+
+4| { orderId: payload.orderId! }
+              ^^^^^^^^^^^^^^^
+exit=255

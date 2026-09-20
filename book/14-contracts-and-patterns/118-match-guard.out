@@ -1,0 +1,15 @@
+{
+  "right": [
+    "empty cart",
+    "standard",
+    "gold",
+    "platinum"
+  ],
+  "wrong": [
+    "empty cart",
+    "standard",
+    "standard",
+    "standard"
+  ]
+}
+exit=0

@@ -1,0 +1,23 @@
+[
+  {
+    "l": {
+      "sku": "PEN-01",
+      "qty": 4
+    },
+    "r": {
+      "sku": "PEN-01",
+      "name": "Old label"
+    }
+  },
+  {
+    "l": {
+      "sku": "PEN-01",
+      "qty": 4
+    },
+    "r": {
+      "sku": "PEN-01",
+      "name": "New label"
+    }
+  }
+]
+exit=0

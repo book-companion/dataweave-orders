@@ -1,0 +1,12 @@
+{
+  "order": {
+    "@id": "A-1001",
+    "@channel": "web",
+    "customer": "Dana",
+    "total": {
+      "@currency": "USD",
+      "__text": "32.00"
+    }
+  }
+}
+exit=0

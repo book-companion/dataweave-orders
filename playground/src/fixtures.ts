@@ -1,11 +1,4 @@
-/**
- * Discovers the book's examples so the playground can open any of them.
- *
- * Every chapter folder holds its scripts (`NN_name.dwl`), the inputs they read,
- * and the output the book printed (`NN_name.out`). The third of those is what
- * makes this more useful than a hosted sandbox: a reader can run an example and
- * compare their result against the one on the page, byte for byte.
- */
+/** Read the current numbered catalogue, with legacy discovery for older clones. */
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -22,7 +15,7 @@ export interface Binding {
 	literal?: boolean;
 }
 
-/** Exactly what the book's own `run.sh` passed when it produced the saved output. */
+/** Inputs, parameters and module paths used for the recorded result. */
 export interface Bindings {
 	inputs: Binding[];
 	params: Array<{ name: string; value: string }>;
@@ -30,10 +23,11 @@ export interface Bindings {
 }
 
 export interface Example {
-	/** `01-a-functional-language/02_summary` — what the picker shows and the client sends back. */
+	/** Catalogue identity; the human-readable name is a separate label. */
 	id: string;
 	chapter: string;
 	name: string;
+	label?: string;
 	script: string;
 	/** Repo-relative path of the saved output, when the chapter kept one. */
 	savedOutput?: string;
@@ -171,6 +165,18 @@ function parseManifest(source: string, chapter: string): Map<string, Bindings> {
 }
 
 export async function discover(repoRoot: string): Promise<Chapter[]> {
+	// This edition declares reading order and bindings explicitly. The old
+	// discovery remains available for clones without the numbered catalogue.
+	let manifestText: string | null = null;
+	try { manifestText = await readFile(path.join(repoRoot, 'book/manifest.json'), 'utf8'); }
+	catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+	if (manifestText !== null) {
+		const chapters = JSON.parse(manifestText) as Chapter[];
+		const scratch = await readdir(path.join(repoRoot, 'scratch')).catch(() => [] as string[]);
+		const inputs = scratch.filter(name => INPUT_EXT.has(path.extname(name))).sort().map(name => `scratch/${name}`);
+		if (inputs.length) chapters.push({ id: 'scratch', examples: [], inputs });
+		return chapters;
+	}
 	const base = path.join(repoRoot, 'chapters');
 	let dirs: string[];
 	try {

@@ -1,0 +1,10 @@
+{
+  "built": "2026-06-16",
+  "builtDT": "2026-06-16T14:30:00-04:00",
+  "namedAsZone": "America/New_York",
+  "namedKind": "TimeZone",
+  "startOfDay": "2026-06-16T00:00:00-04:00",
+  "startOfMonth": "2026-06-01",
+  "startOfWeek": "2026-06-14"
+}
+exit=0

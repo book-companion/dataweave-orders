@@ -1,0 +1,24 @@
+{
+  "orderId": "A-1001",
+  "customer": "Dana",
+  "currency": "USD",
+  "total": 32,
+  "lines": [
+    {
+      "sku": "PEN-01",
+      "qty": 4,
+      "name": "Ballpoint pen"
+    },
+    {
+      "sku": "PAD-22",
+      "qty": 2,
+      "name": "Notepad"
+    },
+    {
+      "sku": "CLP-08",
+      "qty": 10,
+      "name": "Binder clip"
+    }
+  ]
+}
+exit=0

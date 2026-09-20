@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Expects `3` argument but got `2`. Expecting: (_Undefined0, _Undefined1, _Undefined2), but got: (5, 1).
+
+5| 5 clamp 1
+   ^^^^^^^^^
+Location:
+268-reject-a-three-argument-infix-call (line: 5, column:1)
+exit=255

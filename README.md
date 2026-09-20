@@ -1,42 +1,53 @@
 # DataWeave orders companion
 
-Companion code for *DataWeave in Depth* by Simon Sarkar, the second book of the pair that starts with *Mule from Scratch*. It holds the book's DataWeave scripts, input fixtures and saved outputs, chapter by chapter, and runs them with the pinned DataWeave CLI. You need Docker and Python 3; no Anypoint account is required.
+Companion to *DataWeave in Depth* by Simon Sarkar, following *MuleSoft from the Ground Up*. The progressive edition contains 24 chapters and four appendices. Examples start with Hello World, then grow through one order line, collections and a complete order report.
 
-## Run it
+## Start reading and running
 
-```bash
-make image    # builds the pinned image: DataWeave CLI 2.12.0 (engine 2.12.2)
-make verify   # two golden checks: the opening order summary and the final XML-to-JSON report
+```sh
+make runner
 ```
 
-`make verify` compares parsed JSON with the saved results and fails on a changed value or an unexpected process failure. It is a small smoke suite, not a re-run of every chapter. One image serves both the command line and the Runner, and it pins everything it installs: the CLI release, the Node that serves the Runner, and a dated Debian snapshot underneath them. So a rebuild gets the engine and the system libraries it runs against. It is not byte-identical: `apt-get` still resolves against the live archive.
+Open `http://127.0.0.1:4444` and choose **001 — Hello from DataWeave**. Docker is the only prerequisite for this route. The image pins DataWeave CLI 2.12.0, which reports language runtime 2.12.2. The first build downloads the tools.
 
-## DataWeave Runner, in your browser
+## Find an example
 
-```bash
-make runner       # Docker only: http://127.0.0.1:4444
+The book's **318 listings** are numbered continuously by first appearance, including exercise answers. Each listing has a descriptive filename under `book/`. The [example index](book/README.md) maps every number to its source. The Runner opens the **311 runnable CLI scripts** with their declared fixtures, parameters, module paths and expected outputs. Three module listings are imported by other examples; four Mule-only listings retain the separately recorded evidence explained in Appendix C.
+
+`book/manifest.json` is the Runner catalogue. `book/listings.json` includes the modules and Mule-only listings as well. An `.out` file contains recorded output followed by `exit=N`; an error can be the expected result. The web comparison checks text and exit status, removing CLI noise and trailing whitespace. Clock values and diagnostic identity hashes may differ; `make verify` checks the clock's fields and normalizes only identity suffixes.
+
+The `chapters/` directory preserves the previous edition's 553 DataWeave source files, including modules, under their original filenames. It is an archive for old links and investigations; the current Runner uses `book/`. [Migration notes](book/MIGRATION.md) explain the new chapter sequence.
+
+## Verify the book
+
+```sh
+make image
+make verify
+./check-golden.sh
 ```
 
-Three panes — input, script, result — running on the same pinned CLI, offline.
-Bind a file from this repository and read its contents beside your script, or
-type an input inline. Open any example from the book and the Runner will tell
-you whether your result matches the one the book printed. See
-[`playground/README.md`](playground/README.md).
+`make verify` replays all 311 numbered CLI scripts in the pinned image. It checks catalogue order, expected errors, outputs, independent report totals, the empty-order result and rejection of a non-USD price. Negative controls prove that a wrong output and a repaired expected error are detected. It does not rerun the historical large-input memory measurements or the separate Mule probes.
 
-## Run one script from the shell
+`check-golden.sh` compares the serialized order result byte for byte and preserves a nonzero exit from either the engine or `diff`. It also accepts a replacement script path as its first argument, for testing a change against that same contract.
 
-To run one script, pass its input and module path through `dw.sh`. The capstone, for example:
+To check the browser API, start the Runner in one terminal, then use Node 22.6 or newer in another:
 
-```bash
-./dw.sh run -s -i payload=chapters/16-a-real-transform/feed.xml --path=chapters/16-a-real-transform -f chapters/16-a-real-transform/04_final.dwl
+```sh
+node playground/selfcheck.mjs --all
 ```
 
-## Layout
+See [Runner documentation](playground/README.md) for editable inputs and local development. The compiled browser client is committed, so reading the book does not require npm.
 
-`chapters/01-a-functional-language` to `08-composing-and-reusing` hold chapters 1–8, and `chapters/09-json-and-java` to `16-a-real-transform` hold chapters 9–16. The directory names keep the original experiment numbering. Each one holds the chapter's scripts, small fixtures, modules and saved `.out` files. Many examples fail on purpose, and each saved output records the expected exit. Timestamps, UUIDs, object identity strings and some diagnostic ordering vary between runs.
+## Run the capstone from the shell
 
-Each chapter directory has a `run.sh` that regenerates its saved outputs. Keep a clean copy before running one, because it overwrites the files the book quotes.
+```sh
+./dw.sh run -s --path=book/23-order-report/modules \
+  -i payload=book/23-order-report/inspect-the-batch-shape-input.xml \
+  -f book/23-order-report/235-build-the-order-report.dwl
+```
 
-## What is not here
+The source is normalized once before reporting. The module supplies the report functions; the script binds the XML fixture. Order totals are 32, 6 and 33, category totals are 53 and 18, and both reconcile to 71.
 
-The streaming chapter's large-input memory harness is not included; its small transforms are. The CLI has no Java, Excel or flat-file readers, so those examples live in the [MuleSoft companion](https://github.com/book-companion/mulesoft-orders), which runs them under a Mule runtime. Custom POJOs, tagged multi-record flat-file schemas and deployment are outside this suite. No Mule runtime or credentials are included.
+## Evidence boundaries
+
+The CLI does not supply Java, Excel or fixed-width readers. The corresponding small probes were recorded using Mule 4.12.3 / DataWeave 2.12.3 / Java 17.0.13; their integration resources live in the [MuleSoft companion](https://github.com/book-companion/mulesoft-orders). No Mule runtime, account or credentials are included here. The performance chapter's small fixtures are runnable, while its 400,000-order memory results remain measurements from the original lab.

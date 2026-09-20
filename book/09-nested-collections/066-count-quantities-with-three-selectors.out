@@ -1,0 +1,10 @@
+{
+  "units": 16,
+  "starUnits": 16,
+  "everyQty": [
+    4,
+    2,
+    10
+  ]
+}
+exit=0

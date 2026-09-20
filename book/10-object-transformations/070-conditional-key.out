@@ -1,0 +1,26 @@
+[
+  {
+    "sku": "PEN-01",
+    "qty": 4,
+    "bulk": true
+  },
+  {
+    "sku": "PAD-22",
+    "qty": 2
+  },
+  {
+    "sku": "CLP-08",
+    "qty": 10,
+    "bulk": true
+  },
+  {
+    "sku": "PEN-01",
+    "qty": 1
+  },
+  {
+    "sku": "INK-03",
+    "qty": 3,
+    "bulk": true
+  }
+]
+exit=0

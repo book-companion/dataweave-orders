@@ -1,0 +1,5 @@
+sku,name,qty,price
+PEN-01,Ballpoint pen,4,2.50
+PAD-22,Notepad,2,6.00
+CLP-08,Binder clip,10,1.00
+exit=0

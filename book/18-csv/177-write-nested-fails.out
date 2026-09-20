@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Object to String
+
+4| payload.items map { sku: $.sku, dims: { w: 10, h: 20 } }
+                                         ^^^^^^^^^^^^^^^^
+Trace:
+  at 177-write-nested-fails::main (line: 4, column: 39) at:
+
+4| payload.items map { sku: $.sku, dims: { w: 10, h: 20 } }
+                                         ^^^^^^^^^^^^^^^^
+exit=255

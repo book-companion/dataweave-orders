@@ -1,0 +1,10 @@
+[ERROR] Error while executing the script:
+[ERROR] Missing required property: `qty` required by `LineItem`.
+	|-- From: `LineItem`
+	|---- From: orderTotal(items: Array<LineItem>) -> Number
+
+5| orderTotal([ { sku: "PEN-01", price: 2.5 } ])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Location:
+125-type-mismatch-fails (line: 5, column:14)
+exit=255

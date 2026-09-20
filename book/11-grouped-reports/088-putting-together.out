@@ -1,0 +1,16 @@
+[
+  {
+    "category": "writing",
+    "revenue": 21.5,
+    "topSeller": true
+  },
+  {
+    "category": "paper",
+    "revenue": 12
+  },
+  {
+    "category": "desk",
+    "revenue": 10
+  }
+]
+exit=0

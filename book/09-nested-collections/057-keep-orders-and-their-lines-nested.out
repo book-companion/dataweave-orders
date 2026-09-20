@@ -1,0 +1,33 @@
+[
+  {
+    "orderId": "A-1001",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "amount": 10
+      },
+      {
+        "sku": "PAD-22",
+        "amount": 12
+      },
+      {
+        "sku": "CLP-08",
+        "amount": 10
+      }
+    ]
+  },
+  {
+    "orderId": "A-1008",
+    "lines": [
+      {
+        "sku": "PEN-01",
+        "amount": 2.5
+      },
+      {
+        "sku": "INK-03",
+        "amount": 9
+      }
+    ]
+  }
+]
+exit=0

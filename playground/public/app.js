@@ -262,11 +262,11 @@ async function loadExamples() {
   for (const chapter of chapters) {
     if (!chapter.examples.length) continue;
     const group = document.createElement("optgroup");
-    group.label = chapter.id.replace(/-/g, " ");
+    group.label = chapter.title ? `${chapter.id.slice(0, 2)} \u2014 ${chapter.title}` : chapter.id.replace(/-/g, " ");
     for (const example of chapter.examples) {
       const option = document.createElement("option");
       option.value = example.id;
-      option.textContent = example.name.replace(/_/g, " ");
+      option.textContent = example.label ?? example.name.replace(/_/g, " ");
       group.append(option);
     }
     els.example.append(group);
@@ -275,18 +275,9 @@ async function loadExamples() {
 var STARTER = `%dw 2.0
 output application/json
 ---
-{
-  id: payload.orderId,
-  lines: sizeOf(payload.items)
-}
+{ greeting: "Hello, DataWeave!" }
 `;
-var STARTER_INPUT = `{
-  "orderId": "A-1001",
-  "items": [
-    { "sku": "PEN-01", "price": 2.5, "qty": 4 }
-  ]
-}
-`;
+var STARTER_INPUT = "{}\n";
 async function openExample(id) {
   els.compare.hidden = true;
   els.inputList.replaceChildren();
@@ -413,7 +404,9 @@ document.addEventListener("keydown", (event) => {
 });
 void (async () => {
   await loadExamples();
-  await openExample("");
+  const first = chapters.flatMap((chapter) => chapter.examples)[0];
+  els.example.value = first?.id ?? "";
+  await openExample(first?.id ?? "");
   try {
     const version = await api("/api/version");
     const runtime = /Runtime\s*:\s*V?([\d.]+)/i.exec(version.banner)?.[1];

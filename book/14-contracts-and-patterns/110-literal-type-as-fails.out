@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String ("platinum") to String | String | String
+
+5| { tier: "platinum" as Tier }
+           ^^^^^^^^^^^^^^^^^^
+Trace:
+  at 110-literal-type-as-fails::main (line: 5, column: 9) at:
+
+5| { tier: "platinum" as Tier }
+           ^^^^^^^^^^^^^^^^^^
+exit=255

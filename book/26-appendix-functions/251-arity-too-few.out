@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Expects `2` argument but got `1`. Expecting: (_Undefined0, _Undefined1), but got: (20).
+
+5| discountedBy(20)
+   ^^^^^^^^^^^^^^^^
+Location:
+251-arity-too-few (line: 5, column:1)
+exit=255

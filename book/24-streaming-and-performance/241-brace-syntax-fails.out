@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input '{', expected options (line 2, column 32):
+
+
+2| input payload application/json { streaming: true }
+                                  ^
+Location:
+241-brace-syntax-fails (line: 2, column:32)
+exit=255

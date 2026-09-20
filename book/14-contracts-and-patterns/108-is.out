@@ -1,0 +1,12 @@
+{
+  "qtyIsNumber": true,
+  "skuIsString": true,
+  "itemsIsArray": true,
+  "itemIsObject": true,
+  "stringNotNumber": false,
+  "missingIsNull": true,
+  "everythingIsAny": true,
+  "typedArray": true,
+  "mixedArray": true
+}
+exit=0

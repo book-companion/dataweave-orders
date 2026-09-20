@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (2,50) to Number
+
+4| read(payload, "application/csv", { separator: ";" }) map ($.price as Number)
+                                                             ^^^^^^^^^^^^^^^^^
+Trace:
+  at 171-decimal-comma-fails::main (line: 4, column: 59) at:
+
+4| read(payload, "application/csv", { separator: ";" }) map ($.price as Number)
+                                                             ^^^^^^^^^^^^^^^^^
+exit=255

@@ -1,0 +1,21 @@
+[
+  {
+    "column_0": "PEN-01",
+    "column_1": "Ballpoint pen",
+    "column_2": "4",
+    "column_3": "2.50"
+  },
+  {
+    "column_0": "PAD-22",
+    "column_1": "Notepad",
+    "column_2": "2",
+    "column_3": "6.00"
+  },
+  {
+    "column_0": "CLP-08",
+    "column_1": "Binder clip",
+    "column_2": "10",
+    "column_3": "1.00"
+  }
+]
+exit=0

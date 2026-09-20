@@ -1,0 +1,3 @@
+[ERROR] Error while executing the script:
+[ERROR] Trying to output second root, <customer>, while writing Xml at . at:
+exit=255

@@ -1,0 +1,30 @@
+{
+  "h1": {
+    "Acme supplier export": "Generated 2026-06-14"
+  },
+  "h2": {
+    "Generated 2026-06-14": "sku",
+    "column_1": "name",
+    "column_2": "qty",
+    "column_3": "price"
+  },
+  "h3": {
+    "sku": "PEN-01",
+    "name": "Ballpoint pen",
+    "qty": "4",
+    "price": "2.50"
+  },
+  "h2b4": {
+    "Generated 2026-06-14": "PEN-01",
+    "column_1": "Ballpoint pen",
+    "column_2": "4",
+    "column_3": "2.50"
+  },
+  "b3only": {
+    "Acme supplier export": "sku",
+    "column_1": "name",
+    "column_2": "qty",
+    "column_3": "price"
+  }
+}
+exit=0

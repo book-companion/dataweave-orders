@@ -1,0 +1,22 @@
+{
+  "literals": [
+    1,
+    2.5,
+    6,
+    1E+3,
+    10000000000000000000000,
+    0.3
+  ],
+  "types": [
+    "Number",
+    "Number",
+    "Number",
+    "Number"
+  ],
+  "fromPayload": [
+    2.5,
+    6,
+    1
+  ]
+}
+exit=0

@@ -1,0 +1,15 @@
+[
+  {
+    "productCode": "PEN-01",
+    "quantity": 4
+  },
+  {
+    "productCode": "PAD-22",
+    "quantity": 2
+  },
+  {
+    "productCode": "CLP-08",
+    "quantity": 10
+  }
+]
+exit=0

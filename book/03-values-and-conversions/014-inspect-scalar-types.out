@@ -1,0 +1,7 @@
+{
+  "price": "String",
+  "qty": "String",
+  "numericPrice": false,
+  "textPrice": true
+}
+exit=0

@@ -1,0 +1,30 @@
+[ERROR] Error while executing the script:
+[ERROR] You called the function '++' with these arguments: 
+  1: Object ({sku: "PEN-01",price: 2.5,qty: 4})
+  2: String (",")
+
+But it expects one of these combinations:
+  (Array, Array)
+  (Date, Time)
+  (Date, LocalTime)
+  (Date, TimeZone)
+  (LocalDateTime, TimeZone)
+  (LocalTime, Date)
+  (LocalTime, TimeZone)
+  (Object, Object)
+  (String, String)
+  (Time, Date)
+  (TimeZone, LocalDateTime)
+  (TimeZone, Date)
+  (TimeZone, LocalTime)
+
+4| payload.items reduce (item, acc) -> acc ++ "," ++ item.sku
+                                           ^^
+Trace:
+  at 098-reduce-unseeded-type::++ (line: 4, column: 41)
+  at 098-reduce-unseeded-type::reduce (line: 4, column: 48)
+  at 098-reduce-unseeded-type::main (line: 4, column: 15) at:
+
+4| payload.items reduce (item, acc) -> acc ++ "," ++ item.sku
+                                           ^^
+exit=255

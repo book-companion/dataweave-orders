@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+summary:
+  id: A-1001
+  buyer: Dana
+  lineCount: 3
+exit=0

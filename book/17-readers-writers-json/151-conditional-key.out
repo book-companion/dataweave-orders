@@ -1,0 +1,13 @@
+[
+  {
+    "sku": "PEN-01"
+  },
+  {
+    "sku": "PAD-22"
+  },
+  {
+    "sku": "CLP-08",
+    "bulk": true
+  }
+]
+exit=0

@@ -1,0 +1,15 @@
+[
+  {
+    "orderId": "A-1001",
+    "shipping": 0
+  },
+  {
+    "orderId": "A-1008",
+    "shipping": 4.99
+  },
+  {
+    "orderId": "A-1009",
+    "shipping": null
+  }
+]
+exit=0

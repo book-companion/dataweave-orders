@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (hello) to Number
+
+4| { n: "hello" as Number }
+        ^^^^^^^^^^^^^^^^^
+Trace:
+  at 290-as-fails-number::main (line: 4, column: 6) at:
+
+4| { n: "hello" as Number }
+        ^^^^^^^^^^^^^^^^^
+exit=255

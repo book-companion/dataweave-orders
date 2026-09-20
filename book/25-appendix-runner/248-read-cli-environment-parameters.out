@@ -1,0 +1,6 @@
+{
+  "id": "A-1001",
+  "env": "prod",
+  "taxRate": 0.2
+}
+exit=0

@@ -1,0 +1,14 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `capitalise`.
+
+5| capitalise("gel pen")
+   ^^^^^^^^^^
+Location:
+302-import-unknown-function (line: 5, column:1)
+Unable to resolve reference of: `capitalise`.
+
+3| import capitalise from dw::core::Strings
+          ^^^^^^^^^^
+Location:
+302-import-unknown-function (line: 3, column:8)
+exit=255

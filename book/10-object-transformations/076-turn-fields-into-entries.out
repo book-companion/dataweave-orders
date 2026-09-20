@@ -1,0 +1,18 @@
+[
+  {
+    "name": "sku",
+    "value": "PEN-01",
+    "position": 0
+  },
+  {
+    "name": "price",
+    "value": 2.5,
+    "position": 1
+  },
+  {
+    "name": "qty",
+    "value": 4,
+    "position": 2
+  }
+]
+exit=0

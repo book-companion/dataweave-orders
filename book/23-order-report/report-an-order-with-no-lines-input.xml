@@ -1,0 +1,3 @@
+<ord:orderBatch xmlns:ord="http://shipping.acme.com/orders" batchId="B-EMPTY">
+  <ord:order id="A-1004"><ord:placedAt>2026-06-19</ord:placedAt><ord:customer tier="standard">Tomas</ord:customer></ord:order>
+</ord:orderBatch>

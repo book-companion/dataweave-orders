@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (many) to Number
+
+4| "many" as Number
+   ^^^^^^^^^^^^^^^^
+Trace:
+  at 017-reject-a-nonnumeric-price::main (line: 4, column: 1) at:
+
+4| "many" as Number
+   ^^^^^^^^^^^^^^^^
+exit=255

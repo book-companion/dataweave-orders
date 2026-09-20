@@ -1,0 +1,9 @@
+[ERROR] Error while executing the script:
+[ERROR] Invalid input ':', expected `}` or ',' for the object expression. (line 4, column 29):
+
+
+4| { orderId: "A-1001" customer: "Dana" }
+                               ^
+Location:
+004-a-missing-comma (line: 4, column:29)
+exit=255

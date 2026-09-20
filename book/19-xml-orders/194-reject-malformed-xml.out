@@ -1,0 +1,5 @@
+[ERROR] Error while executing the script:
+[ERROR] Unexpected close tag </order>; expected </customer>.
+ at [row,col {unknown-source}]: [3,7] at:
+[row,col]: [3,7]
+exit=255

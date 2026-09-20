@@ -1,0 +1,10 @@
+[ERROR] Error while executing the script:
+[ERROR] Expecting Type: `Number`, but got: `"many"`.
+	|-- From: `Number`
+	|---- From: lineTotal(price: Number, qty: Number) -> Number
+
+5| lineTotal("many", 4)
+             ^^^^^^
+Location:
+030-reject-an-incompatible-argument (line: 5, column:11)
+exit=255

@@ -10,7 +10,7 @@ playground:
 	  echo "The Runner is served by Node, which is not on your PATH."; \
 	  echo "Install Node 22.6 or newer from https://nodejs.org, then run make playground again."; \
 	  echo "Or run an example straight from the engine:"; \
-	  echo "  ./dw.sh run -s -i payload=chapters/01-a-functional-language/order.json -f chapters/01-a-functional-language/02_summary.dwl"; \
+	  echo "  ./dw.sh run -s -f book/01-your-first-script/001-hello-from-dataweave.dwl"; \
 	  exit 1; }
 	@node playground/start.mjs
 # The Runner from the same image: the reader needs Docker and nothing else. The

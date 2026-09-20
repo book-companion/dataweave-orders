@@ -1,0 +1,12 @@
+[ERROR] Error while executing the script:
+[ERROR] deliberately wrong: expected 11, got 10
+
+50| fun fail (message: String = 'Error'): Nothing = native("system::fail")
+                                                    ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at dw::Runtime::fail (line: 50, column: 49)
+  at 133-assert-fail-loud::main (line: 14, column: 8) at:
+
+50| fun fail (message: String = 'Error'): Nothing = native("system::fail")
+                                                    ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

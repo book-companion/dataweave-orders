@@ -1,0 +1,26 @@
+{
+  "totals": [
+    10,
+    12,
+    10
+  ],
+  "numbered": [
+    {
+      "line": 1,
+      "sku": "PEN-01"
+    },
+    {
+      "line": 2,
+      "sku": "PAD-22"
+    },
+    {
+      "line": 3,
+      "sku": "CLP-08"
+    }
+  ],
+  "afterFirst": [
+    "PAD-22",
+    "CLP-08"
+  ]
+}
+exit=0

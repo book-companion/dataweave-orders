@@ -1,0 +1,22 @@
+{
+  "underscore": "Unit Price",
+  "hyphen": "Usb C Hub",
+  "camelSpace": "unit price",
+  "camelUnder": "unitPrice",
+  "camelDash": "unit-price",
+  "dasherized": "unit-price",
+  "underscored": "unit_price",
+  "singular": "box",
+  "pluralIrreg": "children",
+  "pluralS": "statuses",
+  "afterMissing": "",
+  "afterLast": "01",
+  "before": "SKU",
+  "padLonger": "1234567",
+  "rightPad": "42    ",
+  "padChar": "000042",
+  "clipped": "premium",
+  "blank": true,
+  "rep": "-----"
+}
+exit=0

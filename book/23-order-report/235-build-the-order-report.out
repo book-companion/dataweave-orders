@@ -1,0 +1,80 @@
+{
+  "batchId": "B-2026-06-20",
+  "orders": [
+    {
+      "id": "A-1001",
+      "placedAt": "2026-06-14",
+      "customer": "Dana",
+      "vip": true,
+      "note": "Leave at <side door> & ring twice",
+      "lines": [
+        {
+          "sku": "PEN-01",
+          "category": "stationery",
+          "price": 2.5,
+          "qty": 4,
+          "lineTotal": 10
+        },
+        {
+          "sku": "PAD-22",
+          "category": "paper",
+          "price": 6,
+          "qty": 2,
+          "lineTotal": 12
+        },
+        {
+          "sku": "CLP-08",
+          "category": "stationery",
+          "price": 1,
+          "qty": 10,
+          "lineTotal": 10
+        }
+      ],
+      "orderTotal": 32
+    },
+    {
+      "id": "A-1002",
+      "placedAt": "2026-06-16",
+      "customer": "Ravi",
+      "lines": [
+        {
+          "sku": "PAD-22",
+          "category": "paper",
+          "price": 6,
+          "qty": 1,
+          "lineTotal": 6
+        }
+      ],
+      "orderTotal": 6
+    },
+    {
+      "id": "A-1003",
+      "placedAt": "2026-06-18",
+      "customer": "Mei",
+      "vip": true,
+      "lines": [
+        {
+          "sku": "PEN-01",
+          "category": "stationery",
+          "price": 2.5,
+          "qty": 12,
+          "lineTotal": 30
+        },
+        {
+          "sku": "CLP-08",
+          "category": "stationery",
+          "price": 1,
+          "qty": 3,
+          "lineTotal": 3
+        }
+      ],
+      "orderTotal": 33
+    }
+  ],
+  "revenueByCategory": {
+    "stationery": 53,
+    "paper": 18
+  },
+  "batchTotal": 71
+}
+exit=0

@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "PEN-01"
+  },
+  {
+    "sku": "PAD-22",
+    "single": true
+  },
+  {
+    "sku": "CLP-08"
+  },
+  {
+    "sku": "PEN-01",
+    "single": true
+  },
+  {
+    "sku": "INK-03"
+  }
+]
+exit=0

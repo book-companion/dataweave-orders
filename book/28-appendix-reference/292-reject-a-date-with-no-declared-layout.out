@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce String (13/09/2026) to Date
+
+4| { d: payload.placed as Date }
+        ^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 292-reject-a-date-with-no-declared-layout::main (line: 4, column: 6) at:
+
+4| { d: payload.placed as Date }
+        ^^^^^^^^^^^^^^^^^^^^^^
+exit=255

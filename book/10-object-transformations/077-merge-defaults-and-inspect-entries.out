@@ -1,0 +1,28 @@
+{
+  "merged": {
+    "currency": "USD",
+    "id": "A-1001",
+    "giftWrap": true
+  },
+  "keys": [
+    "id",
+    "giftWrap"
+  ],
+  "entries": [
+    {
+      "key": "id",
+      "value": "A-1001",
+      "attributes": {
+        
+      }
+    },
+    {
+      "key": "giftWrap",
+      "value": true,
+      "attributes": {
+        
+      }
+    }
+  ]
+}
+exit=0

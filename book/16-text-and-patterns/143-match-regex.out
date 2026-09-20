@@ -1,0 +1,26 @@
+[
+  {
+    "sku": "PEN-01",
+    "family": "PEN",
+    "number": 1
+  },
+  {
+    "sku": "PAD-22",
+    "family": "PAD",
+    "number": 22
+  },
+  {
+    "sku": "CLP-08",
+    "family": "CLP",
+    "number": 8
+  },
+  {
+    "sku": "pen-1",
+    "error": "unrecognized format"
+  },
+  {
+    "sku": "X-9999",
+    "error": "unrecognized format"
+  }
+]
+exit=0

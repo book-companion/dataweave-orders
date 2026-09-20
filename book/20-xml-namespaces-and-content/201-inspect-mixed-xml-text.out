@@ -1,0 +1,10 @@
+{
+  "name": "Dana",
+  "firstRun": "Ship to ",
+  "allRuns": [
+    "Ship to ",
+    " before Friday."
+  ],
+  "flat": "Ship to [name] before Friday."
+}
+exit=0

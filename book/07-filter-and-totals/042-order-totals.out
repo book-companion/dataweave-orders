@@ -1,0 +1,13 @@
+{
+  "orderId": "A-1001",
+  "lineCount": 3,
+  "lineTotals": [
+    10,
+    12,
+    10
+  ],
+  "subtotal": 32,
+  "delivery": 4.99,
+  "grandTotal": 36.99
+}
+exit=0

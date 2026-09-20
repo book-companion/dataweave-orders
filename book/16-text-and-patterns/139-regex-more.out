@@ -1,0 +1,35 @@
+{
+  "wholeString": false,
+  "anchoredFull": true,
+  "containsInstead": true,
+  "matchGroups": [
+    "AC-1099-XL",
+    "AC",
+    "1099",
+    "XL"
+  ],
+  "matchNothing": [
+    
+  ],
+  "scanAll": [
+    [
+      "PEN-01"
+    ],
+    [
+      "PAD-22"
+    ],
+    [
+      "CLP-08"
+    ]
+  ],
+  "scanNothing": [
+    
+  ],
+  "splitRegex": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ]
+}
+exit=0

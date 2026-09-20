@@ -1,0 +1,8 @@
+[ERROR] Error while executing the script:
+[ERROR] Unable to resolve reference of: `$$$`.
+
+4| payload.items map { sku: $.sku, index: $$, third: $$$ }
+                                                     ^^^
+Location:
+266-reject-a-third-map-parameter (line: 4, column:51)
+exit=255

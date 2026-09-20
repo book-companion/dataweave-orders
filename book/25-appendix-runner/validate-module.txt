@@ -1,0 +1,8 @@
+Compiling `134-normalize-order`...
+[ERROR] Unable to resolve module with identifier orders::OrderMath.
+
+2| import orderTotal, lineTotal from orders::OrderMath
+                                     ^^^^^^^^^^^^^^^^^
+Location:
+134-normalize-order (line: 2, column:35)
+1 errors found

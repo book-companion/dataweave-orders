@@ -1,0 +1,21 @@
+[
+  {
+    "name": "sums the lines",
+    "pass": true,
+    "got": 22,
+    "want": 22
+  },
+  {
+    "name": "empty order is 0",
+    "pass": true,
+    "got": 0,
+    "want": 0
+  },
+  {
+    "name": "deliberately wrong",
+    "pass": false,
+    "got": 10,
+    "want": 11
+  }
+]
+exit=0

@@ -1,0 +1,2228 @@
+[
+  {
+    "number": 1,
+    "chapter": "01-your-first-script",
+    "nameTitle": "Hello from DataWeave",
+    "script": "book/01-your-first-script/001-hello-from-dataweave.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 2,
+    "chapter": "01-your-first-script",
+    "nameTitle": "A fixed order header",
+    "script": "book/01-your-first-script/002-a-fixed-order-header.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 3,
+    "chapter": "01-your-first-script",
+    "nameTitle": "Return a single value",
+    "script": "book/01-your-first-script/003-return-a-single-value.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 4,
+    "chapter": "01-your-first-script",
+    "nameTitle": "A missing comma",
+    "script": "book/01-your-first-script/004-a-missing-comma.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 5,
+    "chapter": "01-your-first-script",
+    "nameTitle": "Add an order status",
+    "script": "book/01-your-first-script/005-add-an-order-status.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 6,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Read the order header",
+    "script": "book/02-read-and-build-objects/006-read-the-order-header.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 7,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Rename an output field",
+    "script": "book/02-read-and-build-objects/007-rename-an-output-field.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 8,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Read a nested customer",
+    "script": "book/02-read-and-build-objects/008-read-a-nested-customer.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 9,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Select a quoted key",
+    "script": "book/02-read-and-build-objects/009-select-a-quoted-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 10,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Inspect a missing field",
+    "script": "book/02-read-and-build-objects/010-inspect-a-missing-field.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 11,
+    "chapter": "02-read-and-build-objects",
+    "nameTitle": "Build a nested order result",
+    "script": "book/02-read-and-build-objects/011-build-a-nested-order-result.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 12,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Calculate one line",
+    "script": "book/03-values-and-conversions/012-calculate-one-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 13,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Name the line calculation",
+    "script": "book/03-values-and-conversions/013-name-the-line-calculation.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 14,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Inspect scalar types",
+    "script": "book/03-values-and-conversions/014-inspect-scalar-types.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 15,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Convert a supplier price",
+    "script": "book/03-values-and-conversions/015-convert-a-supplier-price.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 16,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Arithmetic and concatenation",
+    "script": "book/03-values-and-conversions/016-arithmetic-and-concatenation.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 17,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Reject a nonnumeric price",
+    "script": "book/03-values-and-conversions/017-reject-a-nonnumeric-price.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 18,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Division produces a number",
+    "script": "book/03-values-and-conversions/018-division-produces-a-number.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 19,
+    "chapter": "03-values-and-conversions",
+    "nameTitle": "Discount one line",
+    "script": "book/03-values-and-conversions/019-discount-one-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 20,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Choose a delivery label",
+    "script": "book/04-decisions-and-missing-data/020-choose-a-delivery-label.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 21,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Use a decision in an object",
+    "script": "book/04-decisions-and-missing-data/021-use-a-decision-in-an-object.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 22,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Default only an absent value",
+    "script": "book/04-decisions-and-missing-data/022-default-only-an-absent-value.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 23,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Handle empty notes",
+    "script": "book/04-decisions-and-missing-data/023-handle-empty-notes.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 24,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Require an order identifier",
+    "script": "book/04-decisions-and-missing-data/024-require-an-order-identifier.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 25,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Guard a conversion",
+    "script": "book/04-decisions-and-missing-data/025-guard-a-conversion.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 26,
+    "chapter": "04-decisions-and-missing-data",
+    "nameTitle": "Normalize an optional note",
+    "script": "book/04-decisions-and-missing-data/026-normalize-an-optional-note.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 27,
+    "chapter": "05-functions",
+    "nameTitle": "Call a line-total function",
+    "script": "book/05-functions/027-call-a-line-total-function.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 28,
+    "chapter": "05-functions",
+    "nameTitle": "Give a parameter a default",
+    "script": "book/05-functions/028-give-a-parameter-a-default.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 29,
+    "chapter": "05-functions",
+    "nameTitle": "Declare numeric parameters",
+    "script": "book/05-functions/029-declare-numeric-parameters.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 30,
+    "chapter": "05-functions",
+    "nameTitle": "Reject an incompatible argument",
+    "script": "book/05-functions/030-reject-an-incompatible-argument.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 31,
+    "chapter": "05-functions",
+    "nameTitle": "Keep intermediate values local",
+    "script": "book/05-functions/031-keep-intermediate-values-local.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 32,
+    "chapter": "05-functions",
+    "nameTitle": "Check the receipt boundary",
+    "script": "book/05-functions/032-check-the-receipt-boundary.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 33,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Inspect an item array",
+    "script": "book/06-arrays-and-map/033-inspect-an-item-array.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 34,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Map an array of numbers",
+    "script": "book/06-arrays-and-map/034-map-an-array-of-numbers.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 35,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Calculate every line",
+    "script": "book/06-arrays-and-map/035-calculate-every-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 36,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Build a result for each line",
+    "script": "book/06-arrays-and-map/036-build-a-result-for-each-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 37,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Number the order lines",
+    "script": "book/06-arrays-and-map/037-number-the-order-lines.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 38,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Map an empty array",
+    "script": "book/06-arrays-and-map/038-map-an-empty-array.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 39,
+    "chapter": "06-arrays-and-map",
+    "nameTitle": "Rename every line",
+    "script": "book/06-arrays-and-map/039-rename-every-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 40,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "Keep the bulk lines",
+    "script": "book/07-filter-and-totals/040-keep-the-bulk-lines.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 41,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "Count and total selected lines",
+    "script": "book/07-filter-and-totals/041-count-and-total-selected-lines.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 42,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "Order totals",
+    "script": "book/07-filter-and-totals/042-order-totals.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 43,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "An empty order total",
+    "script": "book/07-filter-and-totals/043-an-empty-order-total.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 44,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "Read the shorthand after the named form",
+    "script": "book/07-filter-and-totals/044-read-the-shorthand-after-the-named-form.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 45,
+    "chapter": "07-filter-and-totals",
+    "nameTitle": "Check an empty selection",
+    "script": "book/07-filter-and-totals/045-check-an-empty-selection.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 46,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Sort the line quantities",
+    "script": "book/08-sorting-and-selection/046-sort-the-line-quantities.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 47,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Choose which fields define a duplicate",
+    "script": "book/08-sorting-and-selection/047-distinctby.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 48,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Sort by price and product name",
+    "script": "book/08-sorting-and-selection/048-orderby-asc.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 49,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Select an array range",
+    "script": "book/08-sorting-and-selection/049-ranges.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 50,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Check range boundaries",
+    "script": "book/08-sorting-and-selection/050-range-bounds.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 51,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Sort numbers in descending order",
+    "script": "book/08-sorting-and-selection/051-orderby-desc-number.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 52,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Try negating a string sort key",
+    "script": "book/08-sorting-and-selection/052-orderby-desc-string-negate.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 53,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Reverse a sorted string array",
+    "script": "book/08-sorting-and-selection/053-orderby-desc-string-reverse.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 54,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Reverse an array with a range",
+    "script": "book/08-sorting-and-selection/054-orderby-desc-string-range.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 55,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Try sorting with an array key",
+    "script": "book/08-sorting-and-selection/055-orderby-array-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 56,
+    "chapter": "08-sorting-and-selection",
+    "nameTitle": "Sort by category and quantity",
+    "script": "book/08-sorting-and-selection/056-orderby-two-keys.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 57,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Keep orders and their lines nested",
+    "script": "book/09-nested-collections/057-keep-orders-and-their-lines-nested.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 58,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Inspect shorthand inside nested callbacks",
+    "script": "book/09-nested-collections/058-nested-dollar.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 59,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Name both nested callback parameters",
+    "script": "book/09-nested-collections/059-nested-named.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 60,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Flatten one level at a time",
+    "script": "book/09-nested-collections/060-flatten-levels.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 61,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Flatten mapped order lines",
+    "script": "book/09-nested-collections/061-flatmap-orders.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 62,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Select SKUs three ways",
+    "script": "book/09-nested-collections/062-three-ways-to-sku.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 63,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Select repeated object keys",
+    "script": "book/09-nested-collections/063-repeated-keys.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 64,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Limit the scope of a descendant search",
+    "script": "book/09-nested-collections/064-descendant-everything.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 65,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Observe missing fields in a projection",
+    "script": "book/09-nested-collections/065-projection-drops-missing.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 66,
+    "chapter": "09-nested-collections",
+    "nameTitle": "Count quantities with three selectors",
+    "script": "book/09-nested-collections/066-count-quantities-with-three-selectors.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 67,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Construct a dynamic field name",
+    "script": "book/10-object-transformations/067-dynamic-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 68,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Splice field pairs into an object",
+    "script": "book/10-object-transformations/068-spread.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 69,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Collect duplicate fields into arrays",
+    "script": "book/10-object-transformations/069-spread-dupkeys-asarray.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 70,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Include a field conditionally",
+    "script": "book/10-object-transformations/070-conditional-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 71,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Try unless in a conditional field",
+    "script": "book/10-object-transformations/071-conditional-key-unless.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 72,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Negate a field condition",
+    "script": "book/10-object-transformations/072-conditional-key-negated.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 73,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Choose a fallback with unless",
+    "script": "book/10-object-transformations/073-unless-expression.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 74,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Transform object fields with mapObject",
+    "script": "book/10-object-transformations/074-mapobject.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 75,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Remove null object fields",
+    "script": "book/10-object-transformations/075-filterobject-nulls.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 76,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Turn fields into entries",
+    "script": "book/10-object-transformations/076-turn-fields-into-entries.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 77,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Merge defaults and inspect entries",
+    "script": "book/10-object-transformations/077-merge-defaults-and-inspect-entries.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 78,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Compare merge and concatenation",
+    "script": "book/10-object-transformations/078-compare-merge-and-concatenation.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 79,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Choose whether null replaces a default",
+    "script": "book/10-object-transformations/079-mergewith-null.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 80,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Pair arrays with zip",
+    "script": "book/10-object-transformations/080-zip.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 81,
+    "chapter": "10-object-transformations",
+    "nameTitle": "Uppercase object keys",
+    "script": "book/10-object-transformations/081-uppercase-object-keys.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 82,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Group lines by category",
+    "script": "book/11-grouped-reports/082-groupby-category.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 83,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Inspect numeric group keys",
+    "script": "book/11-grouped-reports/083-groupby-number-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 84,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Turn groups into summary rows",
+    "script": "book/11-grouped-reports/084-pluck-summary.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 85,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Inspect pluck callback parameters",
+    "script": "book/11-grouped-reports/085-pluck-positional.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 86,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Name the stages of a category report",
+    "script": "book/11-grouped-reports/086-name-the-stages-of-a-category-report.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 87,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "A sort inside the wrong expression",
+    "script": "book/11-grouped-reports/087-precedence-swallowed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 88,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Sort the completed category report",
+    "script": "book/11-grouped-reports/088-putting-together.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 89,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Summarize units per order",
+    "script": "book/11-grouped-reports/089-summarize-units-per-order.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 90,
+    "chapter": "11-grouped-reports",
+    "nameTitle": "Find the highest-revenue SKU",
+    "script": "book/11-grouped-reports/090-find-the-highest-revenue-sku.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 91,
+    "chapter": "12-lookups-and-joins",
+    "nameTitle": "Read a catalogue lookup",
+    "script": "book/12-lookups-and-joins/091-read-a-catalogue-lookup.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 92,
+    "chapter": "12-lookups-and-joins",
+    "nameTitle": "Build a unique name lookup",
+    "script": "book/12-lookups-and-joins/092-build-a-unique-name-lookup.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 93,
+    "chapter": "12-lookups-and-joins",
+    "nameTitle": "Keep unmatched lines in a left join",
+    "script": "book/12-lookups-and-joins/093-leftjoin-short.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 94,
+    "chapter": "12-lookups-and-joins",
+    "nameTitle": "Keep duplicate catalogue matches visible",
+    "script": "book/12-lookups-and-joins/094-keep-duplicate-catalogue-matches-visible.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 95,
+    "chapter": "13-reduce",
+    "nameTitle": "Seed a running sum",
+    "script": "book/13-reduce/095-seed-a-running-sum.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 96,
+    "chapter": "13-reduce",
+    "nameTitle": "Distinguish the item from the accumulator",
+    "script": "book/13-reduce/096-reduce-positional-swapped.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 97,
+    "chapter": "13-reduce",
+    "nameTitle": "Compare seeded and unseeded folds",
+    "script": "book/13-reduce/097-reduce-seed-forms.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 98,
+    "chapter": "13-reduce",
+    "nameTitle": "An accumulator starts with the wrong type",
+    "script": "book/13-reduce/098-reduce-unseeded-type.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 99,
+    "chapter": "13-reduce",
+    "nameTitle": "Build an object with a seeded fold",
+    "script": "book/13-reduce/099-reduce-to-object.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 100,
+    "chapter": "13-reduce",
+    "nameTitle": "Try building an object without a seed",
+    "script": "book/13-reduce/100-reduce-to-object-unseeded.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 101,
+    "chapter": "13-reduce",
+    "nameTitle": "Keep a history of running totals",
+    "script": "book/13-reduce/101-running-total.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 102,
+    "chapter": "13-reduce",
+    "nameTitle": "Flatten arrays with a fold",
+    "script": "book/13-reduce/102-reduce-flatten.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 103,
+    "chapter": "13-reduce",
+    "nameTitle": "Sum, count and partition by a predicate",
+    "script": "book/13-reduce/103-arrays.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 104,
+    "chapter": "13-reduce",
+    "nameTitle": "Check and select array members",
+    "script": "book/13-reduce/104-arrays-more-short.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 105,
+    "chapter": "13-reduce",
+    "nameTitle": "Calculate an order total with reduce",
+    "script": "book/13-reduce/105-total.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 106,
+    "chapter": "13-reduce",
+    "nameTitle": "Count qualifying items with a fold",
+    "script": "book/13-reduce/106-count-qualifying-items-with-a-fold.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 107,
+    "chapter": "13-reduce",
+    "nameTitle": "Choose the largest line amount",
+    "script": "book/13-reduce/107-choose-the-largest-line-amount.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 108,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Check scalar and collection types",
+    "script": "book/14-contracts-and-patterns/108-is.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 109,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Define order and line contracts",
+    "script": "book/14-contracts-and-patterns/109-custom-types.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 110,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Reject an unknown literal-type value",
+    "script": "book/14-contracts-and-patterns/110-literal-type-as-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 111,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Try coercing a whole object",
+    "script": "book/14-contracts-and-patterns/111-object-type-as.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 112,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Declare a structural function parameter",
+    "script": "book/14-contracts-and-patterns/112-fun-signature.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 113,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Reject an incompatible function input",
+    "script": "book/14-contracts-and-patterns/113-fun-signature-rejects.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 114,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Reject an incompatible return value",
+    "script": "book/14-contracts-and-patterns/114-fun-return-type-rejects.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 115,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Match literal values",
+    "script": "book/14-contracts-and-patterns/115-match-literal.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 116,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Inspect an unmatched value",
+    "script": "book/14-contracts-and-patterns/116-match-no-match.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 117,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Match by type",
+    "script": "book/14-contracts-and-patterns/117-match-type.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 118,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Add guards to matching cases",
+    "script": "book/14-contracts-and-patterns/118-match-guard.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 119,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Guard a customer tier",
+    "script": "book/14-contracts-and-patterns/119-guard-a-customer-tier.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 120,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Fill a missing tag",
+    "script": "book/14-contracts-and-patterns/120-fill-a-missing-tag.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 121,
+    "chapter": "14-contracts-and-patterns",
+    "nameTitle": "Choose shipping with guarded cases",
+    "script": "book/14-contracts-and-patterns/121-choose-shipping-with-guarded-cases.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 122,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Shared order calculations",
+    "script": "book/15-modules-and-checks/122-shared-order-calculations.dwl",
+    "kind": "module"
+  },
+  {
+    "number": 123,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Reject a module with a body",
+    "script": "book/15-modules-and-checks/123-module-with-body-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 124,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Import the order module functions",
+    "script": "book/15-modules-and-checks/124-import-star.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 125,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Call the module with a missing quantity",
+    "script": "book/15-modules-and-checks/125-type-mismatch-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 126,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Call the module with a textual price",
+    "script": "book/15-modules-and-checks/126-type-mismatch-string.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 127,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "A second line-total implementation",
+    "script": "book/15-modules-and-checks/127-a-second-line-total-implementation.dwl",
+    "kind": "module"
+  },
+  {
+    "number": 128,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Inspect colliding selective imports",
+    "script": "book/15-modules-and-checks/128-ambiguous-import.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 129,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Alias the two line-total functions",
+    "script": "book/15-modules-and-checks/129-alias-both.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 130,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Keep a module binding in its own scope",
+    "script": "book/15-modules-and-checks/130-use-module-fun-shadows-var.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 131,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Try the dw::test modules in the CLI",
+    "script": "book/15-modules-and-checks/131-dwtest.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 132,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Check a table of function cases",
+    "script": "book/15-modules-and-checks/132-assert-in-script.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 133,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Make a failed assertion stop the command",
+    "script": "book/15-modules-and-checks/133-assert-fail-loud.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 134,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Normalize an order with module functions",
+    "script": "book/15-modules-and-checks/134-normalize-order.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 135,
+    "chapter": "15-modules-and-checks",
+    "nameTitle": "Compare net and taxed line totals",
+    "script": "book/15-modules-and-checks/135-alias-both.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 136,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Clean labels and identifiers",
+    "script": "book/16-text-and-patterns/136-clean-labels-and-identifiers.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 137,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Inspect string boundaries",
+    "script": "book/16-text-and-patterns/137-inspect-string-boundaries.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 138,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Interpolate a value into text",
+    "script": "book/16-text-and-patterns/138-interpolate-a-value-into-text.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 139,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Match, scan and split with patterns",
+    "script": "book/16-text-and-patterns/139-regex-more.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 140,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Try a dollar-one replacement string",
+    "script": "book/16-text-and-patterns/140-replace-dollar-one.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 141,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Build replacement text from a match",
+    "script": "book/16-text-and-patterns/141-replace-lambda.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 142,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Reject an incomplete regular expression",
+    "script": "book/16-text-and-patterns/142-regex-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 143,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Match cases with regular expressions",
+    "script": "book/16-text-and-patterns/143-match-regex.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 144,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Check whether a pattern matches",
+    "script": "book/16-text-and-patterns/144-matches-operator.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 145,
+    "chapter": "16-text-and-patterns",
+    "nameTitle": "Extract SKU components",
+    "script": "book/16-text-and-patterns/145-extract-sku-components.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 146,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Parse a JSON document inside a field",
+    "script": "book/17-readers-writers-json/146-parse-a-json-document-inside-a-field.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 147,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Write compact JSON",
+    "script": "book/17-readers-writers-json/147-indent-false.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 148,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Reject an unknown JSON writer property",
+    "script": "book/17-readers-writers-json/148-unknown-writer-property.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 149,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Omit null object fields",
+    "script": "book/17-readers-writers-json/149-omit-null-object-fields.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 150,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Try an unsupported null policy",
+    "script": "book/17-readers-writers-json/150-skipnull-nowhere.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 151,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Omit an absent field deliberately",
+    "script": "book/17-readers-writers-json/151-conditional-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 152,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Write repeated JSON keys",
+    "script": "book/17-readers-writers-json/152-duplicate-keys-write.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 153,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Read repeated JSON keys",
+    "script": "book/17-readers-writers-json/153-read-repeated-json-keys.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 154,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Write repeated values as an array",
+    "script": "book/17-readers-writers-json/154-duplicate-keys-collapse.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 155,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Inspect JSON field order",
+    "script": "book/17-readers-writers-json/155-key-order.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 156,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Inspect numeric values and their types",
+    "script": "book/17-readers-writers-json/156-numbers.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 157,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Format a monetary amount",
+    "script": "book/17-readers-writers-json/157-money-format.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 158,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Distinguish null from a missing field",
+    "script": "book/17-readers-writers-json/158-null-vs-missing.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 159,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Escape characters in a JSON string",
+    "script": "book/17-readers-writers-json/159-string-escaping.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 160,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Parse and format numeric text",
+    "script": "book/17-readers-writers-json/160-number-format.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 161,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Compare whole and decimal numbers",
+    "script": "book/17-readers-writers-json/161-one-number.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 162,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Reject an unquoted JSON key",
+    "script": "book/17-readers-writers-json/162-reject-an-unquoted-json-key.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 163,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Write compact JSON without object nulls",
+    "script": "book/17-readers-writers-json/163-write-compact-json-without-object-nulls.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 164,
+    "chapter": "17-readers-writers-json",
+    "nameTitle": "Select both duplicate values",
+    "script": "book/17-readers-writers-json/164-select-both-duplicate-values.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 165,
+    "chapter": "18-csv",
+    "nameTitle": "Read CSV rows",
+    "script": "book/18-csv/165-read-csv-rows.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 166,
+    "chapter": "18-csv",
+    "nameTitle": "Inspect CSV string values",
+    "script": "book/18-csv/166-inspect-csv-string-values.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 167,
+    "chapter": "18-csv",
+    "nameTitle": "Read headerless data with default settings",
+    "script": "book/18-csv/167-noheader-default.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 168,
+    "chapter": "18-csv",
+    "nameTitle": "Declare a headerless CSV input",
+    "script": "book/18-csv/168-noheader-directive.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 169,
+    "chapter": "18-csv",
+    "nameTitle": "Read headerless CSV text",
+    "script": "book/18-csv/169-read-headerless-csv-text.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 170,
+    "chapter": "18-csv",
+    "nameTitle": "Read semicolon-separated rows",
+    "script": "book/18-csv/170-semicolon-directive.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 171,
+    "chapter": "18-csv",
+    "nameTitle": "Try parsing a decimal comma directly",
+    "script": "book/18-csv/171-decimal-comma-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 172,
+    "chapter": "18-csv",
+    "nameTitle": "Normalize a decimal comma before conversion",
+    "script": "book/18-csv/172-decimal-comma-fixed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 173,
+    "chapter": "18-csv",
+    "nameTitle": "Read doubled quote characters",
+    "script": "book/18-csv/173-doubled-quote-escape.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 174,
+    "chapter": "18-csv",
+    "nameTitle": "Choose CSV quoting and escaping",
+    "script": "book/18-csv/174-write-quoting.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 175,
+    "chapter": "18-csv",
+    "nameTitle": "Locate a CSV header after a preamble",
+    "script": "book/18-csv/175-locate-a-csv-header-after-a-preamble.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 176,
+    "chapter": "18-csv",
+    "nameTitle": "Inspect CSV column order",
+    "script": "book/18-csv/176-writer-key-order.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 177,
+    "chapter": "18-csv",
+    "nameTitle": "Reject a nested CSV field",
+    "script": "book/18-csv/177-write-nested-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 178,
+    "chapter": "18-csv",
+    "nameTitle": "Write quoted semicolon-separated fields",
+    "script": "book/18-csv/178-write-props.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 179,
+    "chapter": "18-csv",
+    "nameTitle": "Normalize an uploaded CSV file",
+    "script": "book/18-csv/179-worked-upload.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 180,
+    "chapter": "18-csv",
+    "nameTitle": "Write tab-separated output",
+    "script": "book/18-csv/180-write-tab-separated-output.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 181,
+    "chapter": "18-csv",
+    "nameTitle": "Total European price strings",
+    "script": "book/18-csv/181-total-european-price-strings.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 182,
+    "chapter": "18-csv",
+    "nameTitle": "Name headerless columns",
+    "script": "book/18-csv/182-name-headerless-columns.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 183,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Select XML attributes",
+    "script": "book/19-xml-orders/183-select-xml-attributes.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 184,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Inspect an XML attribute object",
+    "script": "book/19-xml-orders/184-attribute-object.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 185,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Check the types of XML text values",
+    "script": "book/19-xml-orders/185-text-is-string.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 186,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Write XML elements and attributes",
+    "script": "book/19-xml-orders/186-attributes-write.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 187,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Select one or all repeated elements",
+    "script": "book/19-xml-orders/187-single-vs-many-three.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 188,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Select an absent element collection",
+    "script": "book/19-xml-orders/188-many-on-none.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 189,
+    "chapter": "19-xml-orders",
+    "nameTitle": "A single element is not an array",
+    "script": "book/19-xml-orders/189-a-single-element-is-not-an-array.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 190,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Compare XML descendant selectors",
+    "script": "book/19-xml-orders/190-compare-xml-descendant-selectors.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 191,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Try writing two XML roots",
+    "script": "book/19-xml-orders/191-two-roots-output.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 192,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Try writing an array at the XML root",
+    "script": "book/19-xml-orders/192-array-root-output.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 193,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Put repeated elements under one root",
+    "script": "book/19-xml-orders/193-array-root-fixed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 194,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Reject malformed XML",
+    "script": "book/19-xml-orders/194-reject-malformed-xml.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 195,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Build XML order elements",
+    "script": "book/19-xml-orders/195-build-xml-order-elements.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 196,
+    "chapter": "19-xml-orders",
+    "nameTitle": "Preserve a one-item array",
+    "script": "book/19-xml-orders/196-preserve-a-one-item-array.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 197,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Select namespaced XML elements",
+    "script": "book/20-xml-namespaces-and-content/197-namespace-select.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 198,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Match a namespace with a different prefix",
+    "script": "book/20-xml-namespaces-and-content/198-namespace-other-prefix.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 199,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Read a default XML namespace",
+    "script": "book/20-xml-namespaces-and-content/199-default-namespace.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 200,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Write a namespaced XML order",
+    "script": "book/20-xml-namespaces-and-content/200-namespace-write.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 201,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Inspect mixed XML text",
+    "script": "book/20-xml-namespaces-and-content/201-inspect-mixed-xml-text.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 202,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Read CDATA as text",
+    "script": "book/20-xml-namespaces-and-content/202-cdata.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 203,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Write a CDATA value",
+    "script": "book/20-xml-namespaces-and-content/203-cdata-write.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 204,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Inspect an empty XML element",
+    "script": "book/20-xml-namespaces-and-content/204-empty-elements.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 205,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Read empty XML elements",
+    "script": "book/20-xml-namespaces-and-content/205-read-empty-xml-elements.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 206,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Write null values as XML",
+    "script": "book/20-xml-namespaces-and-content/206-null-to-xml.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 207,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Choose the XML declaration and indentation",
+    "script": "book/20-xml-namespaces-and-content/207-writer-props.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 208,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Select an XML output encoding",
+    "script": "book/20-xml-namespaces-and-content/208-encoding.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 209,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Normalize a namespaced XML feed",
+    "script": "book/20-xml-namespaces-and-content/209-worked-feed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 210,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Read and write embedded formats",
+    "script": "book/20-xml-namespaces-and-content/210-read-and-write-embedded-formats.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 211,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Preserve XML attributes in JSON output",
+    "script": "book/20-xml-namespaces-and-content/211-write-attributes.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 212,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Reject XML presented as JSON",
+    "script": "book/20-xml-namespaces-and-content/212-reject-xml-presented-as-json.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 213,
+    "chapter": "20-xml-namespaces-and-content",
+    "nameTitle": "Write a wrapped summary as YAML",
+    "script": "book/20-xml-namespaces-and-content/213-write-a-wrapped-summary-as-yaml.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 214,
+    "chapter": "21-date-parsing",
+    "nameTitle": "Parse a declared date layout",
+    "script": "book/21-date-parsing/214-parse-a-declared-date-layout.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 215,
+    "chapter": "21-date-parsing",
+    "nameTitle": "Parse and format temporal values",
+    "script": "book/21-date-parsing/215-parse-format.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 216,
+    "chapter": "21-date-parsing",
+    "nameTitle": "Confuse month and minute tokens",
+    "script": "book/21-date-parsing/216-mm-trap-parse.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 217,
+    "chapter": "21-date-parsing",
+    "nameTitle": "Inspect invalid calendar dates",
+    "script": "book/21-date-parsing/217-lenient-day-overflow.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 218,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Inspect the seven temporal types",
+    "script": "book/22-time-zones-and-intervals/218-seven-types.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 219,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Convert between temporal types",
+    "script": "book/22-time-zones-and-intervals/219-coercions.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 220,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Read the clock and select date components",
+    "script": "book/22-time-zones-and-intervals/220-now-truncations.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 221,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Shift an instant to another offset",
+    "script": "book/22-time-zones-and-intervals/221-shift-offsets.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 222,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Compare a named zone with a fixed offset",
+    "script": "book/22-time-zones-and-intervals/222-dst-named-vs-offset.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 223,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Format an instant and its zone",
+    "script": "book/22-time-zones-and-intervals/223-format-tokens.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 224,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Convert epoch seconds and milliseconds",
+    "script": "book/22-time-zones-and-intervals/224-epoch.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 225,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Add and subtract calendar periods",
+    "script": "book/22-time-zones-and-intervals/225-period-arithmetic.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 226,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Construct periods and calculate intervals",
+    "script": "book/22-time-zones-and-intervals/226-periods-module.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 227,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Construct dates and find calendar boundaries",
+    "script": "book/22-time-zones-and-intervals/227-dates-module.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 228,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Calculate ship dates from a European feed",
+    "script": "book/22-time-zones-and-intervals/228-eu-feed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 229,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Normalize a mixed date feed",
+    "script": "book/22-time-zones-and-intervals/229-normalize-a-mixed-date-feed.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 230,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Group timestamps by local date",
+    "script": "book/22-time-zones-and-intervals/230-group-timestamps-by-local-date.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 231,
+    "chapter": "22-time-zones-and-intervals",
+    "nameTitle": "Format a feed date and amount",
+    "script": "book/22-time-zones-and-intervals/231-format-a-feed-date-and-amount.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 232,
+    "chapter": "23-order-report",
+    "nameTitle": "Inspect the batch shape",
+    "script": "book/23-order-report/232-inspect-the-batch-shape.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 233,
+    "chapter": "23-order-report",
+    "nameTitle": "The feed normalization and report module",
+    "script": "book/23-order-report/233-the-feed-normalization-and-report-module.dwl",
+    "kind": "module"
+  },
+  {
+    "number": 234,
+    "chapter": "23-order-report",
+    "nameTitle": "Normalize the batch",
+    "script": "book/23-order-report/234-normalize-the-batch.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 235,
+    "chapter": "23-order-report",
+    "nameTitle": "Build the order report",
+    "script": "book/23-order-report/235-build-the-order-report.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 236,
+    "chapter": "23-order-report",
+    "nameTitle": "Report an order with no lines",
+    "script": "book/23-order-report/236-report-an-order-with-no-lines.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 237,
+    "chapter": "23-order-report",
+    "nameTitle": "Verify report reconciliation",
+    "script": "book/23-order-report/237-verify-report-reconciliation.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 238,
+    "chapter": "23-order-report",
+    "nameTitle": "Revenue by customer tier",
+    "script": "book/23-order-report/238-revenue-by-customer-tier.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 239,
+    "chapter": "23-order-report",
+    "nameTitle": "Write report totals as XML",
+    "script": "book/23-order-report/239-write-report-totals-as-xml.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 240,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Map a streamed five-order input",
+    "script": "book/24-streaming-and-performance/240-streaming-five.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 241,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Reject object syntax in reader directives",
+    "script": "book/24-streaming-and-performance/241-brace-syntax-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 242,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Pass streaming options to read",
+    "script": "book/24-streaming-and-performance/242-pass-streaming-options-to-read.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 243,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Count a streamed input",
+    "script": "book/24-streaming-and-performance/243-sizeof-streaming.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 244,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Count with a streamed fold",
+    "script": "book/24-streaming-and-performance/244-reduce-streaming.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 245,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Sort a streamed input",
+    "script": "book/24-streaming-and-performance/245-orderby-streaming.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 246,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Read a streamed input more than once",
+    "script": "book/24-streaming-and-performance/246-twice-streaming.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 247,
+    "chapter": "24-streaming-and-performance",
+    "nameTitle": "Declare a stream-capable parameter",
+    "script": "book/24-streaming-and-performance/247-streamcapable.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 248,
+    "chapter": "25-appendix-runner",
+    "nameTitle": "Read CLI environment parameters",
+    "script": "book/25-appendix-runner/248-read-cli-environment-parameters.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 249,
+    "chapter": "25-appendix-runner",
+    "nameTitle": "Convert a CLI rate parameter",
+    "script": "book/25-appendix-runner/249-convert-a-cli-rate-parameter.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 250,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Returning a function value from map",
+    "script": "book/26-appendix-functions/250-returning-a-function-value-from-map.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 251,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Call a function with too few arguments",
+    "script": "book/26-appendix-functions/251-arity-too-few.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 252,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Use a default parameter",
+    "script": "book/26-appendix-functions/252-use-a-default-parameter.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 253,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Call a function declared later",
+    "script": "book/26-appendix-functions/253-fun-forward-reference.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 254,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Declare the same function signature twice",
+    "script": "book/26-appendix-functions/254-fun-duplicate-same-sig.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 255,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Try writing a function value as JSON",
+    "script": "book/26-appendix-functions/255-lambda-as-output-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 256,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Annotate a lambda parameter",
+    "script": "book/26-appendix-functions/256-typed-lambda.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 257,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Select a function overload",
+    "script": "book/26-appendix-functions/257-overloading.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 258,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Calculate with a recursive function",
+    "script": "book/26-appendix-functions/258-recursion.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 259,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Call a lambda for each line",
+    "script": "book/26-appendix-functions/259-call-a-lambda-for-each-line.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 260,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Call a named function inside map",
+    "script": "book/26-appendix-functions/260-call-a-named-function-inside-map.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 261,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Pass a function to prefix map",
+    "script": "book/26-appendix-functions/261-pass-a-function-to-prefix-map.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 262,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Declare a function-valued parameter",
+    "script": "book/26-appendix-functions/262-function-typed-param.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 263,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Reject an incompatible function argument",
+    "script": "book/26-appendix-functions/263-function-typed-param-rejects.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 264,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Inspect map shorthand parameters",
+    "script": "book/26-appendix-functions/264-inspect-map-shorthand-parameters.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 265,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Inspect object callback shorthand",
+    "script": "book/26-appendix-functions/265-shorthands-object.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 266,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Reject a third map parameter",
+    "script": "book/26-appendix-functions/266-reject-a-third-map-parameter.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 267,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Compare prefix and infix calls",
+    "script": "book/26-appendix-functions/267-prefix-infix.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 268,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Reject a three-argument infix call",
+    "script": "book/26-appendix-functions/268-reject-a-three-argument-infix-call.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 269,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Return a function with a bound discount",
+    "script": "book/26-appendix-functions/269-currying.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 270,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Map with a curried function",
+    "script": "book/26-appendix-functions/270-map-with-a-curried-function.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 271,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Compose two calculations",
+    "script": "book/26-appendix-functions/271-compose.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 272,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Change the order of composition",
+    "script": "book/26-appendix-functions/272-compose-order-matters.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 273,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Apply a function argument",
+    "script": "book/26-appendix-functions/273-apply-a-function-argument.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 274,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Compose discount and tax",
+    "script": "book/26-appendix-functions/274-compose-discount-and-tax.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 275,
+    "chapter": "26-appendix-functions",
+    "nameTitle": "Call an overload with a Boolean",
+    "script": "book/26-appendix-functions/275-overloading-no-match.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 276,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Try Java output in the CLI",
+    "script": "book/27-appendix-formats/276-java-output.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 277,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Produce Java scalar objects in Mule",
+    "script": "book/27-appendix-formats/277-produce-java-scalar-objects-in-mule.dwl",
+    "kind": "manual"
+  },
+  {
+    "number": 278,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Inspect Java scalar classes in Mule",
+    "script": "book/27-appendix-formats/278-inspect-java-scalar-classes-in-mule.dwl",
+    "kind": "manual"
+  },
+  {
+    "number": 279,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Read fixed-width customers in Mule",
+    "script": "book/27-appendix-formats/279-read-fixed-width-customers-in-mule.dwl",
+    "kind": "manual"
+  },
+  {
+    "number": 280,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Parse fixed-width fields with string ranges",
+    "script": "book/27-appendix-formats/280-fixed-width-by-hand.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 281,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Round-trip an Excel sheet in Mule",
+    "script": "book/27-appendix-formats/281-round-trip-an-excel-sheet-in-mule.dwl",
+    "kind": "manual"
+  },
+  {
+    "number": 282,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Read multipart content",
+    "script": "book/27-appendix-formats/282-read-multipart-content.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 283,
+    "chapter": "27-appendix-formats",
+    "nameTitle": "Write multipart content",
+    "script": "book/27-appendix-formats/283-multipart-write.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 284,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Combine object paths and array indexes",
+    "script": "book/28-appendix-reference/284-dots-and-indexes.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 285,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Select fields with brackets",
+    "script": "book/28-appendix-reference/285-brackets.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 286,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Continue a selection through null",
+    "script": "book/28-appendix-reference/286-select-on-null.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 287,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Try selecting an object field from text",
+    "script": "book/28-appendix-reference/287-select-on-string-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 288,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Apply indexes to different value types",
+    "script": "book/28-appendix-reference/288-index-on-object.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 289,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Convert scalar values explicitly",
+    "script": "book/28-appendix-reference/289-as-basics.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 290,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Reject nonnumeric text during conversion",
+    "script": "book/28-appendix-reference/290-as-fails-number.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 291,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Try coercing null to a number",
+    "script": "book/28-appendix-reference/291-as-null-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 292,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Reject a date with no declared layout",
+    "script": "book/28-appendix-reference/292-reject-a-date-with-no-declared-layout.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 293,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Parse a feed date and add a week",
+    "script": "book/28-appendix-reference/293-date-parse.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 294,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Inspect a date's retained format",
+    "script": "book/28-appendix-reference/294-schema-sticks.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 295,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Reject a date with the wrong layout",
+    "script": "book/28-appendix-reference/295-date-parse-wrong-format.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 296,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Compare numeric formatting patterns",
+    "script": "book/28-appendix-reference/296-number-format.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 297,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Group a conversion before arithmetic",
+    "script": "book/28-appendix-reference/297-as-precedence.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 298,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Call a function without importing it",
+    "script": "book/28-appendix-reference/298-import-not-imported.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 299,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Import every module function",
+    "script": "book/28-appendix-reference/299-import-wildcard.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 300,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Import selected module functions",
+    "script": "book/28-appendix-reference/300-import-selective.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 301,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Alias a module import",
+    "script": "book/28-appendix-reference/301-import-alias.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 302,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Import a function that does not exist",
+    "script": "book/28-appendix-reference/302-import-unknown-function.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 303,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Import a module that does not exist",
+    "script": "book/28-appendix-reference/303-import-unknown-module.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 304,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Inspect a module name collision",
+    "script": "book/28-appendix-reference/304-import-collision.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 305,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Calculate numeric aggregates and rounding",
+    "script": "book/28-appendix-reference/305-numbers-core.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 306,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Try averaging an empty array",
+    "script": "book/28-appendix-reference/306-numbers-core-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 307,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Select temporal components",
+    "script": "book/28-appendix-reference/307-components.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 308,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Try the singular minute selector",
+    "script": "book/28-appendix-reference/308-singular-minute-fails.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 309,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Distinguish empty text from null",
+    "script": "book/28-appendix-reference/309-distinguish-empty-text-from-null.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 310,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Combine module and local helpers",
+    "script": "book/28-appendix-reference/310-combine-module-and-local-helpers.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 311,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Alias two module paths",
+    "script": "book/28-appendix-reference/311-alias-two-module-paths.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 312,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Qualify colliding module functions",
+    "script": "book/28-appendix-reference/312-qualify-colliding-module-functions.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 313,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Merge defaults and partition order lines",
+    "script": "book/28-appendix-reference/313-merge-defaults-and-partition-order-lines.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 314,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Reject a variable forward reference",
+    "script": "book/28-appendix-reference/314-reject-a-variable-forward-reference.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 315,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Call a function that reads a later binding",
+    "script": "book/28-appendix-reference/315-call-a-function-that-reads-a-later-binding.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 316,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Keep an inner rate local",
+    "script": "book/28-appendix-reference/316-keep-an-inner-rate-local.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 317,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Inspect model value types",
+    "script": "book/28-appendix-reference/317-inspect-model-value-types.dwl",
+    "kind": "script"
+  },
+  {
+    "number": 318,
+    "chapter": "28-appendix-reference",
+    "nameTitle": "Inspect the same fields in a text feed",
+    "script": "book/28-appendix-reference/318-inspect-the-same-fields-in-a-text-feed.dwl",
+    "kind": "script"
+  }
+]

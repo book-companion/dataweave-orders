@@ -1,0 +1,13 @@
+{
+  "exact": [
+    "PEN-01",
+    "PAD-22",
+    "CLP-08"
+  ],
+  "oneTooFar": null,
+  "startInside": null,
+  "single": [
+    "PAD-22"
+  ]
+}
+exit=0

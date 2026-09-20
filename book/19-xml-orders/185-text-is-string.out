@@ -1,0 +1,13 @@
+{
+  "raw": "32.00",
+  "doubled": 64,
+  "joined": "32.0032.00",
+  "coerced": 32,
+  "compared": true,
+  "lineTotals": [
+    10,
+    5,
+    25
+  ]
+}
+exit=0

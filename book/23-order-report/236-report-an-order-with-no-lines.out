@@ -1,0 +1,19 @@
+{
+  "batchId": "B-EMPTY",
+  "orders": [
+    {
+      "id": "A-1004",
+      "placedAt": "2026-06-19",
+      "customer": "Tomas",
+      "lines": [
+        
+      ],
+      "orderTotal": 0
+    }
+  ],
+  "revenueByCategory": {
+    
+  },
+  "batchTotal": 0
+}
+exit=0

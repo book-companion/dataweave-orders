@@ -1,0 +1,17 @@
+{
+  "byPrice": [
+    "CLP-08",
+    "PEN-01",
+    "PEN-01",
+    "INK-03",
+    "PAD-22"
+  ],
+  "byName": [
+    "Binder Clips",
+    "Gel Pen",
+    "Gel Pen",
+    "Ink Refill",
+    "Notepad A5"
+  ]
+}
+exit=0

@@ -1,0 +1,15 @@
+{
+  "descendItem": [
+    "Ballpoint pen"
+  ],
+  "descendStar": [
+    "Ballpoint pen",
+    "Notepad",
+    "Binder clip"
+  ],
+  "jsonDescend": [
+    "PEN-01",
+    "PAD-22"
+  ]
+}
+exit=0

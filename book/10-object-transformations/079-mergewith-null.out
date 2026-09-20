@@ -1,0 +1,15 @@
+{
+  "merged": {
+    "currency": "USD",
+    "coupon": null
+  },
+  "guarded": {
+    "currency": "USD",
+    "coupon": "NONE"
+  },
+  "stripped": {
+    "currency": "USD",
+    "coupon": "NONE"
+  }
+}
+exit=0

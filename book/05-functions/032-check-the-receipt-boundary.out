@@ -1,0 +1,13 @@
+{
+  "below": {
+    "amount": 99.99,
+    "delivery": 4.99,
+    "total": 104.98
+  },
+  "at": {
+    "amount": 100,
+    "delivery": 0,
+    "total": 100
+  }
+}
+exit=0

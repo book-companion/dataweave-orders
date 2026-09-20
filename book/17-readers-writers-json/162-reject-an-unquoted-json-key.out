@@ -1,0 +1,4 @@
+[ERROR] Error while executing the script:
+[ERROR] Unexpected character 'o' at payload@[-1:-1] (line:column), expected '"' at:
+1
+exit=255

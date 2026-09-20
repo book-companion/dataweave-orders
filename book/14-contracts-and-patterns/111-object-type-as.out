@@ -1,0 +1,11 @@
+[ERROR] Error while executing the script:
+[ERROR] Cannot coerce Object ({sku: "PEN-01",price: "2.50",qty: 4}) to {(sku: String), (price: Number), (qty: Number)}
+
+5| { item: { sku: "PEN-01", price: "2.50", qty: 4 } as LineItem }
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trace:
+  at 111-object-type-as::main (line: 5, column: 9) at:
+
+5| { item: { sku: "PEN-01", price: "2.50", qty: 4 } as LineItem }
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exit=255

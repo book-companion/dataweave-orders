@@ -1,0 +1,17 @@
+{
+  "whole": "Object",
+  "id": "String",
+  "items": "Array",
+  "price": "Number",
+  "qty": "Number",
+  "missing": "Null",
+  "aKey": "Key",
+  "date": "Date",
+  "dateTime": "DateTime",
+  "localDateTime": "LocalDateTime",
+  "time": "Time",
+  "localTime": "LocalTime",
+  "period": "Period",
+  "zone": "TimeZone"
+}
+exit=0

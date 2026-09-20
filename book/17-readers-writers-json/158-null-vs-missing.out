@@ -1,0 +1,14 @@
+{
+  "coupon": null,
+  "missing": null,
+  "couponIsNull": true,
+  "missingIsNull": true,
+  "keys": [
+    "orderId",
+    "customer",
+    "coupon",
+    "tags",
+    "items"
+  ]
+}
+exit=0

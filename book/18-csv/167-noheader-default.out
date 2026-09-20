@@ -1,0 +1,15 @@
+[
+  {
+    "PEN-01": "PAD-22",
+    "Ballpoint pen": "Notepad",
+    "4": "2",
+    "2.50": "6.00"
+  },
+  {
+    "PEN-01": "CLP-08",
+    "Ballpoint pen": "Binder clip",
+    "4": "10",
+    "2.50": "1.00"
+  }
+]
+exit=0

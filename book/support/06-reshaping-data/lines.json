@@ -1,0 +1,7 @@
+[
+  { "orderId": "A-1001", "sku": "PEN-01", "name": "Gel Pen",      "category": "writing", "price": 2.5, "qty": 4 },
+  { "orderId": "A-1001", "sku": "PAD-22", "name": "Notepad A5",   "category": "paper",   "price": 6.0, "qty": 2 },
+  { "orderId": "A-1001", "sku": "CLP-08", "name": "Binder Clips", "category": "desk",    "price": 1.0, "qty": 10 },
+  { "orderId": "A-1008", "sku": "PEN-01", "name": "Gel Pen",      "category": "writing", "price": 2.5, "qty": 1 },
+  { "orderId": "A-1008", "sku": "INK-03", "name": "Ink Refill",   "category": "writing", "price": 3.0, "qty": 3 }
+]

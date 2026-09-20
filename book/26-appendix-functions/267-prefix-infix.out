@@ -1,0 +1,15 @@
+{
+  "infix": [
+    10,
+    12,
+    10
+  ],
+  "prefix": [
+    10,
+    12,
+    10
+  ],
+  "ownInfix": 18,
+  "ownPrefix": 18
+}
+exit=0

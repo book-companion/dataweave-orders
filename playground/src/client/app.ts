@@ -11,12 +11,13 @@ interface Example {
 	id: string;
 	chapter: string;
 	name: string;
+	label?: string;
 	script: string;
 	savedOutput?: string;
-	/** What the book's run.sh bound when it produced savedOutput. */
+	/** The catalogue's explicit bindings for this recorded result. */
 	bindings?: Bindings;
 }
-interface Chapter { id: string; examples: Example[]; inputs: string[] }
+interface Chapter { id: string; title?: string; examples: Example[]; inputs: string[] }
 interface RunResult { output: string; exitCode: number; durationMs: number; timedOut: boolean; argv: string[] }
 interface SavedOutput { body: string; exitCode: number | null }
 
@@ -343,14 +344,13 @@ async function loadExamples(): Promise<void> {
 	for (const chapter of chapters) {
 		if (!chapter.examples.length) continue;
 		const group = document.createElement('optgroup');
-		// The folder is the chapter, so read it out rather than showing the slug.
-		group.label = chapter.id.replace(/-/g, ' ');
+		// Use the book title when the current catalogue supplies it.
+		group.label = chapter.title ? `${chapter.id.slice(0, 2)} — ${chapter.title}` : chapter.id.replace(/-/g, ' ');
 		for (const example of chapter.examples) {
 			const option = document.createElement('option');
 			option.value = example.id;
-			// Keep the leading number: it is the order the chapter works through,
-			// and "summary" alone is not findable among sixteen chapters.
-			option.textContent = example.name.replace(/_/g, ' ');
+			// Preserve the number used to locate this example in the book.
+			option.textContent = example.label ?? example.name.replace(/_/g, ' ');
 			group.append(option);
 		}
 		els.example.append(group);
@@ -360,19 +360,9 @@ async function loadExamples(): Promise<void> {
 const STARTER = `%dw 2.0
 output application/json
 ---
-{
-  id: payload.orderId,
-  lines: sizeOf(payload.items)
-}
+{ greeting: "Hello, DataWeave!" }
 `;
-
-const STARTER_INPUT = `{
-  "orderId": "A-1001",
-  "items": [
-    { "sku": "PEN-01", "price": 2.5, "qty": 4 }
-  ]
-}
-`;
+const STARTER_INPUT = '{}\n';
 
 async function openExample(id: string): Promise<void> {
 	els.compare.hidden = true;
@@ -396,11 +386,7 @@ async function openExample(id: string): Promise<void> {
 	els.script.value = file.content;
 	els.scriptPath.textContent = example.script.replace(/^chapters\//, '');
 
-	// Bind exactly what the book bound. Anything else and the verdict below the
-	// result is comparing two different runs: this used to bind the chapter's
-	// first JSON file to `payload` regardless, which was the wrong input for 72
-	// of the 137 examples — every XML and CSV one, every one that reads nothing,
-	// and the two that need an inline input or params.
+	// Explicit bindings preserve no-input examples and fixture variants.
 	const bound = example.bindings;
 	els.modulesLabel.hidden = false;
 	els.modules.checked = (bound?.modulePaths.length ?? 0) > 0;
@@ -534,7 +520,9 @@ document.addEventListener('keydown', (event) => {
 
 void (async () => {
 	await loadExamples();
-	await openExample('');
+	const first = chapters.flatMap(chapter => chapter.examples)[0];
+	els.example.value = first?.id ?? '';
+	await openExample(first?.id ?? '');
 	try {
 		const version = await api<{ banner: string; image: string }>('/api/version');
 		const runtime = /Runtime\s*:\s*V?([\d.]+)/i.exec(version.banner)?.[1];

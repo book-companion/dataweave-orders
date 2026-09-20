@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ord:order xmlns:ord="http://acme.com/orders" id="A-1001">
+  <ord:customer>Dana</ord:customer>
+  <ord:total currency="USD">32</ord:total>
+</ord:order>
+exit=0

@@ -1,0 +1,20 @@
+{
+  "subtotal": 37.49,
+  "average": 12.49666666666666666666666666666667,
+  "rounded": 12,
+  "withVat": 45,
+  "lineTotals": [
+    10,
+    12,
+    10
+  ],
+  "orderTotal": 32,
+  "biggest": 10,
+  "emptySum": 0,
+  "emptyMax": null,
+  "halves": [
+    3,
+    4
+  ]
+}
+exit=0

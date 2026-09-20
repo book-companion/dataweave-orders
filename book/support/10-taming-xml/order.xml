@@ -1,0 +1,8 @@
+<order id="A-1001" channel="web">
+  <customer>Dana</customer>
+  <item sku="PEN-01" qty="4">Ballpoint pen</item>
+  <item sku="PAD-22" qty="2">Notepad</item>
+  <item sku="CLP-08" qty="10">Binder clip</item>
+  <coupon/>
+  <total currency="USD">32.00</total>
+</order>

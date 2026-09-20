@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<report>
+  <order id="A-1001" placedAt="2026-06-14">32</order>
+  <order id="A-1002" placedAt="2026-06-16">6</order>
+  <order id="A-1003" placedAt="2026-06-18">33</order>
+</report>
+exit=0

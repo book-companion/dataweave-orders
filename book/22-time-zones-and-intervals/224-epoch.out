@@ -1,0 +1,8 @@
+{
+  "fromSeconds": "2026-06-15T20:30:00Z",
+  "fromMillis": "2026-06-15T20:30:00Z",
+  "toNumber": 1781634600,
+  "toMillis": 1781634600000,
+  "millisWrong": "+58425-03-30T04:00:00Z"
+}
+exit=0

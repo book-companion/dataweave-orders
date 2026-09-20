@@ -1,0 +1,30 @@
+[
+  {
+    "family": "PEN",
+    "number": 1,
+    "parts": [
+      "PEN-01",
+      "PEN",
+      "01"
+    ]
+  },
+  {
+    "family": "PAD",
+    "number": 22,
+    "parts": [
+      "PAD-22",
+      "PAD",
+      "22"
+    ]
+  },
+  {
+    "family": "CLP",
+    "number": 8,
+    "parts": [
+      "CLP-08",
+      "CLP",
+      "08"
+    ]
+  }
+]
+exit=0

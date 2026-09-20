@@ -1,0 +1,17 @@
+{
+  "defaultRead": {
+    "order": {
+      "coupon": null,
+      "note": null,
+      "customer": "Dana"
+    }
+  },
+  "none": {
+    "order": {
+      "coupon": "",
+      "note": "",
+      "customer": "Dana"
+    }
+  }
+}
+exit=0
